@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>IR トップ</title>
+ 
+ <!-- Google Fonts: Noto Sans JP -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+ 
+ <!-- FontAwesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+ <!-- Tailwind CSS -->
+ <script src="https://cdn.tailwindcss.com"></script>
+ <script>
+  tailwind.config = {
+  theme: {
+   extend: {
+    fontFamily: {
+    sans: ['Noto Sans JP', 'sans-serif'],
+    },
+    colors: {
+    main: {
+     red: '#FF0101',
+     blue: '#0B419B',
+    },
+    dark: '#0a0f1c',
+    digital: '#111827',
+    },
+    backgroundImage: {
+    'main-gradient': 'linear-gradient(135deg, rgba(235, 46, 61, 1) 0%, rgba(46, 121, 187, 1) 100%)',
+    }
+   }
+  }
+  }
+ </script>
+
+ <link rel="stylesheet" href="css/style.css">
+ <style>
+  body {
+      background-color: #ffffff;
+      color: #333333;
+  }
+ </style>
+</head>
+<body class="antialiased selection:bg-main-blue selection:text-white">
+
+ <!-- Header -->
+ <header id="header" class="fixed top-0 left-0 w-full z-50 text-gray-700 bg-white border-b border-gray-200 shadow-sm">
+  <div class="w-full px-4 lg:px-8 h-20 flex items-center justify-between">
+  <!-- Logo -->
+  <a href="#" class="flex-shrink-0 z-50 relative">
+   <!-- ロゴ画像 -->
+   <img src="img/img-main/logo.png" alt="T.RAD 株式会社ティラド" class="header-logo h-8 w-auto">
+  </a>
+
+  <!-- Navigation -->
+  <nav class="hidden xl:flex h-full items-center">
+   <ul class="flex h-full text-[13px] xl:text-sm font-medium tracking-wider w-full justify-end">
+    <!-- 企業情報 -->
+    <li class="nav-item h-full flex items-center px-3 cursor-pointer group">
+    <span class="nav-link flex items-center gap-1">企業情報 <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+    <!-- Mega Menu -->
+    <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-700 shadow-xl border-t border-gray-100 p-8 cursor-default">
+     <div class="max-w-7xl mx-auto">
+      <div class="mb-6 border-b border-gray-200 pb-3">
+      <span class="text-xl font-black text-gradient tracking-widest">企業情報</span>
+      </div>
+      <div class="flex flex-wrap gap-x-12 gap-y-4">
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">会社概要 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">社長メッセージ <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">沿革 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">数字で見るティラド <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">動画で見るティラド <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">海外拠点情報 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">ティラドコネクト <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">ティラドロジスティクス <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      </div>
+     </div>
+    </div>
+    </li>
+    <!-- ティラドのモノづくり -->
+    <li class="nav-item h-full flex items-center px-3 cursor-pointer group">
+    <span class="nav-link flex items-center gap-1">ティラドのモノづくり <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+    <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-700 shadow-xl border-t border-gray-100 p-8 cursor-default">
+     <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-12 gap-12">
+      <!-- 製品・サービス -->
+      <div class="col-span-5 flex flex-col gap-4">
+       <div class="mb-2 border-b border-gray-200 pb-3">
+        <span class="text-xl font-black text-gradient tracking-widest">製品・サービス</span>
+       </div>
+       <a href="#" class="hover-text-gradient transition flex items-center gap-2">製品カテゴリ一覧 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      </div>
+      <!-- 研究開発・技術 -->
+      <div class="col-span-7 flex flex-col gap-4 border-l pl-12 border-gray-200">
+       <div class="mb-2 border-b border-gray-200 pb-3">
+        <span class="text-xl font-black text-gradient tracking-widest">研究開発・技術</span>
+       </div>
+       <div class="flex flex-wrap gap-x-12 gap-y-4">
+        <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">マルチパスウェイ時代への対応 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+        <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">多機能RAD開発 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+        <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">GXへの取り組み <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+        <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">生産技術 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+       </div>
+      </div>
+      </div>
+     </div>
+    </div>
+    </li>
+    <!-- 株主・投資家情報 (IRニュース含む) -->
+    <li class="nav-item h-full flex items-center px-3 cursor-pointer group">
+    <span class="nav-link flex items-center gap-1">株主・投資家情報 <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+    <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-700 shadow-xl border-t border-gray-100 p-8 cursor-default">
+     <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-12 gap-12">
+      <div class="col-span-5 flex flex-col gap-4">
+       <div class="mb-2 border-b border-gray-200 pb-3">
+        <span class="text-xl font-black text-gradient tracking-widest">株主・投資家情報</span>
+       </div>
+       <a href="#" class="hover-text-gradient transition flex items-center gap-2">IR基本方針 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+       <a href="#" class="hover-text-gradient transition flex items-center gap-2">IR資料室 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+       <a href="#" class="hover-text-gradient transition flex items-center gap-2">財務・実績データ <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+       <a href="#" class="hover-text-gradient transition flex items-center gap-2">電子公告 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      </div>
+      <div class="col-span-7 flex flex-col gap-4 border-l pl-12 border-gray-200">
+       <div class="mb-2 border-b border-gray-200 pb-3">
+        <span class="text-xl font-black text-gradient tracking-widest">最新のIRお知らせ</span>
+       </div>
+       <ul class="space-y-3">
+        <li class="flex gap-4 items-start"><span class="text-xs text-gray-500 w-24">2023.11.10</span><a href="#" class="hover-text-gradient text-sm">2024年3月期 第2四半期決算短信</a></li>
+        <li class="flex gap-4 items-start"><span class="text-xs text-gray-500 w-24">2023.10.25</span><a href="#" class="hover-text-gradient text-sm">業績予想の修正に関するお知らせ</a></li>
+        <li class="flex gap-4 items-start"><span class="text-xs text-gray-500 w-24">2023.08.08</span><a href="#" class="hover-text-gradient text-sm">2024年3月期 第1四半期決算短信</a></li>
+       </ul>
+       <div class="mt-4 pt-3 border-t border-gray-100 flex justify-end">
+        <a href="#" class="group text-sm font-bold transition-all duration-300 hover:opacity-70 flex items-center gap-1">
+         <span class="text-gradient">一覧を見る</span> 
+         <span class="transition-transform duration-300 group-hover:translate-x-1"><i class="fa-solid fa-caret-right text-gradient"></i></span>
+        </a>
+       </div>
+      </div>
+      </div>
+     </div>
+    </div>
+    </li>
+    <!-- サステナビリティ -->
+    <li class="nav-item h-full flex items-center px-3 cursor-pointer group">
+    <span class="nav-link flex items-center gap-1">サステナビリティ <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+    <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-700 shadow-xl border-t border-gray-100 p-8 cursor-default">
+     <div class="max-w-7xl mx-auto">
+      <div class="mb-6 border-b border-gray-200 pb-3">
+      <span class="text-xl font-black text-gradient tracking-widest">サステナビリティ</span>
+      </div>
+      <div class="flex flex-wrap gap-x-12 gap-y-4">
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">トップメッセージ <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">サステナビリティマネジメント <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">企業価値創造・マテリアリティ <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">環境 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">社会 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">サステナビリティレポート <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      </div>
+     </div>
+    </div>
+    </li>
+    <!-- サプライヤー様窓口 -->
+    <li class="nav-item h-full flex items-center px-3 cursor-pointer group">
+    <span class="nav-link flex items-center gap-1">サプライヤー様窓口 <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+    <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-700 shadow-xl border-t border-gray-100 p-8 cursor-default">
+     <div class="max-w-7xl mx-auto">
+      <div class="mb-6 border-b border-gray-200 pb-3">
+      <span class="text-xl font-black text-gradient tracking-widest">サプライヤー様窓口</span>
+      </div>
+      <div class="flex flex-wrap gap-x-12 gap-y-4">
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">募集要項 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">調達品目 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">ご提案受付 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">グリーン調達ガイドライン <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">フォーマットDL <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">仕入先CSR <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">取引先ポータル <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400"></i></a>
+      </div>
+     </div>
+    </div>
+    </li>
+    <!-- お知らせ -->
+    <li class="h-full flex items-center px-3"><a href="#" class="nav-link hover-text-gradient transition">お知らせ</a></li>
+    <!-- お問い合わせ -->
+    <li class="nav-item h-full flex items-center px-3 cursor-pointer group">
+    <span class="nav-link flex items-center gap-1">お問い合わせ <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+    <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-700 shadow-xl border-t border-gray-100 p-8 cursor-default">
+     <div class="max-w-7xl mx-auto">
+      <div class="mb-6 border-b border-gray-200 pb-3">
+      <span class="text-xl font-black text-gradient tracking-widest">お問い合わせ</span>
+      </div>
+      <div class="flex gap-12">
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2">IRに関するお問い合わせ <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2">製品・見積りについて <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2">調達に関するお問い合わせ <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2">その他のお問い合わせ <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      </div>
+     </div>
+    </div>
+    </li>
+    <!-- Ja/En -->
+    <li class="h-full flex items-center px-3 border-l border-gray-300 ml-2">
+    <a href="#" class="nav-link font-bold text-gradient">Ja</a><span class="mx-1 nav-link opacity-50">|</span><a href="#" class="nav-link opacity-50 hover-text-gradient transition">En</a>
+    </li>
+    <!-- 採用情報 -->
+    <li class="h-full flex items-center pl-4">
+    <a href="#" class="btn-small">採用情報 <i class="fa-solid fa-caret-right ml-1"></i></a>
+    </li>
+   </ul>
+  </nav>
+  
+  <!-- Mobile Menu Toggle Button -->
+  <button id="mobile-menu-btn" class="xl:hidden text-gray-700 nav-link transition-colors focus:outline-none">
+   <!-- 線をより細く(stroke-width="0.8")設定 -->
+   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.8" stroke="currentColor" class="w-8 h-8">
+   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+   </svg>
+  </button>
+  </div>
+ </header>
+
+ <main class="pt-[80px]">
+    <!-- 新規 FV セクション (添付画像デザイン準拠) -->
+    <section class="relative w-full h-auto md:h-[480px] lg:h-[540px] mb-20 md:mb-32 flex flex-col md:flex-row bg-white border-b border-gray-200">
+        
+        <!-- 左側テキストエリア：タイトルが画像エリアまで伸びるように幅を広く確保 -->
+        <div class="w-full md:w-[90%] lg:w-[85%] h-full flex flex-col justify-center px-6 md:pl-[6%] lg:pl-[8%] pt-20 pb-0 md:py-0 relative z-20">
+            <div>
+                <!-- カテゴリ：サイズアップ -->
+                <div class="text-[14px] md:text-[16px] font-medium tracking-[0.2em] mb-4 text-gray-600">
+                    株主・投資家情報
+                </div>
+                
+                <!-- タイトル：幅がある限り一行で表示 -->
+                <h1 class="text-3xl sm:text-4xl md:text-[42px] lg:text-[52px] font-bold mb-4 md:mb-6 tracking-widest leading-[1.4] md:leading-[1.5] whitespace-normal md:whitespace-nowrap">
+                    <span class="scroll-text-gradient inline-block pr-4 pb-2">IR トップ</span>
+                </h1>
+                
+                <!-- 縦線（アクセント）：画像に合わせて長めに -->
+                <div class="w-[1px] h-14 md:h-20 bg-main-gradient ml-2 md:ml-4 mb-4 md:mb-6"></div>
+                
+                <!-- パンくずリスト：サイズアップ -->
+                <div class="text-[11px] md:text-[12px] text-gray-400 font-medium tracking-widest uppercase flex items-center">
+                    <a href="#" class="hover:text-transparent hover:bg-clip-text hover:bg-main-gradient transition-all duration-300">TOP</a>
+                    <span class="mx-2 font-normal text-gray-400">&gt;</span>
+                    <span class="text-gray-700">IR トップ</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右側画像エリア：1:1のサイズに調整 -->
+        <div class="w-full md:absolute md:top-0 md:right-0 md:w-[45%] lg:w-[50%] h-auto md:h-full flex items-center justify-center pt-0 md:py-0 overflow-hidden">
+            <!-- aspect-square で1:1を維持し、スマホ時はさらに小さめに設定 -->
+            <img src="img-ir/ir.png" alt="IR トップ" class="w-[70%] md:w-auto md:h-full aspect-square object-cover object-center -none">
+        </div>
+        
+    </section>
+
+    <!-- ↓以下のコンテンツのラッパー -->
+    <div class="max-w-4xl mx-auto px-4 pb-16">
+
+        <!-- IRに関するお知らせ -->
+        <section class="mb-20">
+            <!-- デザイン：中央揃え ＋ 短いグラデーション下線 -->
+            <div class="mb-12 text-center flex flex-col items-center">
+                <h2 class="text-2xl md:text-3xl font-black text-gray-700 tracking-wider mb-6">
+                    IRに関するお知らせ
+                </h2>
+                <div class="w-14 h-[2px] bg-main-gradient"></div>
+            </div>
+            <ul class="space-y-4">
+                <!-- お知らせ 1 -->
+                <li>
+                    <a href="#" class="group flex items-center justify-between py-3 hover-border-gradient border-b border-gray-100 transition-colors">
+                        <div class="flex flex-col sm:flex-row gap-4 sm:items-center">
+                            <div class="flex items-center gap-4 w-full sm:w-auto shrink-0">
+                                <span class="text-sm text-gray-500 font-bold font-mono">2024.02.08</span>
+                                <span class="label-ir-custom px-2.5 py-0.5 text-[10px]"><span>決算・IR</span></span>
+                            </div>
+                            <p class="font-medium text-gray-800 group-hover-text-gradient transition-colors">2024年3月期 第3四半期決算短信</p>
+                        </div>
+                        <i class="fa-solid fa-caret-right text-gray-400 group-hover-text-gradient group-hover:translate-x-2 transition-all ml-4 shrink-0"></i>
+                    </a>
+                </li>
+                <!-- お知らせ 2 -->
+                <li>
+                    <a href="#" class="group flex items-center justify-between py-3 hover-border-gradient border-b border-gray-100 transition-colors">
+                        <div class="flex flex-col sm:flex-row gap-4 sm:items-center">
+                            <div class="flex items-center gap-4 w-full sm:w-auto shrink-0">
+                                <span class="text-sm text-gray-500 font-bold font-mono">2024.01.31</span>
+                                <span class="label-ir-custom px-2.5 py-0.5 text-[10px]"><span>決算・IR</span></span>
+                            </div>
+                            <p class="font-medium text-gray-800 group-hover-text-gradient transition-colors">自己株式の取得状況及び取得終了に関するお知らせ</p>
+                        </div>
+                        <i class="fa-solid fa-caret-right text-gray-400 group-hover-text-gradient group-hover:translate-x-2 transition-all ml-4 shrink-0"></i>
+                    </a>
+                </li>
+                <!-- お知らせ 3 -->
+                <li>
+                    <a href="#" class="group flex items-center justify-between py-3 hover-border-gradient border-b border-gray-100 transition-colors">
+                        <div class="flex flex-col sm:flex-row gap-4 sm:items-center">
+                            <div class="flex items-center gap-4 w-full sm:w-auto shrink-0">
+                                <span class="text-sm text-gray-500 font-bold font-mono">2023.11.10</span>
+                                <span class="label-ir-custom px-2.5 py-0.5 text-[10px]"><span>決算・IR</span></span>
+                            </div>
+                            <p class="font-medium text-gray-800 group-hover-text-gradient transition-colors">2024年3月期 第2四半期決算短信</p>
+                        </div>
+                        <i class="fa-solid fa-caret-right text-gray-400 group-hover-text-gradient group-hover:translate-x-2 transition-all ml-4 shrink-0"></i>
+                    </a>
+                </li>
+                <!-- お知らせ 4 -->
+                <li>
+                    <a href="#" class="group flex items-center justify-between py-3 hover-border-gradient border-b border-gray-100 transition-colors">
+                        <div class="flex flex-col sm:flex-row gap-4 sm:items-center">
+                            <div class="flex items-center gap-4 w-full sm:w-auto shrink-0">
+                                <span class="text-sm text-gray-500 font-bold font-mono">2023.10.25</span>
+                                <span class="label-ir-custom px-2.5 py-0.5 text-[10px]"><span>決算・IR</span></span>
+                            </div>
+                            <p class="font-medium text-gray-800 group-hover-text-gradient transition-colors">業績予想の修正に関するお知らせ</p>
+                        </div>
+                        <i class="fa-solid fa-caret-right text-gray-400 group-hover-text-gradient group-hover:translate-x-2 transition-all ml-4 shrink-0"></i>
+                    </a>
+                </li>
+                <!-- お知らせ 5 -->
+                <li>
+                    <a href="#" class="group flex items-center justify-between py-3 hover-border-gradient border-b border-gray-100 transition-colors">
+                        <div class="flex flex-col sm:flex-row gap-4 sm:items-center">
+                            <div class="flex items-center gap-4 w-full sm:w-auto shrink-0">
+                                <span class="text-sm text-gray-500 font-bold font-mono">2023.08.08</span>
+                                <span class="label-ir-custom px-2.5 py-0.5 text-[10px]"><span>決算・IR</span></span>
+                            </div>
+                            <p class="font-medium text-gray-800 group-hover-text-gradient transition-colors">2024年3月期 第1四半期決算短信</p>
+                        </div>
+                        <i class="fa-solid fa-caret-right text-gray-400 group-hover-text-gradient group-hover:translate-x-2 transition-all ml-4 shrink-0"></i>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="mt-10 text-center">
+                <a href="#" class="btn-primary">もっと見る <i class="fa-solid fa-caret-right ml-2 text-xs"></i></a>
+            </div>
+        </section>
+
+        <!-- 株価情報 -->
+        <section class="mb-20">
+            <div class="mb-6 border-b-2 border-gray-200 flex">
+                <div class="relative pb-3 pr-8">
+                    <h2 class="text-[21px] font-bold text-gray-700">株価情報</h2>
+                    <div class="absolute bottom-[-2px] left-0 w-full h-[2px] bg-main-gradient"></div>
+                </div>
+            </div>
+            <div class="border border-gray-700 -none p-10 text-center bg-white mt-6">
+                <p class="text-sm text-gray-700 mb-3 tracking-wide">市場：東証プライム <span class="mx-2 text-gray-300">|</span> 証券コード：7236</p>
+                <a href="#" class="inline-flex items-center gap-1 text-sm font-bold text-main-blue hover:opacity-70 transition-opacity">
+                    株価情報はこちら <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- 関連情報 -->
+        <section class="mb-12">
+            <div class="mb-8 flex items-stretch gap-4">
+                <div class="w-[2px] bg-main-gradient "></div>
+                <h2 class="text-[19px] font-bold text-gray-700 leading-none py-1">関連情報</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                <!-- デザイン：中央にテキスト、右端に画像通りのハーフアロー(SVG) -->
+                <a href="#" class="relative h-20 md:h-24 border border-gray-200  flex items-center justify-center text-lg font-bold text-gray-600 bg-white hover:bg-main-gradient hover:text-white hover:border-transparent transition-all duration-300 group">
+                    <span class="tracking-widest">IR基本方針</span>
+                    <svg width="32" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="butt" stroke-linejoin="miter" class="absolute right-6 md:right-8 text-gray-400 group-hover:text-white group-hover:translate-x-2 transition-all duration-300">
+                        <line x1="2" y1="14" x2="22" y2="14"></line>
+                        <line x1="22" y1="14" x2="14" y2="7"></line>
+                    </svg>
+                </a>
+                <a href="#" class="relative h-20 md:h-24 border border-gray-200  flex items-center justify-center text-lg font-bold text-gray-600 bg-white hover:bg-main-gradient hover:text-white hover:border-transparent transition-all duration-300 group">
+                    <span class="tracking-widest">IR資料室</span>
+                    <svg width="32" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="butt" stroke-linejoin="miter" class="absolute right-6 md:right-8 text-gray-400 group-hover:text-white group-hover:translate-x-2 transition-all duration-300">
+                        <line x1="2" y1="14" x2="22" y2="14"></line>
+                        <line x1="22" y1="14" x2="14" y2="7"></line>
+                    </svg>
+                </a>
+                <a href="#" class="relative h-20 md:h-24 border border-gray-200  flex items-center justify-center text-lg font-bold text-gray-600 bg-white hover:bg-main-gradient hover:text-white hover:border-transparent transition-all duration-300 group">
+                    <span class="tracking-widest">財務・実績データ</span>
+                    <svg width="32" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="butt" stroke-linejoin="miter" class="absolute right-6 md:right-8 text-gray-400 group-hover:text-white group-hover:translate-x-2 transition-all duration-300">
+                        <line x1="2" y1="14" x2="22" y2="14"></line>
+                        <line x1="22" y1="14" x2="14" y2="7"></line>
+                    </svg>
+                </a>
+                <a href="#" class="relative h-20 md:h-24 border border-gray-200  flex items-center justify-center text-lg font-bold text-gray-600 bg-white hover:bg-main-gradient hover:text-white hover:border-transparent transition-all duration-300 group">
+                    <span class="tracking-widest">IRカレンダー</span>
+                    <svg width="32" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="butt" stroke-linejoin="miter" class="absolute right-6 md:right-8 text-gray-400 group-hover:text-white group-hover:translate-x-2 transition-all duration-300">
+                        <line x1="2" y1="14" x2="22" y2="14"></line>
+                        <line x1="22" y1="14" x2="14" y2="7"></line>
+                    </svg>
+                </a>
+                <a href="#" class="relative h-20 md:h-24 border border-gray-200  flex items-center justify-center text-lg font-bold text-gray-600 bg-white hover:bg-main-gradient hover:text-white hover:border-transparent transition-all duration-300 group">
+                    <span class="tracking-widest">電子公告</span>
+                    <svg width="32" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="butt" stroke-linejoin="miter" class="absolute right-6 md:right-8 text-gray-400 group-hover:text-white group-hover:translate-x-2 transition-all duration-300">
+                        <line x1="2" y1="14" x2="22" y2="14"></line>
+                        <line x1="22" y1="14" x2="14" y2="7"></line>
+                    </svg>
+                </a>
+                <a href="#" class="relative h-20 md:h-24 border border-gray-200  flex items-center justify-center text-lg font-bold text-gray-600 bg-white hover:bg-main-gradient hover:text-white hover:border-transparent transition-all duration-300 group">
+                    <span class="tracking-widest">お問い合わせ</span>
+                    <svg width="32" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="butt" stroke-linejoin="miter" class="absolute right-6 md:right-8 text-gray-400 group-hover:text-white group-hover:translate-x-2 transition-all duration-300">
+                        <line x1="2" y1="14" x2="22" y2="14"></line>
+                        <line x1="22" y1="14" x2="14" y2="7"></line>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+    </div>
+ </main>
+
+ <!-- Footer (from index.html) -->
+ <footer class="bg-dark text-gray-400 py-16 border-t border-gray-900">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+   <!-- Logo & Info -->
+   <div class="lg:col-span-1">
+    <div class="mb-6">
+    <a href="#" class="inline-block">
+     <img src="img/img-main/logo.png" alt="T.RAD 株式会社ティラド" class="h-8 w-auto object-contain">
+    </a>
+    </div>
+   </div>
+
+   <!-- Menu Columns -->
+   <div class="flex flex-col gap-4 text-sm">
+    <div class="mb-4">
+    <a href="#" class="group font-bold mb-2 block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">企業情報</span>
+    </a>
+    <ul class="space-y-2 pl-2 border-l border-gray-800">
+     <li><a href="#" class="hover:text-white transition">会社概要</a></li>
+     <li><a href="#" class="hover:text-white transition">社長メッセージ</a></li>
+     <li><a href="#" class="hover:text-white transition">沿革</a></li>
+     <li><a href="#" class="hover:text-white transition">数字で見るティラド</a></li>
+     <li><a href="#" class="hover:text-white transition">動画で見るティラド</a></li>
+     <li><a href="#" class="hover:text-white transition">海外拠点情報</a></li>
+     <li><a href="#" class="hover:text-white transition">ティラドコネクト</a></li>
+     <li><a href="#" class="hover:text-white transition">ティラドロジスティクス</a></li>
+    </ul>
+    </div>
+   </div>
+
+   <div class="flex flex-col gap-4 text-sm">
+    <div class="mb-4">
+    <a href="#" class="group font-bold mb-2 block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">ティラドのモノづくり</span>
+    </a>
+    <ul class="space-y-4 pl-2 border-l border-gray-800">
+     <li>
+      <a href="#" class="group block w-fit mb-1">
+      <span class="text-gray-300 group-hover:text-white transition-all duration-300">製品・サービス</span>
+      </a>
+      <ul class="space-y-2 pl-2 border-l border-gray-800">
+      <li><a href="#" class="hover:text-white transition">製品カテゴリ</a></li>
+      </ul>
+     </li>
+     <li>
+      <a href="#" class="group block w-fit mb-1">
+      <span class="text-gray-300 group-hover:text-white transition-all duration-300">研究開発・技術</span>
+      </a>
+      <ul class="space-y-2 pl-2 border-l border-gray-800">
+      <li><a href="#" class="hover:text-white transition">マルチパスウェイ時代への対応</a></li>
+      <li><a href="#" class="hover:text-white transition">多機能RAD開発</a></li>
+      <li><a href="#" class="hover:text-white transition">GXへの取り組み</a></li>
+      <li><a href="#" class="hover:text-white transition">生産技術</a></li>
+      </ul>
+     </li>
+    </ul>
+    </div>
+    <div>
+    <a href="#" class="group font-bold mb-2 block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">株主・投資家情報</span>
+    </a>
+    <ul class="space-y-2 pl-2 border-l border-gray-800">
+     <li><a href="#" class="hover:text-white transition">IR基本方針</a></li>
+     <li><a href="#" class="hover:text-white transition">IR資料室</a></li>
+     <li><a href="#" class="hover:text-white transition">财务・実績データ</a></li>
+     <li><a href="#" class="hover:text-white transition">電子公告</a></li>
+    </ul>
+    </div>
+   </div>
+
+   <div class="flex flex-col gap-4 text-sm">
+    <div class="mb-4">
+    <a href="#" class="group font-bold mb-2 block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">サステナビリティ</span>
+    </a>
+    <ul class="space-y-2 pl-2 border-l border-gray-800">
+     <li><a href="#" class="hover:text-white transition">トップメッセージ</a></li>
+     <li><a href="#" class="hover:text-white transition">サステナビリティマネジメント</a></li>
+     <li><a href="#" class="hover:text-white transition">企業価値創造・マテリアリティ特定</a></li>
+     <li><a href="#" class="hover:text-white transition">環境</a> / <a href="#" class="hover:text-white transition">社会</a></li>
+     <li><a href="#" class="hover:text-white transition">サステナビリティレポート</a></li>
+    </ul>
+    </div>
+    <div class="mb-4">
+    <a href="#" class="group font-bold mb-2 block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">サプライヤー様窓口</span>
+    </a>
+    <ul class="space-y-2 pl-2 border-l border-gray-800">
+     <li><a href="#" class="hover:text-white transition">募集要項</a> / <a href="#" class="hover:text-white transition">調達品目</a></li>
+     <li><a href="#" class="hover:text-white transition">ご提案受付</a></li>
+     <li><a href="#" class="hover:text-white transition">グリーン調達ガイドライン</a></li>
+     <li><a href="#" class="hover:text-white transition">フォーマットダウンロード</a></li>
+     <li><a href="#" class="hover:text-white transition">仕入先CSRガイドライン</a></li>
+     <li><a href="#" class="hover:text-white transition">取引先ポータルログイン</a></li>
+    </ul>
+    </div>
+    <div class="flex flex-col gap-2 border-t border-gray-800 pt-4 mt-2">
+    <a href="#" class="group font-bold block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">お知らせ</span>
+    </a>
+    <a href="#" class="group font-bold block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">お問い合わせ</span>
+    </a>
+    <a href="#" class="group font-bold block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">採用情報</span>
+    </a>
+    </div>
+   </div>
+  </div>
+
+  <div class="flex flex-col md:flex-row justify-between items-center border-t border-gray-900 pt-8 text-xs">
+   <div class="flex gap-6 mb-4 md:mb-0">
+    <a href="#" class="hover:text-white transition">ご利用に際して</a>
+    <a href="#" class="hover:text-white transition">個人情報保護について</a>
+   </div>
+   <p>Copyright&copy; T.RAD Co., Ltd. All rights reserved.</p>
+  </div>
+  </div>
+ </footer>
+
+ <!-- Scripts -->
+ <script src="js/main.js"></script>
+</body>
+</html>

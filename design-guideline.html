@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デザインガイドライン - 株式会社ティラド</title>
+
+    <!-- Google Fonts: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                    },
+                    colors: {
+                        main: {
+                            red: '#FF0101',
+                            blue: '#0B419B',
+                        },
+                        dark: '#0a0f1c',
+                    },
+                    backgroundImage: {
+                        'main-gradient': 'linear-gradient(135deg, rgba(235, 46, 61, 1) 0%, rgba(46, 121, 187, 1) 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* ガイドライン用独自スタイル */
+        body { background-color: #f8f9fa; }
+        .guide-section { padding: 4rem 2rem; border-bottom: 1px solid #e5e7eb; }
+        .guide-title { font-size: 2rem; font-weight: 900; margin-bottom: 2rem; color: #111827; border-left: 6px solid #0B419B; padding-left: 1rem; }
+        .guide-subtitle { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; margin-top: 2rem; color: #374151; }
+        .color-box { width: 100%; height: 100px; border-radius: 0; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; border: 1px solid rgba(0,0,0,0.1); }
+        .code-block { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 0; overflow-x: auto; font-family: monospace; font-size: 0.875rem; margin-top: 0.5rem; }
+        .component-preview { padding: 2rem; border: 1px solid #e5e7eb; border-radius: 0; background: white; margin-bottom: 1rem; position: relative; overflow: hidden; }
+        .component-preview.dark-preview { background: #0a0f1c; }
+    </style>
+</head>
+<body class="antialiased selection:bg-main-blue selection:text-white">
+
+    <!-- Header equivalent for guide -->
+    <div class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <h1 class="text-xl font-bold text-gray-800 tracking-wider">T.RAD <span class="bg-main-gradient text-transparent bg-clip-text">Design System Guidelines</span></h1>
+            <div class="flex gap-4 text-sm font-medium">
+                <a href="#colors" class="text-gray-600 hover:text-main-blue transition">Color</a>
+                <a href="#typography" class="text-gray-600 hover:text-main-blue transition">Typography</a>
+                <a href="#buttons" class="text-gray-600 hover:text-main-blue transition">Buttons</a>
+                <a href="#components" class="text-gray-600 hover:text-main-blue transition">Components</a>
+                <a href="#animations" class="text-gray-600 hover:text-main-blue transition">Animations</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro -->
+    <div class="max-w-7xl mx-auto guide-section bg-white mt-8 shadow-sm">
+        <p class="text-lg text-gray-700 leading-relaxed max-w-3xl">
+            このドキュメントは、株式会社ティラドのWEBサイトに関するUI/UXデザインシステムとコーディングガイドラインです。<br>
+            ブランドのコアである<b>「熱」と「流れ」</b>を表現しつつ、エッジの効いた<b>シャープで洗練されたデザイン</b>を通じて、先進的なユーザー体験を提供するための設計原則と実装例をまとめています。
+        </p>
+    </div>
+
+    <!-- 1. Colors -->
+    <div id="colors" class="max-w-7xl mx-auto guide-section bg-white">
+        <h2 class="guide-title">1. Colors (配色)</h2>
+        <p class="mb-6 text-gray-600">ティラドのブランドカラーを基軸に、先進性・信頼性・可視性を考慮した配色設計です。サイト全体の統一感を保つため、以下の定義に従って色を使用してください。</p>
+
+        <h3 class="guide-subtitle mt-0">Brand Gradient (ブランドグラデーション)</h3>
+        <p class="mb-4 text-sm text-gray-500">サイト全体を通して象徴的に使用するブランドグラデーションです。熱交換(赤から青へ)を表現します。</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="md:col-span-1">
+                <div class="color-box bg-main-gradient">Main Gradient (135deg)</div>
+                <div class="font-bold text-gray-800">Brand Gradient</div>
+                <div class="text-xs text-gray-500">tailwind: `bg-main-gradient` / `.text-gradient`</div>
+                <div class="text-[10px] text-gray-400 font-mono mt-1">linear-gradient(135deg, #eb2e3d 0%, #2e79bb 100%)</div>
+            </div>
+            <div class="md:col-span-1">
+                <div class="component-preview bg-gray-50 flex items-center justify-center p-8 h-full">
+                    <span class="text-3xl font-black text-gradient">ティラドの技術</span>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="guide-subtitle">Neutral Colors (背景・アクセント)</h3>
+        <p class="mb-4 text-sm text-gray-500">空間の奥行きやセクションの切り替えに使用する背景色・暗色です。</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div>
+                <div class="color-box border border-gray-100" style="background-color: #FFFFFF; color: #1f2937;">#FFFFFF</div>
+                <div class="font-bold text-gray-800">Base White</div>
+                <div class="text-xs text-gray-500">基調色: コンテンツの不透過背景</div>
+            </div>
+            <div>
+                <div class="color-box" style="background-color: #f8f9fa; color: #1f2937;">#F8F9FA</div>
+                <div class="font-bold text-gray-800">Light Gray</div>
+                <div class="text-xs text-gray-500">セクション区切り・薄いグレー背景</div>
+            </div>
+            <div>
+                <div class="color-box" style="background-color: #0a0f1c;">#0A0F1C</div>
+                <div class="font-bold text-gray-800">Dark (Navy)</div>
+                <div class="text-xs text-gray-500">footer / main-dark / 深いネイビー</div>
+            </div>
+        </div>
+
+        <h3 class="guide-subtitle">Typography & UI Grays (文字色・UIパーツ)</h3>
+        <p class="mb-4 text-sm text-gray-500">情報の優先度（階層）を定義する文字・罫線用のグレースケールです。</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div>
+                <div class="h-10 bg-gray-800 rounded-sm mb-1"></div>
+                <div class="font-bold text-[11px] text-gray-800">Gray-800 (Primary Text)</div>
+                <div class="text-[10px] text-gray-500">白背景の見出し・メイン文字</div>
+            </div>
+            <div>
+                <div class="h-10 bg-gray-600 rounded-sm mb-1"></div>
+                <div class="font-bold text-[11px] text-gray-600">Gray-600 (Normal Text)</div>
+                <div class="text-[10px] text-gray-500">本文・リード文の標準色</div>
+            </div>
+            <div>
+                <div class="h-10 bg-gray-500 rounded-sm mb-1"></div>
+                <div class="font-bold text-[11px] text-gray-500">Gray-500 (Medium Text)</div>
+                <div class="text-[10px] text-gray-500">補足情報・メタデータなど</div>
+            </div>
+            <div>
+                <div class="h-10 bg-gray-400 rounded-sm mb-1"></div>
+                <div class="font-bold text-[11px] text-gray-400">Gray-400 (Secondary)</div>
+                <div class="text-[10px] text-gray-500">セクションタイトルの英字補足</div>
+            </div>
+            <div>
+                <div class="h-10 bg-gray-200 border border-gray-100 rounded-sm mb-1"></div>
+                <div class="font-bold text-[11px] text-gray-400 text-gray-300">Gray-200 (Divider)</div>
+                <div class="text-[10px] text-gray-400">罫線・境界線 (`border-gray-200`)</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 2. Typography -->
+    <div id="typography" class="max-w-7xl mx-auto guide-section bg-white">
+        <h2 class="guide-title">2. Typography (タイポグラフィ)</h2>
+        <p class="mb-6 text-gray-600">フォントは「Noto Sans JP」を使用。ウェイト（太さ）で情報にメリハリをつけます。</p>
+
+        <div class="component-preview space-y-8">
+            <div>
+                <div class="text-xs text-gray-400 mb-1">FV / Hero Title ( font-black / 900 )</div>
+                <h1 class="text-[32px] md:text-5xl lg:text-7xl font-black text-[#4B5563] leading-tight tracking-tight">熱のある場所に、<br>ティラドの技術。</h1>
+                <div class="mt-2 text-sm text-gray-500"><code>class="text-5xl font-black leading-tight tracking-tight"</code></div>
+            </div>
+
+            <hr>
+
+            <div>
+                <div class="text-xs text-gray-400 mb-1">Section Title ( font-black / 900 )</div>
+                <h2 class="text-3xl font-black text-gradient inline-block">最新情報</h2>
+                <div class="mt-2 text-sm text-gray-500"><code>class="text-3xl font-black text-gradient"</code></div>
+            </div>
+
+            <hr>
+
+            <div>
+                <div class="text-xs text-gray-400 mb-1">Heading 3 / Subtitle ( font-bold / 700 )</div>
+                <h3 class="text-2xl font-bold text-gray-800 tracking-wide">電気の時代も、出番は増えていく。</h3>
+                <div class="mt-2 text-sm text-gray-500"><code>class="text-2xl font-bold tracking-wide"</code></div>
+            </div>
+
+            <hr>
+
+            <div>
+                <div class="text-xs text-gray-400 mb-1">Body Text ( font-medium / 500 )</div>
+                <p class="text-lg text-gray-700 leading-relaxed font-medium max-w-3xl">熱交換器のパイオニアとして、長年培った技術で世界の産業を支えています。<br>パソコンが熱でフリーズするように、どんな機械も熱を持てば動きを止めます。</p>
+                <div class="mt-2 text-sm text-gray-500"><code>class="text-lg leading-relaxed font-medium"</code></div>
+            </div>
+            
+            <hr>
+            
+            <div>
+                <div class="text-xs text-gray-400 mb-1">Small UI Text ( text-sm / text-xs )</div>
+                <p class="text-sm font-bold text-gray-500 font-mono tracking-widest">2023.11.10</p>
+                <div class="mt-2 text-sm text-gray-500"><code>class="text-sm font-bold font-mono tracking-widest text-gray-500"</code> (日付などのメタデータ用)</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 3. Buttons -->
+    <div id="buttons" class="max-w-7xl mx-auto guide-section bg-white">
+        <h2 class="guide-title">3. Buttons & Links (ボタン・リンク)</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Primary Button -->
+            <div>
+                <h3 class="guide-subtitle mt-0">Primary Button</h3>
+                <p class="text-sm text-gray-600 mb-4">メインのCTA（Call to Action）に使用。ホバー時にグラデーションが動き、わずかに浮き上がるアニメーション。</p>
+                <div class="component-preview flex flex-col items-center gap-4 bg-gray-50">
+                    <a href="#" class="btn-primary">詳細を見る <i class="fa-solid fa-caret-right ml-2"></i></a>
+                    <a href="#" class="btn-primary px-16 py-4  shadow-lg transform hover:-translate-y-1 transition-all duration-300">大きく目立つ配置用 <i class="fa-solid fa-caret-right ml-2 text-xl"></i></a>
+                    <a href="#" class="btn-primary px-16 py-4 shadow-lg transform hover:-translate-y-1 transition-all duration-300">大きく目立つ配置用 <i class="fa-solid fa-caret-right ml-2 text-xl"></i></a>
+                </div>
+                <pre class="code-block">&lt;a href="#" class="btn-primary"&gt;
+  詳細を見る &lt;i class="fa-solid fa-caret-right ml-2"&gt;&lt;/i&gt;
+&lt;/a&gt;</pre>
+            </div>
+
+            <!-- Secondary Button / Small Button -->
+            <div>
+                <h3 class="guide-subtitle mt-0">Secondary & Small Buttons</h3>
+                <p class="text-sm text-gray-600 mb-4">FV上のサブアクションや、ヘッダー内の補助ボタン。</p>
+                <div class="component-preview dark-preview flex flex-col items-center gap-6">
+                    <a href="#" class="btn-secondary">
+                        <span class="btn-secondary-text">製品詳細を見る <i class="fa-solid fa-caret-right ml-2"></i></span>
+                    </a>
+                    <a href="#" class="btn-small">採用情報 <i class="fa-solid fa-caret-right ml-1"></i></a>
+                </div>
+                <pre class="code-block">&lt;a href="#" class="btn-secondary"&gt;
+  &lt;span class="btn-secondary-text"&gt;製品詳細...&lt;/span&gt;
+&lt;/a&gt;</pre>
+            </div>
+
+            <!-- Text Links -->
+            <div class="lg:col-span-2">
+                <h3 class="guide-subtitle mt-0">Text Links & Hover Effects</h3>
+                <p class="text-sm text-gray-600 mb-4">テキストリンクやリストアイテムのホバーエフェクトです。</p>
+                <div class="component-preview flex flex-wrap gap-8 items-center">
+                    
+                    <!-- Hover Text Gradient -->
+                    <div class="p-4 border">
+                        <div class="text-xs text-gray-400 mb-2">.hover-text-gradient</div>
+                        <a href="#" class="font-bold text-gray-800 hover-text-gradient text-lg">ホバーでグラデーション化</a>
+                    </div>
+                    
+                    <!-- Group Action (List item style) -->
+                    <div class="p-4 border  min-w-[300px]">
+                        <div class="text-xs text-gray-400 mb-2">List Item Hover (Group)</div>
+                        <a href="#" class="group flex items-center justify-between py-3 hover-border-gradient border-b border-gray-100 transition-colors w-full">
+                            <span class="font-medium text-gray-700 group-hover-text-gradient transition-colors">IR基本方針</span> 
+                            <i class="fa-solid fa-caret-right text-gray-400 group-hover-text-gradient group-hover:translate-x-2 transition-all"></i>
+                        </a>
+                    </div>
+
+                    <!-- Read more link -->
+                    <div class="p-4 border ">
+                        <div class="text-xs text-gray-400 mb-2">Arrow Link</div>
+                        <a href="#" class="group text-sm font-bold transition-all duration-300 hover:opacity-70 flex items-center gap-1">
+                            <span class="text-gradient">一覧を見る</span> 
+                            <span class="transition-transform duration-300 group-hover:translate-x-1"><i class="fa-solid fa-caret-right text-gradient"></i></span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 4. Components -->
+    <div id="components" class="max-w-7xl mx-auto guide-section bg-white">
+        <h2 class="guide-title">4. Components (コンポーネント)</h2>
+
+        <!-- Header Concept -->
+        <h3 class="guide-subtitle">Header (PC)</h3>
+        <p class="text-sm text-gray-600 mb-4">通常時は不透明または暗い背景の上に配置し、スクロール時に白背景のグラスモーフィズム(`scrolled`クラス)になります。企業情報などはメガメニューを開きます。</p>
+        <div class="component-preview dark-preview !p-0">
+            <header class="relative w-full text-white border-b border-white/20 h-16 flex items-center px-4" style="background-image: var(--main-gradient);">
+                <div class="font-black text-xl italic tracking-wider mr-8">T.RAD</div>
+                <nav class="flex h-full text-sm font-medium">
+                    <div class="nav-item h-full flex items-center px-4 cursor-pointer group relative">
+                        <span class="nav-link">企業情報 <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+                    </div>
+                    <div class="h-full flex items-center px-4 hover:text-gray-300 cursor-pointer transition">お知らせ</div>
+                </nav>
+            </header>
+        </div>
+
+        <h3 class="guide-subtitle mt-12">Mega Menu (Hover Concept)</h3>
+        <div class="component-preview !p-0 bg-gray-100 flex justify-center py-8">
+            <!-- 擬似的に開いた状態を見せる -->
+            <div class="w-full max-w-4xl bg-white text-gray-800 shadow-xl border-t-2 border-main-blue p-8">
+                <div class="mb-6 border-b border-gray-200 pb-3">
+                    <span class="text-lg font-black text-gradient tracking-widest">企業情報</span>
+                </div>
+                <div class="flex flex-wrap gap-x-12 gap-y-4">
+                    <a href="#" class="hover-text-gradient transition flex items-center gap-2"><i class="fa-solid fa-caret-right text-xs text-gray-400"></i>会社概要</a>
+                    <a href="#" class="hover-text-gradient transition flex items-center gap-2"><i class="fa-solid fa-caret-right text-xs text-gray-400"></i>社長メッセージ</a>
+                    <a href="#" class="hover-text-gradient transition flex items-center gap-2"><i class="fa-solid fa-caret-right text-xs text-gray-400"></i>沿革</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Concept -->
+        <h3 class="guide-subtitle mt-12">Footer</h3>
+        <p class="text-sm text-gray-600 mb-4">ダークトーンの背景にグレーのテキストを配置。リンクホバー時はグラデーションまたは白文字へと変化します。</p>
+        <div class="component-preview dark-preview !p-0 bg-dark text-gray-400">
+             <footer class="py-8 px-8 border-t border-gray-900 text-sm">
+                <div class="flex flex-col gap-4">
+                     <div class="mb-4">
+                        <a href="#" class="group font-bold mb-2 block w-fit">
+                            <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">企業情報</span>
+                        </a>
+                        <ul class="space-y-2 pl-2 border-l border-gray-800">
+                         <li><a href="#" class="hover:text-white transition">会社概要</a></li>
+                         <li><a href="#" class="hover:text-white transition">社長メッセージ</a></li>
+                        </ul>
+                     </div>
+                </div>
+            </footer>
+        </div>
+
+
+        <!-- Cards -->
+        <h3 class="guide-subtitle mt-12">Cards (カード要素)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Technology Card -->
+            <div>
+                <p class="text-sm font-bold text-gray-500 mb-2">Technology Section Card</p>
+                <div class="component-preview !p-0 border-none">
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden  aspect-video mb-6 border border-gray-200 bg-gray-200 group-hover:shadow-lg transition-all">
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-400"><i class="fa-solid fa-image text-4xl"></i></div>
+                            <div class="absolute inset-0 bg-main-blue/10 mix-blend-overlay"></div>
+                        </div>
+                        <div class="flex items-start gap-4 p-2">
+                            <div class="w-14 h-14  bg-main-gradient flex items-center justify-center shrink-0 text-2xl text-white shadow-lg">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">世界5極・自社完結のモノづくり</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">設計から生産、評価まで一貫した体制をグローバルに展開。地域に根ざした迅速な対応を可能にします。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Card -->
+            <div>
+                <p class="text-sm font-bold text-gray-500 mb-2">Contact Section Card (.hover-card-gradient)</p>
+                <div class="component-preview bg-gray-50 p-6 flex items-center justify-center h-full">
+                    
+                    <a href="#" class="group w-full max-w-sm bg-white p-6  shadow-sm transition-all duration-300 border border-gray-100 hover-card-gradient flex flex-col items-center text-center">
+                        <i class="fa-solid fa-box-open text-3xl text-gray-400 group-hover-text-gradient transition-colors mb-4"></i>
+                        <h3 class="font-bold text-gray-800 leading-normal mb-8">製品・見積りに関する<br>お問い合わせ</h3>
+                        
+                        <div class="relative w-10 h-10  border-2 border-gray-200 flex items-center justify-center text-gray-400 group-hover:border-transparent group-hover:shadow-md transition-all duration-300 overflow-hidden z-10">
+                            <div class="absolute -inset-1 bg-main-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[-1]"></div>
+                            <i class="fa-solid fa-caret-right text-lg ml-0.5 relative z-10 group-hover:text-white transition-colors"></i>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Badges & Tags -->
+        <h3 class="guide-subtitle mt-12">Badges & Tags (ラベル)</h3>
+        <div class="component-preview bg-white flex flex-wrap gap-4 items-center">
+            
+            <div class="mr-4">
+                <div class="text-xs text-gray-400 mb-2">Category Filter (Active)</div>
+                <button class="px-4 py-1.5  text-xs font-bold bg-main-gradient text-white shadow-md">全て</button>
+            </div>
+            
+            <div class="mr-4">
+                <div class="text-xs text-gray-400 mb-2">Category Filter (Default)</div>
+                <button class="px-4 py-1.5  text-xs font-bold bg-gray-100 text-gray-500 hover:bg-gray-200 transition">お知らせ</button>
+            </div>
+
+            <div class="mr-4">
+                <div class="text-xs text-gray-400 mb-2">Premium Tag (.label-ir-custom)</div>
+                <span class="label-ir-custom px-2.5 py-0.5 text-[10px]"><span>決算・IR</span></span>
+            </div>
+
+            <div class="mr-4">
+                <div class="text-xs text-gray-400 mb-2">Border Wrapper Tag</div>
+                <div class="p-[1px] bg-main-gradient overflow-hidden inline-flex shadow-sm">
+                    <div class="px-2.5 pt-0.5 pb-1 bg-white">
+                        <span class="text-gradient font-black text-xs">EV戦略</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 5. Animations -->
+    <div id="animations" class="max-w-7xl mx-auto guide-section bg-white -b-xl shadow-sm mb-20">
+        <h2 class="guide-title">5. Animations (アニメーション＆エフェクト)</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            
+            <!-- Fade In Up -->
+            <div>
+                <h3 class="guide-subtitle mt-0">.fade-in-up</h3>
+                <p class="text-sm text-gray-600 mb-4">スクロール連動で下からふんわりと表示します。Intersection Observerで制御します。</p>
+                <div class="component-preview bg-gray-50 h-32 flex items-center justify-center">
+                    <div class="bg-white p-4 shadow-md  border border-gray-200 fade-in-up visible" style="animation: demo-fade 3s infinite">
+                        この要素が下からフェードインします
+                    </div>
+                </div>
+                <pre class="code-block">&lt;div class="fade-in-up"&gt;...&lt;/div&gt;
+// jsで .visible を付与</pre>
+            </div>
+
+            <!-- Scroll Line -->
+            <div>
+                <h3 class="guide-subtitle mt-0">Scroll Indicator</h3>
+                <p class="text-sm text-gray-600 mb-4">FV下部などでスクロールを促す縦線アニメーションです。</p>
+                <div class="component-preview dark-preview h-32 flex flex-col items-center justify-center">
+                    <span class="text-[10px] text-white/70 uppercase tracking-widest mb-2 font-bold">Scroll</span>
+                    <div class="scroll-line" style="height: 40px;"></div>
+                </div>
+            </div>
+
+            <!-- Text Gradient Fill -->
+            <div>
+                <h3 class="guide-subtitle">.scroll-text-gradient</h3>
+                <p class="text-sm text-gray-600 mb-4">セクションタイトルに使用。スクロールに応じて左から右へ色が染まるような演出です。<code>.active</code>クラスで発火。</p>
+                <div class="component-preview flex items-center justify-center h-32">
+                    <h2 class="text-3xl font-black text-[#4B5563]">
+                        <span class="scroll-text-gradient active" style="transition-duration: 4s;">社会を支える、熱交換器。</span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Underline Draw -->
+            <div>
+                <h3 class="guide-subtitle">.border-b-gradient</h3>
+                <p class="text-sm text-gray-600 mb-4">重要なテキストの強調表示。スクロール時に左から右へグラデーションの下線が引かれます。<code>.drawn</code>クラスで発火。</p>
+                <div class="component-preview flex items-center justify-center h-32">
+                    <p class="text-lg font-bold">
+                        <span class="text-gray-800 border-b-gradient pb-1 py-1 px-2 hover:drawn cursor-pointer" onclick="this.classList.toggle('drawn')">（クリックで線を引くテスト）</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <style>
+        /* デモ用アニメーション補足 */
+        @keyframes demo-fade {
+            0%, 100% { opacity: 0; transform: translateY(20px); }
+            20%, 80% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+</body>
+</html>

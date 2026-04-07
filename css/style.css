@@ -1,0 +1,515 @@
+@charset "UTF-8";
+
+/* Base & Reset */
+:root {
+    --main-red: rgba(235, 46, 61, 1);
+    --main-blue: rgba(46, 121, 187, 1);
+    --main-dark: #0a0f1c;
+    --main-bg: #0a0f1c;
+    --transition-speed: 0.3s;
+    --transition-speed-slow: 0.5s;
+    --transition-speed-fast: 0.8s;
+    --main-gradient: linear-gradient(135deg, var(--main-red) 0%, var(--main-blue) 100%);
+    --main-gradient-btn: linear-gradient(135deg, var(--main-blue) 0%, var(--main-red) 50%, var(--main-blue) 100%);
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Text Gradient */
+.text-gradient {
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.text-outline-gx {
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(11, 65, 155, 0.8); /* 枠線のみ：メインブルーをベースにした色 */
+}
+
+/* Buttons */
+.btn-primary, .btn-small {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+
+    /* Sync with guideline gradient variables */
+    background: var(--main-gradient-btn);
+    background-size: 200% auto;
+    background-position: 100% center;
+    color: white;
+    transition: var(--transition-speed-slow) ease;
+}
+.btn-primary {
+    padding: 1rem 2.5rem;
+}
+.btn-small {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.75rem;
+}
+.btn-primary:hover, .btn-small:hover {
+    background-position: left center;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -10px rgba(11, 65, 155, 0.5);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+
+    background: white;
+    color: var(--main-dark);
+    position: relative;
+    z-index: 1;
+    padding: 1rem 2.5rem;
+    transition: all var(--transition-speed-slow) ease;
+}
+.btn-secondary::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0;
+    padding: 2px; /* Border width */
+    background: var(--main-gradient);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+.btn-secondary:hover {
+    background: var(--main-gradient);
+    color: white;
+    transform: translateY(-2px);
+}
+.btn-secondary:hover::before {
+    display: none;
+}
+
+.btn-secondary-text {
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all var(--transition-speed-slow) ease;
+    display: inline-flex;
+    align-items: center;
+}
+.btn-secondary:hover .btn-secondary-text {
+    background: none;
+    -webkit-text-fill-color: white;
+    color: white;
+}
+
+/* Labels with Gradient Border */
+.label-gradient {
+    display: inline-flex;
+    align-items: center;
+    background: white;
+    position: relative;
+    z-index: 1;
+}
+.label-gradient::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px; /* Border thickness */
+    background: var(--main-gradient);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+.label-gradient-text {
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+/* Header Transition */
+#header {
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+#header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+#header .nav-link {
+    transition: all var(--transition-speed) ease;
+}
+#header.scrolled .nav-link {
+    color: #1f2937; /* text-gray-800 */
+}
+#header .nav-link:hover,
+#header .nav-item:hover > .nav-link {
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Mega Menu */
+.mega-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all var(--transition-speed) ease;
+}
+.nav-item:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Fade in up animation */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity var(--transition-speed-fast) cubic-bezier(0.16, 1, 0.3, 1), transform var(--transition-speed-fast) cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fade-in-up.visible,
+.fade-in-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* News IR Label Custom */
+.label-ir-custom {
+    position: relative;
+    background: white;
+    border-radius: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+}
+.label-ir-custom::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px; /* border thickness */
+    background: var(--main-gradient);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    border-radius: 0;
+    z-index: -1;
+}
+.label-ir-custom span {
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* Scroll Animation Adjustment */
+.scroll-line {
+    position: relative;
+    width: 1px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+.scroll-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: white;
+    animation: scrollLineDown 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+@keyframes scrollLineDown {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(200%); }
+}
+
+/* Hover Text Gradient */
+.hover-text-gradient {
+    transition: all var(--transition-speed) ease;
+}
+.hover-text-gradient:hover,
+.group:hover .group-hover-text-gradient {
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    transition: all var(--transition-speed) ease;
+}
+
+/* Reset gradient for white icons on hover */
+.group:hover .group-hover-icon-white i {
+    background: none;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-text-fill-color: initial;
+    color: white;
+}
+
+/* Top Border Gradient */
+.border-t-gradient {
+    position: relative;
+}
+.border-t-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 4px;
+    background: var(--main-gradient);
+}
+
+/* Bottom Border Gradient (Animated) */
+.border-b-gradient {
+    background-image: var(--main-gradient);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 0% 2px;
+    display: inline;
+    transition: background-size 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.border-b-gradient.drawn {
+    background-size: 100% 2px;
+}
+
+/* Border image gradient for corners */
+.border-gradient-corner {
+    border-image: var(--main-gradient) 1;
+}
+
+/* Infinite Carousel (Left to Right) */
+.carousel-track-ltr {
+    display: flex;
+    width: max-content;
+    animation: scroll-ltr 40s linear infinite;
+}
+@keyframes scroll-ltr {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.carousel-img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+
+
+/* Utility */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.light-glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* About Section New Layout */
+.about-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .about-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+    
+    .about-header-left {
+        flex: 1;
+    }
+    
+    .about-header-right {
+        flex: 1.2;
+    }
+}
+
+.about-grid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+}
+
+/* Scroll Text Gradient Animation */
+.scroll-text-gradient {
+    display: inline-block;
+    /* 背景グラデーション：境界を 52% に設定し、文末の最後の 1px まで確実に色が乗るように修正 */
+    background-image: linear-gradient(to right, var(--main-red) 0%, var(--main-blue) 52%, #e5e7eb 52%, #e5e7eb 100%);
+    background-size: 200% 100%;
+    background-position: 100% 0%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 2.5s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    /* 文字の下が切れないように描画領域を確保 */
+    padding-bottom: 0.15em;
+    margin-bottom: -0.15em;
+}
+
+.scroll-text-gradient.active {
+    background-position: 0% 0%;
+}
+
+/* Stagger Reveal for Images */
+.stagger-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stagger-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Specific Delays for Staggered Image Reveal (Consistent 0.5s tempo) */
+.stagger-reveal:nth-child(1).active { transition-delay: 0.5s; }
+.stagger-reveal:nth-child(2).active { transition-delay: 1.0s; }
+.stagger-reveal:nth-child(3).active { transition-delay: 1.5s; }
+
+/* EV Slider */
+.ev-thumb {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+}
+.ev-thumb.active-thumb {
+    opacity: 1 !important;
+}
+.ev-thumb:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 一覧ホバー時のグラデーション下線 */
+.hover-border-gradient {
+    position: relative;
+}
+
+.hover-border-gradient {
+    position: relative;
+    border-bottom: 1px solid #f3f4f6 !important; /* border-gray-100 */
+}
+
+.hover-border-gradient::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--main-gradient);
+    transition: width 0.3s ease;
+    z-index: 1;
+}
+
+.hover-border-gradient:hover::after {
+    width: 100%;
+}
+
+.hover-border-gradient:hover {
+    border-bottom-color: transparent !important;
+}
+
+/* お問い合わせ・IRカードのホバー枠線 */
+.hover-card-gradient:hover {
+    border-color: transparent !important;
+    background: linear-gradient(white, white) padding-box, var(--main-gradient) border-box !important;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* About Section: Image Fade Animation (Cross-fade) */
+.image-fade-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-fade-base, .image-fade-fg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-fade-fg {
+    z-index: 2;
+    animation: image-fade-loop 12s infinite cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@keyframes image-fade-loop {
+    0%, 40% {
+        /* 前面画像を表示（フェード開始前） */
+        opacity: 1;
+    }
+    50%, 90% {
+        /* 前面画像を透明にする（背面画像を出す） */
+        opacity: 0;
+    }
+    100% {
+        /* 再び前面画像を表示 */
+        opacity: 1;
+    }
+}
+
+/* Floating Animations for Environment Section */
+@keyframes float-env-1 {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-20px) rotate(2deg); }
+}
+@keyframes float-env-2 {
+    0%, 100% { transform: translateY(0) rotate(3deg); }
+    50% { transform: translateY(25px) rotate(-1deg); }
+}
+@keyframes float-env-3 {
+    0%, 100% { transform: translateY(0) translateX(0) rotate(-1deg); }
+    50% { transform: translateY(-15px) translateX(10px) rotate(1deg); }
+}
+@keyframes float-env-4 {
+    0%, 100% { transform: translateY(0) translateX(0) scale(1); }
+    50% { transform: translateY(15px) translateX(-10px) scale(1.05); }
+}
+
+.float-anim-1 { animation: float-env-1 8s ease-in-out infinite; }
+.float-anim-2 { animation: float-env-2 10s ease-in-out infinite; animation-delay: -2s; }
+.float-anim-3 { animation: float-env-3 9s ease-in-out infinite; animation-delay: -4s; }
+.float-anim-4 { animation: float-env-4 11s ease-in-out infinite; animation-delay: -3s; }
