@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社ティラドコネクト - 製造業向けDX</title>
+  
+  <!-- Google Fonts: Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Noto Sans JP', 'sans-serif'],
+          },
+          colors: {
+            main: {
+              red: '#FF0101',
+              blue: '#0B419B',
+            },
+            dark: '#0a0f1c',
+            digital: '#111827',
+          },
+          backgroundImage: {
+            'main-gradient': 'linear-gradient(135deg, rgba(235, 46, 61, 1) 0%, rgba(46, 121, 187, 1) 100%)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased selection:bg-main-blue selection:text-white bg-gray-50">
+
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 w-full z-50 text-white border-b border-white/10">
+    <div class="w-full px-4 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex-shrink-0 z-50 relative flex items-center gap-3">
+        <img src="img/img-main/logo.png" alt="T.RAD 株式会社ティラド" class="header-logo h-8 w-auto">
+        <span class="font-bold text-xs md:text-sm tracking-[0.2em] border-l-2 pl-3 border-current mt-0.5 text-white [.scrolled_&]:text-gray-400 transition-colors duration-300">CONNECT</span>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="hidden xl:flex h-full items-center">
+        <ul class="flex h-full text-[13px] xl:text-sm font-medium tracking-wider w-full justify-end">
+          <li class="h-full flex items-center px-4"><a href="#fv" class="nav-link hover-text-gradient transition">HOME</a></li>
+          
+          <!-- 会社情報 : Mega Menu -->
+          <li class="nav-item h-full flex items-center px-4 cursor-pointer group">
+            <span class="nav-link flex items-center gap-1">会社情報 <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+            <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-800 shadow-xl border-t border-gray-100 p-8 cursor-default">
+              <div class="max-w-7xl mx-auto">
+                <div class="mb-6 border-b border-gray-200 pb-3">
+                  <span class="text-xl font-black text-gradient tracking-widest">会社情報</span>
+                </div>
+                <div class="flex flex-wrap gap-x-12 gap-y-4">
+                  <a href="#mission" class="hover-text-gradient transition flex items-center gap-2"><i class="fa-solid fa-caret-right text-xs text-gray-400"></i> 会社概要</a>
+                  <a href="#story" class="hover-text-gradient transition flex items-center gap-2"><i class="fa-solid fa-caret-right text-xs text-gray-400"></i> 代表ご挨拶</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="h-full flex items-center px-4"><a href="#recruit" class="nav-link hover-text-gradient transition">採用情報</a></li>
+          <li class="h-full flex items-center px-4"><a href="#footer" class="nav-link hover-text-gradient transition">アクセス</a></li>
+          
+          <li class="h-full flex items-center pl-4 ml-4 border-l border-white/20 [.scrolled_&]:border-gray-200">
+            <a href="#contact" class="btn-small">お問い合わせ <i class="fa-solid fa-caret-right ml-1"></i></a>
+          </li>
+        </ul>
+      </nav>
+      
+      <!-- Mobile Menu Toggle -->
+      <button id="mobile-menu-btn" class="xl:hidden text-white [.scrolled_&]:text-gray-800 nav-link transition-colors focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[100] bg-white text-gray-800 transition-transform duration-500 ease-in-out transform translate-x-full overflow-y-auto hidden-scroll">
+    <div class="sticky top-0 bg-white/95 backdrop-blur-sm z-10 px-6 h-20 flex justify-between items-center border-b border-gray-100">
+      <a href="#" class="flex items-center gap-3">
+        <img src="img/img-main/logo.png" alt="T.RAD 株式会社ティラド" class="h-8 w-auto object-contain">
+        <span class="font-bold text-xs tracking-[0.2em] text-gray-400 border-l-2 pl-3 border-gray-300 mt-0.5">CONNECT</span>
+      </a>
+      <button id="mobile-close-btn" class="text-gray-500 hover:text-main-red transition-colors w-10 h-10 flex items-center justify-center hover:bg-gray-100 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <div class="px-6 py-8 pb-32">
+      <div class="flex flex-col gap-6">
+        <a href="#fv" class="mobile-close-link text-lg font-bold text-gray-800 tracking-wider hover-text-gradient transition-colors border-b border-gray-100 pb-4 block">HOME</a>
+        <div class="border-b border-gray-100 pb-4">
+          <span class="block text-lg font-bold text-gray-800 tracking-wider mb-3">会社情報</span>
+          <div class="pl-4 space-y-3">
+            <a href="#mission" class="mobile-close-link block text-gray-600 hover-text-gradient">会社概要</a>
+            <a href="#story" class="mobile-close-link block text-gray-600 hover-text-gradient">代表ご挨拶</a>
+          </div>
+        </div>
+        <a href="#recruit" class="mobile-close-link text-lg font-bold text-gray-800 tracking-wider hover-text-gradient transition-colors border-b border-gray-100 pb-4 block">採用情報</a>
+        <a href="#footer" class="mobile-close-link text-lg font-bold text-gray-800 tracking-wider hover-text-gradient transition-colors border-b border-gray-100 pb-4 block">アクセス</a>
+        <a href="#contact" class="mobile-close-link btn-primary w-full py-4 text-white font-black text-sm shadow-md flex justify-center items-center mt-4">お問い合わせ <i class="fa-solid fa-caret-right ml-1"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- FV -->
+    <section id="fv" class="relative w-full h-[100vh] min-h-[600px] flex items-center pt-20 overflow-hidden bg-dark">
+      <!-- Background Image & Overlay -->
+      <div class="absolute inset-0 z-0">
+        <!-- Replace with appropriate manufacturing/tech image -->
+        <img src="img/img-recruit/about.jpg" alt="Manufacturing DX" class="absolute inset-0 w-full h-full object-cover opacity-60">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-dark/40"></div>
+      </div>
+
+      <div class="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 text-white fade-in-up">
+        <div class="bg-white inline-flex items-center px-4 py-2 shadow-sm mb-8 lg:mb-10">
+          <div class="w-1.5 h-4 bg-main-gradient mr-3"></div>
+          <p class="font-black tracking-[0.3em] uppercase text-xs md:text-sm text-gradient">T.RAD CONNECT</p>
+        </div>
+
+        <h1 class="font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-[0.02em] drop-shadow-2xl mb-8 font-sans">
+          <span class="block mb-2">製造業向けのDXで、</span>
+          <span>世界のものづくりに</span><br class="md:hidden">
+          <span>貢献します</span>
+        </h1>
+        
+        <p class="text-base md:text-xl font-medium tracking-widest text-gray-300 max-w-2xl leading-relaxed mb-10 border-l-2 border-main-blue pl-4">
+          データと知見を繋ぎ、生産現場の可能性を拡張する。<br>
+          ティラドグループのノウハウが息づく<br class="hidden md:block">次世代プラットフォーム。
+        </p>
+
+        <a href="#solutions" class="btn-primary w-full sm:w-auto px-8 py-4 shadow-xl text-lg">
+          ソリューションを見る <i class="fa-solid fa-caret-right ml-2"></i>
+        </a>
+      </div>
+      
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white/50">
+        <span class="text-[10px] uppercase tracking-widest mb-3 font-bold">Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- 私たちのミッション (Mission) -->
+    <section id="mission" class="py-32 bg-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="w-full lg:w-1/2 fade-in-up">
+            <span class="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase mb-3 block">Mission</span>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-black tracking-wider leading-tight mb-10">
+              <span class="scroll-text-gradient inline-block">現場を知る、</span><br>
+              <span class="scroll-text-gradient inline-block mt-2">ITプロフェッショナル。</span>
+            </h2>
+            <div class="text-lg md:text-xl text-gray-700 leading-relaxed font-medium space-y-6">
+              <p>ティラドコネクトは、熱交換器の専門メーカーである「株式会社ティラド」の100%出資のシステム子会社です。</p>
+              <p>製造業特有の課題、現場の「熱」、そして生きたデータ。単なるITベンダーではなく、製造現場のリアルを知り尽くした私たちだからこそ提供できる価値があります。</p>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 fade-in-up" style="transition-delay: 0.2s;">
+            <div class="relative w-full aspect-square md:aspect-video lg:aspect-square bg-gray-50 border border-gray-100 flex items-center justify-center p-8 group overflow-hidden">
+              <div class="absolute top-0 right-0 w-32 h-32 bg-main-gradient opacity-10 rounded-bl-full transition-transform duration-700 group-hover:scale-150"></div>
+              <div class="absolute bottom-0 left-0 w-32 h-32 bg-main-gradient opacity-10 rounded-tr-full transition-transform duration-700 group-hover:scale-150"></div>
+              
+              <div class="relative z-10 text-center">
+                <i class="fa-solid fa-network-wired text-6xl text-gray-300 group-hover:text-main-blue transition-colors duration-500 mb-6"></i>
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">T.RAD Group</h3>
+                <p class="text-sm font-bold text-gradient tracking-widest uppercase">100% Subsidiary</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ティラドコネクトストーリー (Story) -->
+    <section id="story" class="py-32 bg-gray-50 relative border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="text-center mb-24 fade-in-up">
+          <span class="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase mb-3 block">Our Story</span>
+          <h2 class="text-3xl md:text-5xl font-black tracking-wider leading-tight">
+            <span class="scroll-text-gradient inline-block">ティラドコネクトストーリー</span>
+          </h2>
+        </div>
+
+        <div class="relative max-w-5xl mx-auto">
+          <!-- Center Vertical Line -->
+          <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200 transform -translate-x-1/2"></div>
+          
+          <div class="space-y-20">
+            <!-- Step 1 -->
+            <div class="relative flex flex-col md:flex-row items-center md:justify-between group fade-in-up">
+              <div class="md:w-5/12 text-center md:text-right mb-6 md:mb-0">
+                <span class="text-main-blue font-black text-5xl opacity-20 absolute top-[-20px] right-4 md:right-auto md:left-auto md:relative pointer-events-none transition-opacity group-hover:opacity-100">01</span>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 mt-2">宿泊業DXの<br class="hidden xl:block">成功体験から<br class="hidden xl:block">製造業DXへの<br class="hidden xl:block">チャレンジへ</h3>
+                <p class="text-gray-600 font-medium leading-relaxed text-sm md:text-base">
+                  当社代表の宮﨑は、宿泊業向け基幹システム『陣屋コネクト』を自社開発し、業界のDX化を推進した先駆者として知られる人物です。
+                </p>
+              </div>
+              <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white border-2 border-gray-200 items-center justify-center z-10 transition-colors group-hover:border-main-blue group-hover:shadow-[0_0_15px_rgba(11,65,155,0.3)]">
+                <div class="w-3 h-3 rounded-full bg-gray-300 group-hover:bg-main-blue transition-colors"></div>
+              </div>
+              <div class="md:w-5/12 ml-auto">
+                <div class="aspect-video bg-white border border-gray-100 shadow-sm overflow-hidden p-4 group-hover:shadow-lg transition-all duration-300 flex items-center justify-center text-gray-400">
+                  <i class="fa-solid fa-hotel text-5xl group-hover-text-gradient transition-colors"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="relative flex flex-col md:flex-row-reverse items-center md:justify-between group fade-in-up" style="transition-delay: 0.1s;">
+              <div class="md:w-5/12 text-center md:text-left mb-6 md:mb-0">
+                <span class="text-main-blue font-black text-5xl opacity-20 absolute top-[-20px] left-4 md:left-auto md:relative pointer-events-none transition-opacity group-hover:opacity-100">02</span>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 mt-2">先端技術を活用した<br class="hidden xl:block">製造業DX<br class="hidden xl:block">プラットフォームを構築</h3>
+                <p class="text-gray-600 font-medium leading-relaxed text-sm md:text-base">
+                  世界的なCRMシステム「Salesforce」を活用してシステムを構築したノウハウ、技術的なナレッジを受け継ぎ、「製造業のDXプラットフォーム」を構築しています。
+                </p>
+              </div>
+              <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white border-2 border-gray-200 items-center justify-center z-10 transition-colors group-hover:border-main-blue group-hover:shadow-[0_0_15px_rgba(11,65,155,0.3)]">
+                <div class="w-3 h-3 rounded-full bg-gray-300 group-hover:bg-main-blue transition-colors"></div>
+              </div>
+              <div class="md:w-5/12 mr-auto">
+                <div class="aspect-video bg-white border border-gray-100 shadow-sm overflow-hidden p-4 group-hover:shadow-lg transition-all duration-300 flex items-center justify-center text-gray-400">
+                  <i class="fa-brands fa-salesforce text-5xl group-hover-text-gradient transition-colors"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="relative flex flex-col md:flex-row items-center md:justify-between group fade-in-up" style="transition-delay: 0.2s;">
+              <div class="md:w-5/12 text-center md:text-right mb-6 md:mb-0">
+                <span class="text-main-red font-black text-5xl opacity-20 absolute top-[-20px] right-4 md:right-auto md:left-auto md:relative pointer-events-none transition-opacity group-hover:opacity-100">03</span>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 mt-2">サプライチェーン<br class="hidden xl:block">全体での<br class="hidden xl:block">DX活用推進</h3>
+                <p class="text-gray-600 font-medium leading-relaxed text-sm md:text-base">
+                  強みは親会社ティラドが持つネットワークです。仕入先にDXツールの導入を促し、会社間でデータ連携を進めることで、高効率な経営をサプライチェーン全体で実現します。
+                </p>
+              </div>
+              <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white border-2 border-gray-200 items-center justify-center z-10 transition-colors group-hover:border-main-red group-hover:shadow-[0_0_15px_rgba(255,1,1,0.3)]">
+                <div class="w-3 h-3 rounded-full bg-gray-300 group-hover:bg-main-red transition-colors"></div>
+              </div>
+              <div class="md:w-5/12 ml-auto">
+                <div class="aspect-video bg-white border border-gray-100 shadow-sm overflow-hidden p-4 group-hover:shadow-lg transition-all duration-300 flex items-center justify-center text-gray-400 relative">
+                  <!-- Gradient specific to last step -->
+                  <div class="absolute inset-0 bg-main-gradient opacity-0 group-hover:opacity-5 transition-opacity"></div>
+                  <i class="fa-solid fa-link text-5xl group-hover-text-gradient transition-colors"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DX推進テーマ例 (Themes) -->
+    <section id="themes" class="py-32 bg-white relative">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="text-center max-w-4xl mx-auto mb-20 fade-in-up">
+          <span class="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase mb-3 block">DX Themes</span>
+          <h2 class="text-3xl md:text-5xl font-black tracking-wider leading-tight mb-8">
+            <span class="scroll-text-gradient inline-block">DX推進テーマ例</span>
+          </h2>
+          <p class="text-gray-600 font-medium leading-relaxed">
+            ティラドグループの生産管理システムをはじめ、IoTやAIを駆使したデータマイニング、Salesforceを活用した社内・社外ワークフローの構築など、様々な業界から集まったエキスパートチームが、業務や経営を変革するための様々なテーマに取り組んでいます。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Theme 1 -->
+          <div class="group bg-white p-8 border border-gray-100 hover-card-gradient transition-all duration-300 hover:shadow-lg fade-in-up">
+            <div class="w-14 h-14 bg-gray-50 flex items-center justify-center mb-6 text-2xl text-gray-400 group-hover-text-gradient transition-colors">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover-text-gradient transition-colors">販売予測・<br>経営シミュレーション</h3>
+          </div>
+
+          <!-- Theme 2 -->
+          <div class="group bg-white p-8 border border-gray-100 hover-card-gradient transition-all duration-300 hover:shadow-lg fade-in-up" style="transition-delay: 0.1s;">
+            <div class="w-14 h-14 bg-gray-50 flex items-center justify-center mb-6 text-2xl text-gray-400 group-hover-text-gradient transition-colors">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover-text-gradient transition-colors">データレイク構築</h3>
+          </div>
+
+          <!-- Theme 3 -->
+          <div class="group bg-white p-8 border border-gray-100 hover-card-gradient transition-all duration-300 hover:shadow-lg fade-in-up" style="transition-delay: 0.2s;">
+            <div class="w-14 h-14 bg-gray-50 flex items-center justify-center mb-6 text-2xl text-gray-400 group-hover-text-gradient transition-colors">
+              <i class="fa-solid fa-project-diagram"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover-text-gradient transition-colors">ワークフロー構築</h3>
+          </div>
+
+          <!-- Theme 4 -->
+          <div class="group bg-white p-8 border border-gray-100 hover-card-gradient transition-all duration-300 hover:shadow-lg fade-in-up" style="transition-delay: 0.3s;">
+            <div class="w-14 h-14 bg-gray-50 flex items-center justify-center mb-6 text-2xl text-gray-400 group-hover-text-gradient transition-colors">
+              <i class="fa-solid fa-folder-tree"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover-text-gradient transition-colors">設計情報管理</h3>
+          </div>
+
+          <!-- Theme 5 -->
+          <div class="group bg-white p-8 border border-gray-100 hover-card-gradient transition-all duration-300 hover:shadow-lg fade-in-up" style="transition-delay: 0.4s;">
+            <div class="w-14 h-14 bg-gray-50 flex items-center justify-center mb-6 text-2xl text-gray-400 group-hover-text-gradient transition-colors">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover-text-gradient transition-colors">生産指示最適化</h3>
+          </div>
+
+          <!-- Theme 6 -->
+          <div class="group bg-white p-8 border border-gray-100 hover-card-gradient transition-all duration-300 hover:shadow-lg fade-in-up" style="transition-delay: 0.5s;">
+            <div class="w-14 h-14 bg-gray-50 flex items-center justify-center mb-6 text-2xl text-gray-400 group-hover-text-gradient transition-colors">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover-text-gradient transition-colors">生産IoTソフトウェア開発</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DXソリューション・パッケージ (Solutions) -->
+    <section id="solutions" class="py-32 relative text-white bg-dark overflow-hidden">
+      <!-- Dark Digital Background -->
+      <div class="absolute inset-0 z-0">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-main-gradient opacity-10 blur-[100px]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+        <div class="text-center max-w-4xl mx-auto mb-20 fade-in-up">
+          <span class="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase mb-3 block">Solutions</span>
+          <h2 class="text-3xl md:text-5xl font-black tracking-wider leading-tight mb-8">
+            <span class="text-transparent bg-clip-text bg-main-gradient">DXソリューション・<br class="md:hidden">パッケージ</span>
+          </h2>
+          <p class="text-gray-300 font-medium leading-relaxed">
+            ティラドグループのDX推進を通じて開発した様々なパッケージ群を<br class="hidden md:block">
+            DXプラットフォームとして国内外の製造業・サービス業などに広く提供することで、<br class="hidden md:block">
+            ものづくりの進化と持続可能な社会に貢献します。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Packages -->
+          <div class="glass-panel p-8 md:p-12 fade-in-up border-t-gradient relative group">
+            <div class="absolute inset-0 bg-main-gradient opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-center gap-4 mb-8">
+                <i class="fa-solid fa-cubes text-2xl text-gradient"></i>
+                <h3 class="text-2xl font-bold">パッケージ機能（例）</h3>
+              </div>
+              <ul class="space-y-4">
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-check text-gradient text-sm"></i>
+                  <span class="text-lg text-gray-200">各種ワークフロー</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-check text-gradient text-sm"></i>
+                  <span class="text-lg text-gray-200">課題管理</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-check text-gradient text-sm"></i>
+                  <span class="text-lg text-gray-200">品質向上活動</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-check text-gradient text-sm"></i>
+                  <span class="text-lg text-gray-200">安全衛生</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Support -->
+          <div class="glass-panel p-8 md:p-12 fade-in-up border-t-gradient relative group flex flex-col" style="transition-delay: 0.2s;">
+            <div class="absolute inset-0 bg-main-gradient opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+            <div class="relative z-10 flex-grow">
+              <div class="flex items-center gap-4 mb-8">
+                <i class="fa-solid fa-headset text-2xl text-gradient"></i>
+                <h3 class="text-2xl font-bold">運用支援メニュー</h3>
+              </div>
+              <ul class="space-y-4 mb-10">
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-check text-gradient text-sm"></i>
+                  <span class="text-lg text-gray-200">各種設定サポート・ヘルプデスク</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-check text-gradient text-sm"></i>
+                  <span class="text-lg text-gray-200">運用アドバイス</span>
+                </li>
+              </ul>
+
+              
+              <a href="#contact" class="group/btn flex items-center justify-between border border-white/20 hover:border-white/50 bg-white/5 p-4 transition-all hover:bg-white/10 mt-auto relative overflow-hidden">
+                <div class="absolute inset-0 bg-main-gradient opacity-0 group-hover/btn:opacity-20 transition-opacity"></div>
+                <span class="font-bold text-white tracking-widest relative z-10 text-sm md:text-base">ソリューションに関するお問い合わせ</span>
+                <i class="fa-solid fa-arrow-right group-hover/btn:translate-x-2 transition-transform text-white relative z-10"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- トピックス (Topics) -->
+    <section id="topics" class="py-32 bg-gray-50 relative">
+      <div class="max-w-5xl mx-auto px-4 md:px-8">
+        <div class="mb-12 border-b pb-4 border-gray-200 flex justify-between items-end fade-in-up">
+          <h2 class="text-3xl font-black scroll-text-gradient inline-block">トピックス</h2>
+          <a href="#" class="group text-sm font-bold transition-all duration-300 hover:opacity-70 flex items-center gap-1">
+            <span class="text-gradient">一覧を見る</span> 
+            <span class="transition-transform duration-300 group-hover:translate-x-1"><i class="fa-solid fa-caret-right text-gradient"></i></span>
+          </a>
+        </div>
+
+        <ul class="space-y-4 fade-in-up">
+          <li class="bg-white px-6">
+            <a href="#" class="group flex items-center justify-between py-5 hover-border-gradient border-b border-gray-100 transition-colors">
+              <div class="flex flex-col sm:flex-row gap-4 sm:items-center w-full">
+                <div class="flex items-center gap-4 w-full sm:w-auto shrink-0">
+                  <span class="text-sm text-gray-500 font-bold font-mono">2025.09.02</span>
+                  <div class="flex gap-2">
+                    <span class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-gray-600 text-[10px] font-bold transition">経営</span>
+                    <span class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-gray-600 text-[10px] font-bold transition">お知らせ</span>
+                  </div>
+                </div>
+                <p class="font-medium text-gray-800 group-hover-text-gradient transition-colors">株式会社電通総研と「T.RADコネクト」の販売代理店契約を締結</p>
+              </div>
+              <i class="fa-solid fa-caret-right text-gray-400 group-hover-text-gradient group-hover:translate-x-2 transition-all ml-4 shrink-0"></i>
+            </a>
+          </li>
+          <li class="bg-white px-6">
+            <a href="#" class="group flex items-center justify-between py-5 hover-border-gradient border-b border-gray-100 transition-colors">
+              <div class="flex flex-col sm:flex-row gap-4 sm:items-center w-full">
+                <div class="flex items-center gap-4 w-full sm:w-auto shrink-0">
+                  <span class="text-sm text-gray-500 font-bold font-mono">2024.09.01</span>
+                  <div class="flex gap-2">
+                    <span class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-gray-600 text-[10px] font-bold transition">経営</span>
+                    <span class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-gray-600 text-[10px] font-bold transition">お知らせ</span>
+                  </div>
+                </div>
+                <p class="font-medium text-gray-800 group-hover-text-gradient transition-colors">株式会社ティラドコネクトの取締役選任のお知らせ</p>
+              </div>
+              <i class="fa-solid fa-caret-right text-gray-400 group-hover-text-gradient group-hover:translate-x-2 transition-all ml-4 shrink-0"></i>
+            </a>
+          </li>
+          <li class="bg-white px-6">
+            <a href="#" class="group flex items-center justify-between py-5 hover-border-gradient border-b border-gray-100 transition-colors">
+              <div class="flex flex-col sm:flex-row gap-4 sm:items-center w-full">
+                <div class="flex items-center gap-4 w-full sm:w-auto shrink-0">
+                  <span class="text-sm text-gray-500 font-bold font-mono">2023.04.01</span>
+                  <div class="flex gap-2">
+                    <span class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-gray-600 text-[10px] font-bold transition">経営</span>
+                    <span class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-gray-600 text-[10px] font-bold transition">お知らせ</span>
+                  </div>
+                </div>
+                <p class="font-medium text-gray-800 group-hover-text-gradient transition-colors">株式会社ティラドコネクトの取締役と監査役選任のお知らせ</p>
+              </div>
+              <i class="fa-solid fa-caret-right text-gray-400 group-hover-text-gradient group-hover:translate-x-2 transition-all ml-4 shrink-0"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 採用情報 (Recruit CTA) -->
+    <section id="recruit" class="py-32 relative text-white text-center flex flex-col items-center justify-center">
+      <div class="absolute inset-0 bg-main-gradient z-0"></div>
+      <!-- Pattern Overlay -->
+      <div class="absolute inset-0 bg-[url('img/img-main/bg-pattern.png')] opacity-10 mix-blend-overlay"></div>
+      
+      <div class="relative z-10 max-w-4xl mx-auto px-4 fade-in-up">
+        <span class="text-xs font-bold tracking-[0.3em] uppercase mb-4 block opacity-80">Recruit</span>
+        <h2 class="text-4xl md:text-6xl font-black mb-8 tracking-wider">
+          熱意ある仲間を求めています
+        </h2>
+        <p class="text-lg md:text-xl font-bold leading-loose mb-12 opacity-90 max-w-2xl mx-auto">
+          製造業DXプロジェクトを推進するためのメンバーを募集いたします。<br>
+          ティラドコネクトには、今だからこそ、ここだからこそできる、<br>ダイナミックかつチャレンジングな仕事が待っています。<br><br>
+          共に世界の製造業の発展のために力を尽くしてくれる方々の応募を、<br class="hidden md:block">心からお待ちしています。
+        </p>
+        <a href="recruit.html" class="btn-secondary px-12 py-5 shadow-2xl inline-flex text-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 group">
+          <span class="btn-secondary-text font-black tracking-widest">採用情報を見る <i class="fa-solid fa-caret-right ml-2 group-hover:translate-x-1 transition-transform"></i></span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-dark text-gray-400 py-16 border-t border-gray-900">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
+        <!-- Logo -->
+        <div>
+           <a href="#" class="inline-block flex items-center gap-3">
+             <img src="img/img-main/logo.png" alt="T.RAD 株式会社ティラド" class="h-8 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition duration-300">
+             <span class="font-bold text-xs tracking-[0.2em] border-l border-gray-600 pl-3">CONNECT</span>
+           </a>
+        </div>
+        
+        <!-- Utility Links -->
+        <div class="flex flex-wrap gap-x-8 gap-y-4 text-sm font-bold">
+          <a href="index.html" class="hover:text-white transition group flex items-center gap-1">株式会社ティラド公式サイトへ <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-50 group-hover:opacity-100 transition"></i></a>
+          <a href="#" class="hover:text-white transition">ご利用に際して</a>
+          <a href="#" class="hover:text-white transition">個人情報保護について</a>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-sm font-bold opacity-50">© T.RAD CONNECT Co., Ltd.</p>
+        <div class="flex gap-4 opacity-50">
+           <!-- Social place holders if needed -->
+           <a href="#" class="hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+           <a href="#" class="hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
