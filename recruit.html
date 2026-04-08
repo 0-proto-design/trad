@@ -56,10 +56,39 @@
     <ul class="flex h-full text-[13px] xl:text-sm font-medium tracking-wider w-full justify-end">
      <!-- はじめてのティラド -->
      <li class="h-full flex items-center px-3"><a href="#intro" class="nav-link hover-text-gradient transition">はじめてのティラド</a></li>
-     <!-- 企業文化 -->
-     <li class="h-full flex items-center px-3"><a href="#environment" class="nav-link hover-text-gradient transition">企業文化</a></li>
-     <!-- 職種紹介 -->
-     <li class="h-full flex items-center px-3"><a href="#jobs" class="nav-link hover-text-gradient transition">職種紹介</a></li>
+      <!-- ティラドの仕事と人 -->
+      <li class="nav-item h-full flex items-center px-3 cursor-pointer group">
+        <span class="nav-link flex items-center gap-1">ティラドの仕事と人 <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+        <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-800 shadow-xl border-t border-gray-100 p-8 cursor-default">
+          <div class="max-w-7xl mx-auto">
+            <div class="mb-6 border-b border-gray-200 pb-3">
+              <span class="text-xl font-black text-gradient tracking-widest">ティラドの仕事と人</span>
+            </div>
+            <div class="flex flex-wrap gap-x-12 gap-y-4">
+              <a href="#jobs" class="hover-text-gradient transition flex items-center gap-2 w-auto">職種紹介 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+              <a href="#interviews" class="hover-text-gradient transition flex items-center gap-2 w-auto">社員インタビュー <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+              <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">動画で見るティラド <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+              <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">採用パンフレット <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- はたらく環境 -->
+      <li class="nav-item h-full flex items-center px-3 cursor-pointer group">
+        <span class="nav-link flex items-center gap-1">はたらく環境 <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+        <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-800 shadow-xl border-t border-gray-100 p-8 cursor-default">
+          <div class="max-w-7xl mx-auto">
+            <div class="mb-6 border-b border-gray-200 pb-3">
+              <span class="text-xl font-black text-gradient tracking-widest">はたらく環境</span>
+            </div>
+            <div class="flex flex-wrap gap-x-12 gap-y-4">
+              <a href="#env1" class="hover-text-gradient transition flex items-center gap-2 w-auto">待遇・福利厚生 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+              <a href="#env2" class="hover-text-gradient transition flex items-center gap-2 w-auto">人材育成 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+              <a href="#env3" class="hover-text-gradient transition flex items-center gap-2 w-auto">企業文化 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+            </div>
+          </div>
+        </div>
+      </li>
      <!-- 働く環境 -->
      <li class="h-full flex items-center px-3"><a href="#new-grad" class="nav-link hover-text-gradient transition">新卒採用</a></li>
      <li class="h-full flex items-center px-3"><a href="#career-grad" class="nav-link hover-text-gradient transition">キャリア採用</a></li>
@@ -97,8 +126,35 @@
    <div class="px-6 py-8 pb-32">
    <div class="flex flex-col gap-6">
      <a href="#intro" class="mobile-close-link text-lg font-bold text-gray-800 tracking-wider hover-text-gradient transition-colors border-b border-gray-100 pb-4 block">はじめてのティラド</a>
-     <a href="#environment" class="mobile-close-link text-lg font-bold text-gray-800 tracking-wider hover-text-gradient transition-colors border-b border-gray-100 pb-4 block">企業文化</a>
-     <a href="#jobs" class="mobile-close-link text-lg font-bold text-gray-800 tracking-wider hover-text-gradient transition-colors border-b border-gray-100 pb-4 block">職種紹介</a>
+      <!-- ティラドの仕事と人 -->
+      <div class="border-b border-gray-100 pb-4">
+        <button class="mobile-accordion-btn group w-full flex justify-between items-center text-lg font-bold text-gray-800 tracking-wider">
+          <span class="group-hover-text-gradient transition-colors">ティラドの仕事と人</span>
+          <div class="w-8 h-8 bg-gray-50 flex items-center justify-center transition-transform duration-300 icon-wrapper">
+            <i class="fa-solid fa-plus text-sm text-gradient"></i>
+          </div>
+        </button>
+        <div class="mobile-accordion-content hidden mt-4 space-y-2 pl-4 border-l-2 border-main-blue/20">
+          <a href="#jobs" class="mobile-close-link flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>職種紹介</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+          <a href="#interviews" class="mobile-close-link flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>社員インタビュー</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+          <a href="#" class="mobile-close-link flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>動画で見るティラド</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+          <a href="#" class="mobile-close-link flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>採用パンフレット</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+        </div>
+      </div>
+      <!-- はたらく環境 -->
+      <div class="border-b border-gray-100 pb-4">
+        <button class="mobile-accordion-btn group w-full flex justify-between items-center text-lg font-bold text-gray-800 tracking-wider">
+          <span class="group-hover-text-gradient transition-colors">はたらく環境</span>
+          <div class="w-8 h-8 bg-gray-50 flex items-center justify-center transition-transform duration-300 icon-wrapper">
+            <i class="fa-solid fa-plus text-sm text-gradient"></i>
+          </div>
+        </button>
+        <div class="mobile-accordion-content hidden mt-4 space-y-2 pl-4 border-l-2 border-main-blue/20">
+          <a href="#env1" class="mobile-close-link flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>待遇・福利厚生</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+          <a href="#env2" class="mobile-close-link flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>人材育成</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+          <a href="#env3" class="mobile-close-link flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>企業文化</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+        </div>
+      </div>
      <a href="#new-grad" class="mobile-close-link text-lg font-bold text-gray-800 tracking-wider hover-text-gradient transition-colors border-b border-gray-100 pb-4 block">新卒採用</a>
      <a href="#career-grad" class="mobile-close-link text-lg font-bold text-gray-800 tracking-wider hover-text-gradient transition-colors border-b border-gray-100 pb-4 block">キャリア採用</a>
       <div class="pt-6 flex flex-col gap-4">
