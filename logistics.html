@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>ティラドロジスティクス | 株式会社ティラド（T.RAD Co., Ltd.）</title>
+ 
+ <!-- Google Fonts: Noto Sans JP -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+ 
+ <!-- FontAwesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+ <!-- Tailwind CSS -->
+ <script src="https://cdn.tailwindcss.com"></script>
+ <script>
+  tailwind.config = {
+  theme: {
+   extend: {
+    fontFamily: {
+    sans: ['Noto Sans JP', 'sans-serif'],
+    },
+    colors: {
+    main: {
+     red: '#FF0101',
+     blue: '#0B419B',
+    },
+    dark: '#0a0f1c',
+    digital: '#111827',
+    },
+    backgroundImage: {
+    'main-gradient': 'linear-gradient(135deg, rgba(235, 46, 61, 1) 0%, rgba(46, 121, 187, 1) 100%)',
+    }
+   }
+  }
+  }
+ </script>
+
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased selection:bg-main-blue selection:text-white">
+ 
+
+ <!-- Header -->
+ <header id="header" class="fixed top-0 left-0 w-full z-50 text-white border-b border-white/10">
+  <div class="w-full px-4 lg:px-8 h-20 flex items-center justify-between">
+  <!-- Logo -->
+  <a href="index.html" class="flex-shrink-0 z-50 relative flex items-center gap-3">
+   <img src="img/img-main/logo.png" alt="T.RAD 株式会社ティラド" class="header-logo h-8 w-auto">
+   <span class="font-bold text-xs md:text-sm tracking-[0.2em] border-l-2 pl-3 border-current mt-0.5 text-white [.scrolled_&]:text-gray-400 transition-colors duration-300 uppercase">T.RAD LOGISTICS</span>
+  </a>
+
+  <!-- Navigation -->
+  <nav class="hidden xl:flex h-full items-center">
+   <ul class="flex h-full text-[13px] xl:text-sm font-medium tracking-wider w-full justify-end">
+
+    
+    <!-- 事業内容 -->
+    <li class="nav-item h-full flex items-center px-3 cursor-pointer group">
+    <span class="nav-link flex items-center gap-1">事業内容 <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+    <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-800 shadow-xl border-t border-gray-100 p-8 cursor-default">
+     <div class="max-w-7xl mx-auto">
+      <div class="mb-6 border-b border-gray-200 pb-3">
+      <span class="text-xl font-black text-gradient tracking-widest">事業内容</span>
+      </div>
+      <div class="flex flex-wrap gap-x-12 gap-y-4">
+      <a href="#services" class="hover-text-gradient transition flex items-center gap-2 w-auto">運送業 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#services" class="hover-text-gradient transition flex items-center gap-2 w-auto">配送センター <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#services" class="hover-text-gradient transition flex items-center gap-2 w-auto">派遣業 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      </div>
+     </div>
+    </div>
+    </li>
+
+    <!-- 会社情報 -->
+    <li class="nav-item h-full flex items-center px-3 cursor-pointer group">
+    <span class="nav-link flex items-center gap-1">会社情報 <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+    <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-800 shadow-xl border-t border-gray-100 p-8 cursor-default">
+     <div class="max-w-7xl mx-auto">
+      <div class="mb-6 border-b border-gray-200 pb-3">
+      <span class="text-xl font-black text-gradient tracking-widest">会社情報</span>
+      </div>
+      <div class="flex flex-wrap gap-x-12 gap-y-4">
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">経営理念 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">会社概要 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">沿革 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">拠点一覧 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      </div>
+     </div>
+    </div>
+    </li>
+
+    <!-- 安全と環境への取り組み -->
+    <li class="nav-item h-full flex items-center px-3 cursor-pointer group">
+    <span class="nav-link flex items-center gap-1">安全と環境への取り組み <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+    <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-800 shadow-xl border-t border-gray-100 p-8 cursor-default">
+     <div class="max-w-7xl mx-auto">
+      <div class="mb-6 border-b border-gray-200 pb-3">
+      <span class="text-xl font-black text-gradient tracking-widest">安全と環境への取り組み</span>
+      </div>
+      <div class="flex flex-wrap gap-x-12 gap-y-4">
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">安全活動 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">環境改善活動 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">運輸安全マネジメント <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">認証・表彰 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">研修会・社内教育 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      </div>
+     </div>
+    </div>
+    </li>
+
+    <!-- ご協力会社様へのお願い -->
+    <li class="h-full flex items-center px-3"><a href="#" class="nav-link hover-text-gradient transition">ご協力会社様へのお願い</a></li>
+
+    <!-- 採用情報 -->
+    <li class="nav-item h-full flex items-center px-3 cursor-pointer group">
+    <span class="nav-link flex items-center gap-1">採用情報 <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+    <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-800 shadow-xl border-t border-gray-100 p-8 cursor-default">
+     <div class="max-w-7xl mx-auto">
+      <div class="mb-6 border-b border-gray-200 pb-3">
+      <span class="text-xl font-black text-gradient tracking-widest">採用情報</span>
+      </div>
+      <div class="flex flex-wrap gap-x-12 gap-y-4">
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">当社について <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">人材・社風 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">仕事案内 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">福利厚生・教育制度 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">募集要項一覧 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      </div>
+     </div>
+    </div>
+    </li>
+
+    <!-- CTA ボタン (メガメニューではなく直接配置) -->
+    <li class="h-full flex items-center pl-6 gap-3">
+     <a href="#" class="btn-primary px-5 h-[44px] text-xs font-black text-white flex items-center justify-center whitespace-nowrap shadow-md">お問い合わせ <i class="fa-solid fa-caret-right ml-2"></i></a>
+     <a href="#" class="btn-primary px-5 h-[44px] text-xs font-black text-white flex items-center justify-center whitespace-nowrap shadow-md">採用お問い合わせ <i class="fa-solid fa-caret-right ml-2"></i></a>
+    </li>
+
+   </ul>
+  </nav>
+  
+  <!-- Mobile Menu Toggle Button -->
+  <button id="mobile-menu-btn" class="xl:hidden text-white nav-link transition-colors focus:outline-none">
+   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.8" stroke="currentColor" class="w-8 h-8">
+   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+   </svg>
+  </button>
+  </div>
+ </header>
+
+ <!-- Mobile Menu Overlay -->
+ <div id="mobile-menu" class="fixed inset-0 z-[100] bg-white text-gray-800 transition-transform duration-500 ease-in-out transform translate-x-full overflow-y-auto hidden-scroll">
+  <div class="sticky top-0 bg-white/95 backdrop-blur-sm z-10 px-6 h-20 flex justify-between items-center border-b border-gray-100">
+  <a href="index.html" class="flex items-center gap-3">
+   <img src="img/img-main/logo.png" alt="T.RAD 株式会社ティラド" class="h-8 w-auto object-contain">
+   <span class="font-bold text-xs tracking-[0.2em] text-gray-400 border-l-2 pl-3 border-gray-300 mt-0.5 uppercase">T.RAD LOGISTICS</span>
+  </a>
+  <button id="mobile-close-btn" class="text-gray-500 hover:text-main-red transition-colors w-10 h-10 flex items-center justify-center  hover:bg-gray-100 focus:outline-none">
+   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.8" stroke="currentColor" class="w-8 h-8">
+   <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+   </svg>
+  </button>
+  </div>
+  
+  <div class="px-6 py-8 pb-32">
+  <div class="space-y-6">
+
+   
+   <!-- 事業内容 (Mobile) -->
+   <div class="border-b border-gray-100 pb-4">
+    <button class="mobile-accordion-btn group w-full flex justify-between items-center text-lg font-bold text-gray-800 tracking-wider">
+    <span class="group-hover-text-gradient transition-colors">事業内容</span>
+    <div class="w-8 h-8 bg-gray-50 flex items-center justify-center transition-transform duration-300 icon-wrapper">
+     <i class="fa-solid fa-plus text-sm text-gradient"></i>
+    </div>
+    </button>
+    <div class="mobile-accordion-content hidden mt-4 space-y-2 pl-4 border-l-2 border-main-blue/20">
+    <a href="#services" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>運送業</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#services" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>配送センター</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#services" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>派遣業</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    </div>
+   </div>
+
+   <!-- 会社情報 (Mobile) -->
+   <div class="border-b border-gray-100 pb-4">
+    <button class="mobile-accordion-btn group w-full flex justify-between items-center text-lg font-bold text-gray-800 tracking-wider">
+    <span class="group-hover-text-gradient transition-colors">会社情報</span>
+    <div class="w-8 h-8 bg-gray-50 flex items-center justify-center transition-transform duration-300 icon-wrapper">
+     <i class="fa-solid fa-plus text-sm text-gradient"></i>
+    </div>
+    </button>
+    <div class="mobile-accordion-content hidden mt-4 space-y-2 pl-4 border-l-2 border-main-blue/20">
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>経営理念</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>会社概要</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>沿革</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>拠点一覧</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    </div>
+   </div>
+
+   <!-- 安全と環境への取り組み (Mobile) -->
+   <div class="border-b border-gray-100 pb-4">
+    <button class="mobile-accordion-btn group w-full flex justify-between items-center text-lg font-bold text-gray-800 tracking-wider">
+    <span class="group-hover-text-gradient transition-colors">安全と環境への取り組み</span>
+    <div class="w-8 h-8 bg-gray-50 flex items-center justify-center transition-transform duration-300 icon-wrapper">
+     <i class="fa-solid fa-plus text-sm text-gradient"></i>
+    </div>
+    </button>
+    <div class="mobile-accordion-content hidden mt-4 space-y-2 pl-4 border-l-2 border-main-blue/20">
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>安全活動</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>環境改善活動</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>運輸安全マネジメント</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>認証・表彰</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>研修会・社内教育</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    </div>
+   </div>
+
+   <a href="#" class="block text-lg font-bold text-gray-800 tracking-wider hover-text-gradient transition-colors border-b border-gray-100 pb-4">ご協力会社様へのお願い</a>
+
+   <!-- 採用情報 (Mobile) -->
+   <div class="border-b border-gray-100 pb-4">
+    <button class="mobile-accordion-btn group w-full flex justify-between items-center text-lg font-bold text-gray-800 tracking-wider">
+    <span class="group-hover-text-gradient transition-colors">採用情報</span>
+    <div class="w-8 h-8 bg-gray-50 flex items-center justify-center transition-transform duration-300 icon-wrapper">
+     <i class="fa-solid fa-plus text-sm text-gradient"></i>
+    </div>
+    </button>
+    <div class="mobile-accordion-content hidden mt-4 space-y-2 pl-4 border-l-2 border-main-blue/20">
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>当社について</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>人材・社風</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>仕事案内</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>福利厚生・教育制度</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>募集要項一覧</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    </div>
+   </div>
+
+   <!-- お問い合わせ (Mobile) -->
+   <div class="border-b border-gray-100 pb-4">
+    <button class="mobile-accordion-btn group w-full flex justify-between items-center text-lg font-bold text-gray-800 tracking-wider">
+    <span class="group-hover-text-gradient transition-colors">お問い合わせ</span>
+    <div class="w-8 h-8 bg-gray-50 flex items-center justify-center transition-transform duration-300 icon-wrapper">
+     <i class="fa-solid fa-plus text-sm text-gradient"></i>
+    </div>
+    </button>
+    <div class="mobile-accordion-content hidden mt-4 space-y-2 pl-4 border-l-2 border-main-blue/20">
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>お問い合わせ</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>採用お問い合わせ</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    </div>
+   </div>
+
+  </div>
+  </div>
+ </div>
+
+ <main>
+  <!-- #01 First View (FV) -->
+  <section id="fv" class="relative h-screen min-h-[700px] w-full flex flex-col md:flex-row overflow-hidden z-0 bg-white">
+   
+    <!-- Left Side (70%) -->
+    <div class="relative w-full md:w-[70%] h-[75%] md:h-full flex-shrink-0 border-r-0 md:border-r-[2px] border-white box-border">
+     <!-- Image -->
+     <img src="img/img-logistics/fv-main.png" class="absolute inset-0 w-full h-full object-cover" alt="株式会社ティラド 物流イメージ">
+     <!-- Blue Mask (青系マスク) -->
+     <div class="absolute inset-0 bg-main-blue/60"></div>
+     
+     <!-- Text Overlay -->
+     <div class="absolute top-[25%] left-[5%] md:left-[8%] xl:left-[10%] -translate-y-1/2 z-20 flex flex-col items-start fade-in-up">
+       <!-- T.RAD LOGISTICS Tag -->
+       <div class="bg-white inline-flex items-center px-4 py-2 shadow-sm mb-4 lg:mb-6">
+         <div class="w-1.5 h-4 bg-main-gradient mr-3"></div>
+         <p class="font-black tracking-[0.3em] uppercase text-xs md:text-sm text-gradient">T.RAD LOGISTICS</p>
+       </div>
+
+       <div class="bg-white p-3 md:p-4 shadow-sm mb-4">
+        <span class="text-lg md:text-2xl lg:text-3xl font-black text-gray-900 tracking-wider">ティラドロジスティクスは<span class="inline-block -mr-[0.4em]">、</span></span>
+       </div>
+       <div class="bg-white p-3 md:p-5 shadow-md mb-8 md:mb-12">
+        <span class="text-2xl md:text-4xl lg:text-6xl font-black text-gradient tracking-wider">皆様に夢と幸せを届けます！</span>
+       </div>
+       
+       <!-- Inquiry Button -->
+       <a href="#contact-cta" class="btn-primary px-8 md:px-12 py-4 md:py-5 text-sm md:text-base font-bold shadow-2xl flex items-center justify-center group">
+        お問い合わせはこちら <i class="fa-solid fa-caret-right ml-3 transition-transform group-hover:translate-x-1"></i>
+       </a>
+     </div>
+    </div>
+
+    <!-- Right Side (30%) Slider (上から下に流れる画像スライダー) -->
+    <div class="relative w-full md:w-[30%] h-[25%] md:h-full flex-shrink-0 bg-white overflow-hidden border-t-[2px] md:border-t-0 border-white">
+    <div class="flex gap-[2px] px-0 max-md:w-max max-md:h-full max-md:flex-row md:flex-col md:w-full md:h-max max-md:[animation:scroll-ltr_40s_linear_infinite] md:[animation:scroll-vertical_40s_linear_infinite]">
+      <!-- Image Set 1 (7枚) -->
+      <img src="img/img-logistics/fv-slider-1.png" class="max-md:h-full max-md:w-auto max-md:max-w-none md:w-full aspect-[4/3] object-cover shadow-sm bg-gray-100" alt="物流イメージ1">
+      <img src="img/img-logistics/fv-slider-2.jpg" class="max-md:h-full max-md:w-auto max-md:max-w-none md:w-full aspect-[4/3] object-cover shadow-sm bg-gray-100" alt="物流イメージ2">
+      <img src="img/img-logistics/fv-slider-3.jpg" class="max-md:h-full max-md:w-auto max-md:max-w-none md:w-full aspect-[4/3] object-cover shadow-sm bg-gray-100" alt="物流イメージ3">
+      <img src="img/img-logistics/fv-slider-4.jpg" class="max-md:h-full max-md:w-auto max-md:max-w-none md:w-full aspect-[4/3] object-cover shadow-sm bg-gray-100" alt="物流イメージ4">
+      <img src="img/img-logistics/fv-slider-5.jpg" class="max-md:h-full max-md:w-auto max-md:max-w-none md:w-full aspect-[4/3] object-cover shadow-sm bg-gray-100" alt="物流イメージ5">
+      <img src="img/img-logistics/fv-slider-6.jpg" class="max-md:h-full max-md:w-auto max-md:max-w-none md:w-full aspect-[4/3] object-cover shadow-sm bg-gray-100" alt="物流イメージ6">
+      <img src="img/img-logistics/fv-slider-7.jpg" class="max-md:h-full max-md:w-auto max-md:max-w-none md:w-full aspect-[4/3] object-cover shadow-sm bg-gray-100" alt="物流イメージ7">
+      
+      <!-- Image Set 2 (for infinite loop) -->
+      <img src="img/img-logistics/fv-slider-1.png" class="max-md:h-full max-md:w-auto max-md:max-w-none md:w-full aspect-[4/3] object-cover shadow-sm bg-gray-100" alt="物流イメージ1">
+      <img src="img/img-logistics/fv-slider-2.jpg" class="max-md:h-full max-md:w-auto max-md:max-w-none md:w-full aspect-[4/3] object-cover shadow-sm bg-gray-100" alt="物流イメージ2">
+      <img src="img/img-logistics/fv-slider-3.jpg" class="max-md:h-full max-md:w-auto max-md:max-w-none md:w-full aspect-[4/3] object-cover shadow-sm bg-gray-100" alt="物流イメージ3">
+      <img src="img/img-logistics/fv-slider-4.jpg" class="max-md:h-full max-md:w-auto max-md:max-w-none md:w-full aspect-[4/3] object-cover shadow-sm bg-gray-100" alt="物流イメージ4">
+      <img src="img/img-logistics/fv-slider-5.jpg" class="max-md:h-full max-md:w-auto max-md:max-w-none md:w-full aspect-[4/3] object-cover shadow-sm bg-gray-100" alt="物流イメージ5">
+      <img src="img/img-logistics/fv-slider-6.jpg" class="max-md:h-full max-md:w-auto max-md:max-w-none md:w-full aspect-[4/3] object-cover shadow-sm bg-gray-100" alt="物流イメージ6">
+      <img src="img/img-logistics/fv-slider-7.jpg" class="max-md:h-full max-md:w-auto max-md:max-w-none md:w-full aspect-[4/3] object-cover shadow-sm bg-gray-100" alt="物流イメージ7">
+    </div>
+   </div>
+
+   <!-- Bottom Marquee (FV内下側に配置) -->
+   <div class="absolute max-md:bottom-[25%] md:bottom-[2%] left-0 w-full z-30 overflow-hidden pointer-events-none max-md:pb-8">
+    <div class="marquee-text-container text-white opacity-60 items-center">
+      <div class="text-[5rem] sm:text-[7rem] md:text-[10rem] lg:text-[12rem] tracking-tighter leading-none whitespace-nowrap font-black mix-blend-normal uppercase text-white">
+        WE DELIVER DREAMS AND HAPPINESS TO YOU! <span class="pr-16 md:pr-32 lg:pr-48"></span>
+      </div>
+      <div class="text-[5rem] sm:text-[7rem] md:text-[10rem] lg:text-[12rem] tracking-tighter leading-none whitespace-nowrap font-black mix-blend-normal uppercase text-white">
+        WE DELIVER DREAMS AND HAPPINESS TO YOU! <span class="pr-16 md:pr-32 lg:pr-48"></span>
+      </div>
+    </div>
+   </div>
+  </section>
+
+
+  <!-- #02 Business introduction -->
+  <section id="intro" class="py-24 md:py-32 relative z-10 bg-white">
+   <div class="max-w-7xl mx-auto px-4 md:px-8">
+    <div class="text-center mb-16 md:mb-20 fade-in-up">
+
+     <h2 class="text-4xl md:text-5xl font-black text-[#4B5563] leading-tight mb-8">
+      <span class="scroll-text-gradient inline-block">事業案内</span>
+     </h2>
+     <div class="max-w-4xl mx-auto text-gray-600 leading-relaxed font-medium text-lg md:text-xl max-md:text-left">
+      <p>「熱交換器技術」のパイオニア「株式会社ティラド」の運輸部門として信頼を維持し、誇りと使命を担い、東は北関東、西は中国・山陰地方まで幅広い地域で業務展開しています。</p>
+     </div>
+    </div>
+    
+    <div id="services" class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10">
+     <!-- 運送業 -->
+     <div class="group relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 h-[450px] md:h-[500px] xl:h-[600px] fade-in-up cursor-pointer">
+      <img src="img/img-logistics/business-1.jpg" alt="運送業" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent transition-all duration-700 opacity-90 group-hover:opacity-100"></div>
+      
+      <div class="absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col justify-end h-full">
+       <div class="transition-transform duration-500 ease-out lg:translate-y-3 group-hover:translate-y-0">
+        <h3 class="text-3xl xl:text-4xl font-black mb-6 text-white tracking-wider flex items-center">
+         <i class="fa-solid fa-truck-fast mr-4 text-white"></i>
+         運送業
+        </h3>
+        <div class="overflow-hidden">
+         <div class="transition-opacity duration-700">
+          <div class="mt-6 flex items-center text-white/90 font-bold text-sm tracking-widest group/btn cursor-pointer">
+           詳細を見る 
+           <div class="ml-4 w-10 h-10 border border-white/50 flex items-center justify-center transition-all bg-white/10 backdrop-blur-sm group-hover:bg-transparent group-hover:border-transparent group-hover:scale-110 duration-300 relative overflow-hidden text-white">
+            <div class="absolute inset-0 bg-main-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
+            <i class="fa-solid fa-caret-right text-sm relative z-10 transition-colors"></i>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+
+     <!-- 配送センター -->
+     <div class="group relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 h-[450px] md:h-[500px] xl:h-[600px] fade-in-up cursor-pointer" style="transition-delay: 0.1s;">
+      <img src="img/img-logistics/business-2.jpg" alt="配送センター" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent transition-all duration-700 opacity-90 group-hover:opacity-100"></div>
+      
+      <div class="absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col justify-end h-full">
+       <div class="transition-transform duration-500 ease-out lg:translate-y-3 group-hover:translate-y-0">
+        <h3 class="text-3xl xl:text-4xl font-black mb-6 text-white tracking-wider flex items-center">
+         <i class="fa-solid fa-warehouse mr-4 text-white"></i>
+         配送センター
+        </h3>
+        <div class="overflow-hidden">
+         <div class="transition-opacity duration-700">
+          <div class="mt-6 flex items-center text-white/90 font-bold text-sm tracking-widest group/btn cursor-pointer">
+           詳細を見る 
+           <div class="ml-4 w-10 h-10 border border-white/50 flex items-center justify-center transition-all bg-white/10 backdrop-blur-sm group-hover:bg-transparent group-hover:border-transparent group-hover:scale-110 duration-300 relative overflow-hidden text-white">
+            <div class="absolute inset-0 bg-main-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
+            <i class="fa-solid fa-caret-right text-sm relative z-10 transition-colors"></i>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+
+     <!-- 派遣業 -->
+     <div class="group relative overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 h-[450px] md:h-[500px] xl:h-[600px] fade-in-up cursor-pointer" style="transition-delay: 0.2s;">
+      <img src="img/img-logistics/business-3.jpg" alt="派遣業" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent transition-all duration-700 opacity-90 group-hover:opacity-100"></div>
+      
+      <div class="absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col justify-end h-full">
+       <div class="transition-transform duration-500 ease-out lg:translate-y-3 group-hover:translate-y-0">
+        <h3 class="text-3xl xl:text-4xl font-black mb-6 text-white tracking-wider flex items-center">
+         <i class="fa-solid fa-people-carry-box mr-4 text-white"></i>
+         派遣業
+        </h3>
+        <div class="overflow-hidden">
+         <div class="transition-opacity duration-700">
+          <div class="mt-6 flex items-center text-white/90 font-bold text-sm tracking-widest group/btn cursor-pointer">
+           詳細を見る 
+           <div class="ml-4 w-10 h-10 border border-white/50 flex items-center justify-center transition-all bg-white/10 backdrop-blur-sm group-hover:bg-transparent group-hover:border-transparent group-hover:scale-110 duration-300 relative overflow-hidden text-white">
+            <div class="absolute inset-0 bg-main-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
+            <i class="fa-solid fa-caret-right text-sm relative z-10 transition-colors"></i>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <!-- #03 News -->
+  <section id="news" class="py-24 bg-[#f8f9fa]">
+   <div class="max-w-7xl mx-auto px-4 md:px-8">
+    <div class="bg-white p-8 md:p-12 shadow-lg border-2 border-gray-100 fade-in-up">
+     <div class="mb-8 border-b pb-4 border-gray-200">
+      <h2 class="text-3xl font-black scroll-text-gradient inline-block">最新情報</h2>
+     </div>
+     
+     <ul class="space-y-4">
+      <li>
+       <a href="#" class="group flex items-center justify-between py-3 hover-border-gradient border-b border-gray-100 transition-colors">
+       <div class="flex flex-col sm:flex-row gap-4 sm:items-center">
+        <div class="flex items-center gap-4 w-full sm:w-auto shrink-0">
+         <span class="text-sm text-gray-500 font-bold font-mono">2026.01.01</span>
+         <span class="label-gradient px-3 py-1"><span class="label-gradient-text text-[10px]">お知らせ / News</span></span>
+        </div>
+        <p class="font-medium text-gray-800 group-hover-text-gradient transition-colors">代表取締役交代のお知らせ</p>
+       </div>
+       <i class="fa-solid fa-caret-right text-gray-400 group-hover-text-gradient group-hover:translate-x-2 transition-all ml-4 shrink-0"></i>
+       </a>
+      </li>
+     </ul>
+
+     <div class="mt-8 flex justify-end">
+      <a href="#" class="group text-sm font-bold transition-all duration-300 hover:opacity-70 flex items-center gap-1">
+       <span class="text-gradient">一覧を見る</span> 
+       <span class="transition-transform duration-300 group-hover:translate-x-1"><i class="fa-solid fa-caret-right text-gradient"></i></span>
+      </a>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <!-- #04 Contact CTA -->
+  <section id="contact-cta" class="py-24 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1532131238719-21669ef02d84?auto=format&fit=crop&q=80&w=2000');">
+   <div class="max-w-4xl mx-auto px-4 relative z-10 text-center text-white fade-in-up">
+    <h2 class="text-4xl md:text-5xl font-black leading-tight mb-4 md:mb-8">
+     <span class="scroll-text-gradient inline-block">お問い合わせ</span>
+    </h2>
+    <p class="text-lg mb-6 md:mb-10 text-white/80">事業内容や採用に関するご質問、ご相談など、お気軽にお問い合わせください。</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-6">
+     <a href="#" class="btn-primary px-12 py-4 shadow-2xl">お問い合わせ <i class="fa-solid fa-caret-right ml-2"></i></a>
+     <a href="#" class="btn-primary px-12 py-4 shadow-2xl">採用お問い合わせ <i class="fa-solid fa-caret-right ml-2"></i></a>
+    </div>
+   </div>
+  </section>
+
+ </main>
+
+ <!-- Footer -->
+ <footer class="bg-dark text-gray-400 py-16 border-t border-gray-900">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+   <!-- Logo & Info -->
+   <div class="lg:col-span-1">
+    <div class="mb-6">
+    <a href="index.html" class="inline-flex flex-col gap-2">
+     <img src="img/img-main/logo.png" alt="T.RAD 株式会社ティラド" class="h-8 w-auto object-contain">
+     <div class="font-bold text-xs tracking-[0.2em] text-gray-300 uppercase mt-1">T.RAD LOGISTICS</div>
+    </a>
+    </div>
+    <ul class="text-xs space-y-2 text-gray-500 font-bold">
+    </ul>
+   </div>
+
+   <!-- 事業内容 -->
+   <div class="flex flex-col gap-4 text-sm">
+    <div class="mb-4">
+    <a href="#services" class="group font-bold mb-2 block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">事業内容</span>
+    </a>
+    <ul class="space-y-2 pl-2 border-l border-gray-800">
+     <li><a href="#services" class="hover:text-white transition">運送業</a></li>
+     <li><a href="#services" class="hover:text-white transition">配送センター</a></li>
+     <li><a href="#services" class="hover:text-white transition">派遣業</a></li>
+    </ul>
+    </div>
+   </div>
+
+   <!-- 会社・取り組み -->
+   <div class="flex flex-col gap-4 text-sm">
+    <div class="mb-4">
+    <a href="#" class="group font-bold mb-2 block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">会社情報</span>
+    </a>
+    <ul class="space-y-2 pl-2 border-l border-gray-800 mb-6">
+     <li><a href="#" class="hover:text-white transition">経営理念</a></li>
+     <li><a href="#" class="hover:text-white transition">会社概要</a></li>
+     <li><a href="#" class="hover:text-white transition">沿革</a></li>
+     <li><a href="#" class="hover:text-white transition">拠点一覧</a></li>
+    </ul>
+    <a href="#" class="group font-bold mb-2 block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">安全・環境</span>
+    </a>
+    <ul class="space-y-2 pl-2 border-l border-gray-800">
+     <li><a href="#" class="hover:text-white transition">安全活動</a></li>
+     <li><a href="#" class="hover:text-white transition">環境改善活動</a></li>
+    </ul>
+    </div>
+   </div>
+
+   <!-- 採用・お問い合わせ -->
+   <div class="flex flex-col gap-4 text-sm">
+    <div class="mb-4">
+    <a href="#" class="group font-bold mb-2 block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">採用情報</span>
+    </a>
+    <ul class="space-y-2 pl-2 border-l border-gray-800 mb-6">
+     <li><a href="#" class="hover:text-white transition">当社について</a></li>
+     <li><a href="#" class="hover:text-white transition">人材・社風</a></li>
+     <li><a href="#" class="hover:text-white transition">募集要項一覧</a></li>
+    </ul>
+    <a href="#" class="group font-bold mb-2 block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">お問い合わせ</span>
+    </a>
+    <ul class="space-y-2 pl-2 border-l border-gray-800">
+     <li><a href="#" class="hover:text-white transition">お問い合わせ</a></li>
+     <li><a href="#" class="hover:text-white transition">採用お問い合わせ</a></li>
+    </ul>
+    </div>
+   </div>
+  </div>
+
+  <div class="flex flex-col md:flex-row justify-between items-center border-t border-gray-900 pt-8 text-xs">
+   <div class="flex gap-6 mb-4 md:mb-0">
+    <a href="#" class="hover:text-white transition">ご利用に際して</a>
+    <a href="#" class="hover:text-white transition">個人情報保護について</a>
+   </div>
+   <p>Copyright&copy; T.RAD Co., Ltd. All rights reserved.</p>
+  </div>
+  </div>
+ </footer>
+
+ <!-- Scripts -->
+ <script src="js/main.js"></script>
+</body>
+</html>

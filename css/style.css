@@ -317,6 +317,29 @@ body {
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
+/* Vertical Infinite Carousel */
+.carousel-track-vertical {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    animation: scroll-vertical 40s linear infinite;
+}
+@keyframes scroll-vertical {
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(0); }
+}
+
+/* Marquee Text (Right to Left) */
+.marquee-text-container {
+    display: flex;
+    width: max-content;
+    animation: scroll-marquee 25s linear infinite;
+}
+@keyframes scroll-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
 
 
 /* Utility */
