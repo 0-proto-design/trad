@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ティラドコネクト採用情報</title>
+  
+  <!-- Google Fonts: Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Noto Sans JP', 'sans-serif'],
+          },
+          colors: {
+            main: {
+              red: '#FF0101',
+              blue: '#0B419B',
+            },
+            dark: '#0a0f1c',
+            digital: '#111827',
+          },
+          backgroundImage: {
+            'main-gradient': 'linear-gradient(135deg, rgba(235, 46, 61, 1) 0%, rgba(46, 121, 187, 1) 100%)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased selection:bg-main-blue selection:text-white bg-gray-50">
+
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 w-full z-50 text-white border-b border-white/10">
+    <div class="w-full px-4 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex-shrink-0 z-50 relative flex items-center gap-4">
+        <img src="img/img-connect/logo.png" alt="T.RAD CONNECT" class="header-logo h-14 md:h-16 w-auto transition-all duration-300">
+        <span class="font-bold text-xs md:text-sm tracking-[0.1em] border-l-2 pl-4 border-current mt-1 text-white [.scrolled_&]:text-gray-400 transition-colors duration-300 leading-none">ティラドコネクト採用情報</span>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="hidden xl:flex h-full items-center">
+        <ul class="flex h-full text-[13px] xl:text-sm font-medium tracking-wider w-full justify-end">
+          <li class="h-full flex items-center px-4"><a href="#interviews" class="nav-link hover-text-gradient transition">先輩インタビュー</a></li>
+          <li class="h-full flex items-center px-4"><a href="#requirements" class="nav-link hover-text-gradient transition">募集要項</a></li>
+          <li class="h-full flex items-center px-4"><a href="#entry" class="nav-link hover-text-gradient transition">採用エントリー</a></li>
+          <li class="h-full flex items-center px-4"><a href="#company" class="nav-link hover-text-gradient transition">会社概要</a></li>
+        </ul>
+      </nav>
+      
+      <!-- Mobile Menu Toggle -->
+      <button id="mobile-menu-btn" class="xl:hidden text-white [.scrolled_&]:text-gray-800 nav-link transition-colors focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.8" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[100] bg-white text-gray-800 transition-transform duration-500 ease-in-out transform translate-x-full overflow-y-auto hidden-scroll">
+    <div class="sticky top-0 bg-white/95 backdrop-blur-sm z-10 px-6 h-20 flex justify-between items-center border-b border-gray-100">
+      <a href="#" class="flex items-center gap-4">
+           <img src="img/img-connect/logo.png" alt="T.RAD CONNECT" class="h-14 w-auto object-contain">
+           <span class="font-bold text-xs tracking-[0.1em] text-gray-400 border-l-2 pl-4 border-gray-300 mt-1 leading-none">ティラドコネクト採用情報</span>
+      </a>
+      <button id="mobile-close-btn" class="text-gray-500 hover:text-main-red transition-colors w-10 h-10 flex items-center justify-center hover:bg-gray-100 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.8" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <div class="px-6 py-8 pb-32">
+      <div class="space-y-6">
+        <div class="border-b border-gray-100 pb-4">
+          <a href="#interviews" class="mobile-close-link w-fit flex items-center text-lg font-bold text-gray-800 tracking-wider hover-text-gradient transition-colors">先輩インタビュー</a>
+        </div>
+        <div class="border-b border-gray-100 pb-4">
+          <a href="#requirements" class="mobile-close-link w-fit flex items-center text-lg font-bold text-gray-800 tracking-wider hover-text-gradient transition-colors">募集要項</a>
+        </div>
+        <div class="border-b border-gray-100 pb-4">
+          <a href="#entry" class="mobile-close-link w-fit flex items-center text-lg font-bold text-gray-800 tracking-wider hover-text-gradient transition-colors">採用エントリー</a>
+        </div>
+        <div class="border-b border-gray-100 pb-4">
+          <a href="#company" class="mobile-close-link w-fit flex items-center text-lg font-bold text-gray-800 tracking-wider hover-text-gradient transition-colors">会社概要</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- FV -->
+    <section id="fv" class="relative w-full h-[100vh] min-h-[600px] flex items-center pt-20 overflow-hidden bg-dark">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-dark/60"></div>
+        <img src="img/img-connect/recruit-fv.jpg" alt="" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay">
+      </div>
+
+      <div class="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 text-white fade-in-up text-center">
+        <p class="font-black tracking-[0.3em] uppercase text-sm md:text-lg text-white mb-6">We Keep Challenging Ourselves.</p>
+        <h1 class="font-black text-3xl sm:text-5xl md:text-6xl leading-tight tracking-wider font-sans">
+          私たちは、<br class="md:hidden">製造業DXの<br>エキスパート集団です。
+        </h1>
+      </div>
+      
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white/50">
+        <span class="text-[10px] uppercase tracking-widest mb-3 font-bold">Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- 私たちのミッション -->
+    <section id="mission" class="pt-32 pb-0 bg-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <!-- Section Header + Mission Intro with Image -->
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20 mb-24">
+          <!-- Right: Title & Intro Text -->
+          <div class="w-full lg:w-1/2 fade-in-up">
+            <div class="mb-10 lg:mb-12">
+               <span class="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase mb-3 block text-left">Mission</span>
+               <h2 class="text-3xl md:text-5xl lg:text-6xl font-black tracking-wider leading-tight text-left">
+                 <span class="scroll-text-gradient inline-block">私たちのミッション</span>
+               </h2>
+            </div>
+            <div class="text-gray-700 leading-relaxed font-medium space-y-6 text-[15px] text-left">
+                <p>ティラドコネクトは熱交換技術の専門メーカー「株式会社ティラド」のDX推進をミッションとして設立されました。<br>
+    ティラドが長年培ってきたものづくりのノウハウ・技術をベースに、IoT や AI を活用した新たなITソリューション・サービスを創出します。また、独自開発したアプリケーションやソリューションを世界の製造業・サービス業などに広く提供することで、持続可能な社会に貢献します。</p>
+            </div>
+          </div>
+          <!-- Left: Section Title Image -->
+          <div class="w-full lg:w-1/2 fade-in-up" style="transition-delay: 0.1s;">
+            <div class="relative group">
+              <div class="aspect-[16/9] lg:aspect-[4/3] overflow-hidden shadow-xl rounded-sm">
+                <img src="img/img-connect-recruit/mission.jpg" alt="Mission Section" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- Close Mission Intro Container -->
+
+      <!-- Venture Mindset Subsection with Grid Layout & Solid-Left Full-Width Background -->
+      <div class="relative pt-32 pb-0 mt-20 border-t border-gray-100 w-full overflow-hidden">
+        <!-- Solid-Left Steeper Slant Background (Increased angle to 65%) -->
+        <div class="absolute top-0 left-0 w-full lg:w-[40%] h-full bg-main-gradient opacity-5 pointer-events-none z-0" 
+             style="clip-path: polygon(0 0, 100% 0, 65% 100%, 0 100%);"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10 pb-32">
+          <div class="flex flex-col lg:flex-row items-start gap-16 lg:gap-24">
+            <!-- Left: New Asymmetric Landscape-Major Pattern (Sequential Animation) -->
+            <div class="w-full lg:w-1/2 flex flex-col gap-6">
+              <!-- Top: Main Landscape Image (Fastest) -->
+              <div class="w-full fade-in-up" style="transition-delay: 0.1s;">
+                 <div class="aspect-video overflow-hidden shadow-2xl rounded-sm">
+                   <img src="img/img-connect-recruit/mind-1.jpg" alt="" class="w-full h-full object-cover">
+                 </div>
+              </div>
+              <!-- Bottom: Two Supporting Images (Sequential) -->
+              <div class="flex gap-6 items-start">
+                <div class="w-1/2 fade-in-up" style="transition-delay: 0.3s;">
+                   <div class="aspect-square overflow-hidden shadow-xl rounded-sm">
+                     <img src="img/img-connect-recruit/mind-2.jpg" alt="" class="w-full h-full object-cover">
+                   </div>
+                </div>
+                <div class="w-1/2 mt-8 fade-in-up" style="transition-delay: 0.5s;">
+                   <div class="aspect-[4/3] overflow-hidden shadow-xl rounded-sm">
+                     <img src="img/img-connect-recruit/mind-3.jpg" alt="" class="w-full h-full object-cover">
+                   </div>
+                </div>
+              </div>
+            </div>
+
+              <!-- Right: Text Content (Aligned with Image Top) -->
+            <div class="w-full lg:w-1/2 fade-in-up" style="transition-delay: 0.2s;">
+              <h3 class="text-2xl md:text-3xl lg:text-4xl font-black text-gray-800 leading-[1.1] mb-8 relative">
+                アウトプットと<br class="md:hidden">スピード感を重視するベンチャーマインド
+                <div class="w-12 h-1 bg-main-gradient mt-6"></div>
+              </h3>
+                <div class="text-[15px] text-gray-600 leading-relaxed font-medium space-y-6">
+                  <p>ティラドコネクトでは、ティラドの自社エンジニアやパートナー会社と協力して開発を進めており、DXプロジェクト全体に関わるメンバーは１００名を越える体制になっています。これだけの開発プロジェクトを可能にしているのが、ティラドコネクトの誇る開発チームです。</p>
+
+                  <p>当社の強みの一つが、アーキテクトまで含めた最高峰の開発メンバーが揃っていることです。<br>
+    自社エンジニアだけではなく、10社ものパートナー会社とコラボレーションを行なっており、ともに協力してDXテーマを推進しています。異なる専門のプロフェッショナルたち同じチームメンバーとして活発に議論を交わし、アジャイル開発を推し進めています。</p>
+
+                  <p>今まさにティラドコネクトのコアとなるメンバーを募集しており、大きなことにチャレンジしたいという意欲があれば、様々な経験ができる環境だと自負しています。</p>
+
+                  <p>ティラドコネクトは、「自律」を人材育成の方針として打ち出しており、ベンチャーマインドを持ったスピード感を重視するワークスタイルです。仕事の裁量が広く、働き方もコアタイム以外は自由。徹底した成果主義で、アウトプットを重視する評価制度を確立しています。</p>
+
+                  <p>「知恵を生み出す人材を育てたい」というのが会社の方針です。基盤力＝コンピテンシー力✕地頭力と考え、メンバー各自の基盤力アップを目指しています。開発の上流工程がメイン業務となるため、コーディングのスキルよりも、ヒアリングや課題抽出、解決策の立案等に必要なスキルを中心に研修を進めています。</p>
+
+                  <p>大手企業の子会社ですから経営の安定性も抜群！加えて、自由な社風と柔軟な働き方で、個性的なメンバーと楽しく働けます。</p>
+
+                  <p class="font-bold text-gray-800">一緒に組織を作り上げ、製造業のDXを推進する仲間やパートナーを広く求めています。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 取り組みテーマ -->
+    <section id="themes" class="pt-32 pb-0 bg-gray-50 relative">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="text-center max-w-4xl mx-auto mb-20 fade-in-up">
+           <span class="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase mb-3 block">Project</span>
+           <h2 class="text-3xl md:text-5xl lg:text-6xl font-black tracking-wider leading-tight mb-8">
+             <span class="scroll-text-gradient inline-block">取り組みテーマ</span>
+            </h2>
+          </div>
+
+          <!-- Main Themes: Horizontal Grid Layout -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 mb-32 max-w-7xl mx-auto px-4">
+            <!-- Digital Factory -->
+            <div class="group fade-in-up">
+              <div class="aspect-video overflow-hidden shadow-lg mb-8 rounded-sm">
+                <img src="img/img-connect-recruit/thema-1.png" alt="Digital Factory" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+              </div>
+              <div class="text-left">
+                <h3 class="text-xl md:text-2xl font-black text-gray-800 leading-tight flex items-start gap-4">
+                  <span class="w-1.5 h-8 bg-main-gradient shrink-0 mt-0.5"></span>
+                  <span>DXエキスパートチームによる<br>デジタルファクトリー</span>
+                </h3>
+              </div>
+            </div>
+
+            <!-- IT Solutions -->
+            <div class="group fade-in-up" style="transition-delay: 0.1s;">
+              <div class="aspect-video overflow-hidden shadow-lg mb-8 rounded-sm">
+                <img src="img/img-connect-recruit/thema-2.png" alt="IT Solutions" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+              </div>
+              <div class="text-left">
+                <h3 class="text-xl md:text-2xl font-black text-gray-800 leading-tight flex items-start gap-4">
+                  <span class="w-1.5 h-8 bg-main-gradient shrink-0 mt-0.5"></span>
+                  <span>Salesforce、AI、IoTソリューションで<br>製造業を変革</span>
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center max-w-4xl mx-auto px-4">
+           
+           <p class="text-gray-600 font-medium leading-relaxed text-[15px] mb-12 text-left md:text-center px-4">
+             ティラドグループの生産管理システムをはじめ、IoTやAIを駆使したデータマイニング、 Salesforceを活用した社内・社外ワークフローの構築など、様々な業界から集まったエキスパートチームが、業務や経営を変革するための様々なテーマに取り組んでいます。
+           </p>
+           <div class="mb-16 px-4 max-w-5xl mx-auto overflow-hidden">
+             <img src="img/img-connect-recruit/project-top.png" alt="Project Themes Overview" class="w-full h-auto rounded-sm">
+         </div>
+      </div>
+    </div>
+
+      <!-- Detail Themes List Background Wrapper -->
+      <div class="py-24 bg-fixed bg-center bg-cover relative" style="background-image: url('img/img-connect-recruit/project-bg.png');">
+        <!-- Thin white overlay to keep text readable against the background -->
+        <div class="absolute inset-0 bg-white/70 pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+          <div class="space-y-16">
+            <!-- Theme 1 -->
+          <div class="bg-white border border-gray-100 shadow-xl p-8 md:p-12 fade-in-up group flex flex-col md:flex-row gap-8 relative overflow-hidden">
+             
+             <div class="w-full md:w-1/3 aspect-[4/3] shrink-0 overflow-hidden relative z-10 self-start">
+                <img src="img/img-connect-recruit/project-1.png" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+             </div>
+             <div class="w-full md:w-2/3 flex flex-col">
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 flex items-start gap-4">
+                  <span class="w-1.5 h-8 bg-main-gradient shrink-0 mt-0.5"></span>
+                  <span>データレイク構築～ 販売予測・経営シミュレーション</span>
+                </h3>
+                <p class="text-gray-600 text-[15px] leading-relaxed mb-6">現場でリアルタイムに発生するデータをデータレイクに一元管理。経営判断の迅速化や精度向上を目的とし、データに基づいた販売予測や生産性分析などのシステム化に取り組んでいます。</p>
+                <div class="bg-gray-50 p-4 mb-4 text-sm text-gray-700">
+                  <span class="font-bold text-gray-800">主な取り組みテーマ</span><br>
+                  生産性分析等データマイニング<br>
+                  テキストマイニングによる課題分析<br>
+                  Python、SQL、DB：主にPythonによる分析基盤構築
+                </div>
+                <div class="bg-gray-50 p-4 mb-8 text-sm text-gray-700">
+                  <span class="font-bold text-gray-800">募集職種</span><br>
+                  ソフト開発経験者やPythonへチャレンジしてみたい方　初心者可<br>
+                  CODER系ツール活用経験者：テキストマイニングの経験者やこれからテキストマイニングにチャレンジしてみたい方
+                </div>
+                <div class="mt-auto">
+                   <a href="#requirements" class="btn-primary inline-block">募集要項を見る <i class="fa-solid fa-caret-right ml-2"></i></a>
+                </div>
+             </div>
+          </div>
+
+          <!-- Theme 2 -->
+          <div class="bg-white border border-gray-100 shadow-xl p-8 md:p-12 fade-in-up group flex flex-col md:flex-row gap-8 relative overflow-hidden">
+             
+             <div class="w-full md:w-1/3 aspect-[4/3] shrink-0 overflow-hidden relative z-10 self-start">
+                <img src="img/img-connect-recruit/project-2.png" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+             </div>
+             <div class="w-full md:w-2/3 flex flex-col">
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 flex items-start gap-4">
+                  <span class="w-1.5 h-8 bg-main-gradient shrink-0 mt-0.5"></span>
+                  <span>ワークフロー構築 (Salesforce)</span>
+                </h3>
+                <p class="text-gray-600 text-[15px] leading-relaxed mb-6">Salesforce構築のエキスパートが在籍し、Salesforceの機能を駆使した先端的なシステム開発や外販パッケージ開発を推進しています。</p>
+                <div class="bg-gray-50 p-4 mb-4 text-sm text-gray-700">
+                  <span class="font-bold text-gray-800">主な取り組みテーマ</span><br>
+                  販売パイプライン管理、社内ワークフロー等<br>
+                  コミュニティクラウドベースでの外部取引先コミュニケーションツール
+                </div>
+                <div class="bg-gray-50 p-4 mb-8 text-sm text-gray-700 space-y-4">
+                  <div>
+                    <span class="font-bold text-gray-800">募集職種：販売パイプライン管理・社内ワークフロー等</span><br>
+                    Salesforceベースでの開発（未経験者もOK：標準オブジェクトからカスタマイズまで技術を修得できます）
+                  </div>
+                  <div class="pt-2 border-t border-gray-200">
+                    <span class="font-bold text-gray-800">取引先コミュニケーション</span><br>
+                    Salesforce、コミュニティクラウドベースでの開発（未経験者もOK：標準オブジェクトからカスタマイズまで技術を修得できます）
+                  </div>
+                </div>
+                <div class="mt-auto">
+                   <a href="#requirements" class="btn-primary inline-block">募集要項を見る <i class="fa-solid fa-caret-right ml-2"></i></a>
+                </div>
+             </div>
+          </div>
+
+          <!-- Theme 3 -->
+          <div class="bg-white border border-gray-100 shadow-xl p-8 md:p-12 fade-in-up group flex flex-col md:flex-row gap-8 relative overflow-hidden">
+             
+             <div class="w-full md:w-1/3 aspect-[4/3] shrink-0 overflow-hidden relative z-10 self-start">
+                <img src="img/img-connect-recruit/project-3.png" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+             </div>
+             <div class="w-full md:w-2/3 flex flex-col">
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 flex items-start gap-4">
+                  <span class="w-1.5 h-8 bg-main-gradient shrink-0 mt-0.5"></span>
+                  <span>生産指示最適化</span>
+                </h3>
+                <p class="text-gray-600 text-[15px] leading-relaxed mb-6">多くの手間がかかり、属人化しがちな生産指示の業務を効率化・最適化すべく、自動化エンジンの開発に取り組んでいます。</p>
+                <div class="bg-gray-50 p-4 mb-4 text-sm text-gray-700">
+                  <span class="font-bold text-gray-800">主な取り組みテーマ</span><br>
+                  生産指示最適化<br>
+                  生産指示自動エンジン開発
+                </div>
+                <div class="bg-gray-50 p-4 mb-8 text-sm text-gray-700">
+                  <span class="font-bold text-gray-800">募集職種</span><br>
+                  Python、Javaなど　未経験者OK。
+                </div>
+                <div class="mt-auto">
+                   <a href="#requirements" class="btn-primary inline-block">募集要項を見る <i class="fa-solid fa-caret-right ml-2"></i></a>
+                </div>
+             </div>
+          </div>
+
+          <!-- Theme 4 -->
+          <div class="bg-white border border-gray-100 shadow-xl p-8 md:p-12 fade-in-up group flex flex-col md:flex-row gap-8 relative overflow-hidden">
+             
+             <div class="w-full md:w-1/3 aspect-[4/3] shrink-0 overflow-hidden relative z-10 self-start">
+                <img src="img/img-connect-recruit/project-4.png" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+             </div>
+             <div class="w-full md:w-2/3 flex flex-col">
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 flex items-start gap-4">
+                  <span class="w-1.5 h-8 bg-main-gradient shrink-0 mt-0.5"></span>
+                  <span>生産IoTソフトウェア開発</span>
+                </h3>
+                <p class="text-gray-600 text-[15px] leading-relaxed mb-6">Salesforce構築のエキスパートが在籍し、Salesforceの機能を駆使した先端的なシステム開発や外販パッケージ開発を推進しています。</p>
+                <div class="bg-gray-50 p-4 mb-4 text-sm text-gray-700">
+                  <span class="font-bold text-gray-800">主な取り組みテーマ</span><br>
+                  販売パイプライン管理、社内ワークフロー等<br>
+                  コミュニティクラウドベースでの外部取引先コミュニケーションツール
+                </div>
+                <div class="bg-gray-50 p-4 mb-8 text-sm text-gray-700">
+                  <span class="font-bold text-gray-800">募集職種</span><br>
+                  ラズペリーパイ用ソフトウェアエンジニア：LINUX基礎知識、CorC++言語3年以上<br>
+                  PLCエンジニア：経験3年以上<br>
+                  画像認識、物体認識AI開発エンジニア：チャレンジしたい方、経験者優遇
+                </div>
+                <div class="mt-auto">
+                   <a href="#requirements" class="btn-primary inline-block">募集要項を見る <i class="fa-solid fa-caret-right ml-2"></i></a>
+                </div>
+             </div>
+          </div>
+
+          <!-- Theme 5 -->
+          <div class="bg-white border border-gray-100 shadow-xl p-8 md:p-12 fade-in-up group flex flex-col md:flex-row gap-8 relative overflow-hidden">
+             
+             <div class="w-full md:w-1/3 aspect-[4/3] shrink-0 overflow-hidden relative z-10 self-start">
+                <img src="img/img-connect-recruit/project-5.png" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+             </div>
+             <div class="w-full md:w-2/3 flex flex-col">
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 flex items-start gap-4">
+                  <span class="w-1.5 h-8 bg-main-gradient shrink-0 mt-0.5"></span>
+                  <span>DXネットワーク基盤構築</span>
+                </h3>
+                <p class="text-gray-600 text-[15px] leading-relaxed mb-6">海外を含めたネットワーク設計・構築・サポートを行っています。</p>
+                <div class="bg-gray-50 p-4 mb-4 text-sm text-gray-700">
+                  <span class="font-bold text-gray-800">主な取り組みテーマ</span><br>
+                  LAN設計<br>
+                  海外ネットワーク構築・保守
+                </div>
+                <div class="bg-gray-50 p-4 mb-8 text-sm text-gray-700">
+                  <span class="font-bold text-gray-800">募集職種</span><br>
+                  LAN設計、海外ネットワーク構築、サポートエンジニア：経験３年以上
+                </div>
+                <div class="mt-auto">
+                   <a href="#requirements" class="btn-primary inline-block">募集要項を見る <i class="fa-solid fa-caret-right ml-2"></i></a>
+                </div>
+             </div>
+          </div>
+
+          <!-- Theme 6 -->
+          <div class="bg-white border border-gray-100 shadow-xl p-8 md:p-12 fade-in-up group flex flex-col md:flex-row gap-8 relative overflow-hidden">
+             
+             <div class="w-full md:w-1/3 aspect-[4/3] shrink-0 overflow-hidden relative z-10 self-start">
+                <img src="img/img-connect-recruit/project-6.png" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+             </div>
+             <div class="w-full md:w-2/3 flex flex-col">
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4 flex items-start gap-4">
+                  <span class="w-1.5 h-8 bg-main-gradient shrink-0 mt-0.5"></span>
+                  <span>製造業向け DXパッケージ外販</span>
+                </h3>
+                <p class="text-gray-600 text-[15px] leading-relaxed mb-6">ティラドで開発・運用実績のあるDXアプリケーション群を、国内外の企業に外販しています。</p>
+                <div class="bg-gray-50 p-4 mb-4 text-sm text-gray-700">
+                  <span class="font-bold text-gray-800">主な取り組みテーマ</span><br>
+                  販売パイプライン管理、社内ワークフロー等<br>
+                  コミュニティクラウドベースでの外部取引先コミュニケーションツール<br>
+                  生産管理システム
+                </div>
+                <div class="bg-gray-50 p-4 mb-8 text-sm text-gray-700">
+                  <span class="font-bold text-gray-800">募集職種</span><br>
+                  セールスエンジニア（ソリューション営業）<br>
+                  カスタマーサポートエンジニア
+                </div>
+                <div class="mt-auto">
+                   <a href="#requirements" class="btn-primary inline-block">募集要項を見る <i class="fa-solid fa-caret-right ml-2"></i></a>
+                </div>
+             </div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 先輩インタビュー (Interviews) -->
+    <section id="interviews" class="py-24 bg-gray-50 text-gray-800 scroll-mt-20 relative border-t border-gray-100 overflow-hidden">
+      <!-- 装飾的な背景要素 -->
+      <div class="absolute top-0 right-0 w-1/2 h-full bg-main-gradient opacity-5 skew-x-12 transform translate-x-1/4 pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 relative z-10">
+        <!-- セクションヘッダー -->
+        <div class="text-center mb-20 fade-in-up">
+          <span class="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase mb-3 block">Interviews</span>
+          <h2 class="text-3xl md:text-5xl lg:text-6xl font-black tracking-wider leading-tight">
+            <span class="scroll-text-gradient inline-block">先輩インタビュー</span>
+          </h2>
+          <p class="text-gray-600 font-medium leading-relaxed text-[15px] max-w-2xl mx-auto text-left md:text-center mt-8">
+            ティラドコネクトが最も重要視しているのが、「チャレンジ」と「成長」です。<br>
+            様々な業界での経験をベースに、製造業を、そして働き方を変えていきたい、<br>
+            という熱い思いを持つメンバーが集まっています。
+          </p>
+        </div>
+
+        <!-- インタビュー一覧（カードデザイン） -->
+        <div class="max-w-4xl mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+          
+            <!-- Interview 1 -->
+            <a href="#" class="group block bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 fade-in-up overflow-hidden">
+              <div class="relative w-full aspect-square overflow-hidden">
+                <div class="absolute inset-0 flex items-center justify-center text-gray-100 bg-gray-50"><i class="fa-regular fa-user text-6xl md:text-7xl"></i></div>
+                <img src="img/img-connect-recruit/interview-1.jpg" alt="塩見悠二" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 relative z-10">
+              </div>
+
+              <div class="w-full bg-main-gradient py-1.5 px-4 text-center">
+                <span class="text-[13px] md:text-[14px] font-bold text-white uppercase tracking-wider block">開発マネージャー</span>
+              </div>
+
+              <div class="p-6 lg:p-10">
+                <div class="w-full">
+                  <div class="flex flex-wrap items-center gap-4 mb-6">
+                    <h3 class="text-2xl font-black text-gray-800 tracking-wide transition-colors duration-300">塩見悠二</h3>
+                  </div>
+                  <p class="text-[15px] font-bold leading-relaxed mb-10 text-gray-600 line-clamp-6 group-hover:text-gray-900 transition-colors">
+                    <span class="text-gray-900 block mb-2">「人を喜ばせる」と 「モノづくり」が原動力</span>
+                    ティラドコネクトでは、システムパッケージは使用されなければ意味がない、と考えます。 モノづくりの未来をより良くするために、もっと人に喜んでもらうために。 ベストなゴールを目指していきたいと思っています。
+                  </p>
+                  <div class="flex items-center gap-3 text-xs font-black tracking-[0.2em] text-gray-800 transition-colors uppercase">
+                    <span>詳細を見る</span>
+                    <div class="w-10 h-10 border border-gray-200 flex items-center justify-center transition-all group-hover:border-transparent group-hover:text-white group-hover:scale-110 duration-300 relative overflow-hidden">
+                      <div class="absolute inset-0 bg-main-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
+                      <i class="fa-solid fa-caret-right text-xs relative z-10 transition-colors"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Interview 2 -->
+            <a href="#" class="group block bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 fade-in-up overflow-hidden" style="transition-delay: 0.1s;">
+              <div class="relative w-full aspect-square overflow-hidden">
+                <div class="absolute inset-0 flex items-center justify-center text-gray-100 bg-gray-50"><i class="fa-regular fa-user text-6xl md:text-7xl"></i></div>
+                <img src="img/img-connect-recruit/interview-2.jpg" alt="小泉幸季" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 relative z-10">
+              </div>
+
+              <div class="w-full bg-main-gradient py-1.5 px-4 text-center">
+                <span class="text-[13px] md:text-[14px] font-bold text-white uppercase tracking-wider block">生産管理プロジェクトPMO</span>
+              </div>
+
+              <div class="p-6 lg:p-10">
+                <div class="w-full">
+                  <div class="flex flex-wrap items-center gap-4 mb-6">
+                    <h3 class="text-2xl font-black text-gray-800 tracking-wide transition-colors duration-300">小泉幸季</h3>
+                  </div>
+                  <p class="text-[15px] font-bold leading-relaxed mb-10 text-gray-600 line-clamp-6 group-hover:text-gray-900 transition-colors">
+                    <span class="text-gray-900 block mb-2">言語の壁、文化の壁を、解きほぐすために</span>
+                    新たなITへの興味と、タイでの経験を生かすため、またここから学ぶため、ティラドコネクトへ転職。 現在は子育てをしながら、グローバルなプロジェクトの一員として、海外との言語の壁、文化の壁を解きほぐす調整役として従事しています。
+                  </p>
+                  <div class="flex items-center gap-3 text-xs font-black tracking-[0.2em] text-gray-800 transition-colors uppercase">
+                    <span>詳細を見る</span>
+                    <div class="w-10 h-10 border border-gray-200 flex items-center justify-center transition-all group-hover:border-transparent group-hover:text-white group-hover:scale-110 duration-300 relative overflow-hidden">
+                      <div class="absolute inset-0 bg-main-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
+                      <i class="fa-solid fa-caret-right text-xs relative z-10 transition-colors"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- あなたの選択は、どちらですか？ -->
+    <section id="entry" class="py-32 bg-gray-50 text-gray-800 relative border-t border-gray-100 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+         <img src="img/img-connect/recruit-choice.jpg" alt="" class="w-full h-full object-cover opacity-10">
+      </div>
+      <!-- 斜め背景のあしらい -->
+      <div class="absolute top-0 left-0 w-full lg:w-[40%] h-full bg-main-gradient opacity-5 pointer-events-none z-0" 
+           style="clip-path: polygon(0 0, 100% 0, 65% 100%, 0 100%);"></div>
+
+      <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10 text-center">
+        <div class="fade-in-up mb-16 text-center">
+          <p class="text-gray-500 mb-6 font-medium text-[15px]">このページを最後まで読んでいただいた皆さん、ありがとうございます。</p>
+          <h2 class="text-3xl md:text-5xl lg:text-6xl font-black tracking-wider leading-tight mb-4">
+             <span class="scroll-text-gradient inline-block">あなたの選択は、<br class="md:hidden">どちらですか？</span>
+          </h2>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-12">
+          <!-- Question 1 -->
+          <div class="bg-white p-8 md:p-12 shadow-xl border border-gray-100 fade-in-up">
+            <h3 class="text-xl md:text-2xl font-black mb-8 tracking-widest text-black flex items-center gap-4 text-left">
+              <span class="w-1.5 h-8 bg-main-gradient shrink-0"></span>
+              なりたいのはどちら？
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+              <!-- Former -->
+              <label class="cursor-pointer block relative">
+                <input type="radio" name="q1" value="former" class="peer hidden" onchange="updateChoiceStyles()">
+                <div class="h-full py-8 px-6 md:px-8 border-2 border-gray-100 bg-gray-50 text-gray-400 font-bold transition-all duration-300 peer-checked:border-gray-300 peer-checked:bg-white peer-checked:text-gray-800 flex flex-col items-center justify-center text-center gap-4 peer-checked:[&_.radio-dot]:scale-100 peer-checked:[&_.radio-circle]:border-main-blue">
+                  <!-- Radio Icon -->
+                  <div class="radio-circle w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center transition-all bg-white">
+                    <div class="radio-dot w-2.5 h-2.5 rounded-full bg-main-blue scale-0 transition-transform duration-300"></div>
+                  </div>
+                  ありきたりのエンジニア
+                </div>
+              </label>
+              <!-- Latter -->
+              <label class="cursor-pointer block relative">
+                <input type="radio" name="q1" value="latter" class="peer hidden" onchange="updateChoiceStyles()">
+                <div class="h-full py-8 px-6 md:px-8 border-2 border-gray-100 bg-gray-50 text-gray-400 font-bold transition-all duration-300 peer-checked:border-main-blue/30 peer-checked:bg-main-blue/5 peer-checked:text-main-blue flex flex-col items-center justify-center text-center gap-4 peer-checked:[&_.radio-dot]:scale-100 peer-checked:[&_.radio-circle]:border-main-blue">
+                  <!-- Radio Icon -->
+                  <div class="radio-circle w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center transition-all bg-white">
+                    <div class="radio-dot w-2.5 h-2.5 rounded-full bg-main-blue scale-0 transition-transform duration-300"></div>
+                  </div>
+                  製造業を変える<br class="md:hidden">エンジニア
+                </div>
+              </label>
+            </div>
+
+            <a id="btn-q1" href="#requirements" class="btn-primary w-full md:w-auto md:px-12 tracking-widest inline-flex opacity-30 pointer-events-none grayscale transition-all duration-500">
+               募集要項 <i class="fa-solid fa-caret-right ml-3"></i>
+            </a>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="bg-white p-8 md:p-12 shadow-xl border border-gray-100 fade-in-up" style="transition-delay: 0.2s;">
+            <h3 class="text-xl md:text-2xl font-black mb-8 tracking-widest text-black flex items-center gap-4 text-left">
+              <span class="w-1.5 h-8 bg-main-gradient shrink-0"></span>
+              大事なのはどちら？
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+              <!-- Former -->
+              <label class="cursor-pointer block relative">
+                <input type="radio" name="q2" value="former" class="peer hidden" onchange="updateChoiceStyles()">
+                <div class="h-full py-8 px-6 md:px-8 border-2 border-gray-100 bg-gray-50 text-gray-400 font-bold transition-all duration-300 peer-checked:border-gray-300 peer-checked:bg-white peer-checked:text-gray-800 flex flex-col items-center justify-center text-center gap-4 peer-checked:[&_.radio-dot]:scale-100 peer-checked:[&_.radio-circle]:border-main-blue">
+                  <!-- Radio Icon -->
+                  <div class="radio-circle w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center transition-all bg-white">
+                    <div class="radio-dot w-2.5 h-2.5 rounded-full bg-main-blue scale-0 transition-transform duration-300"></div>
+                  </div>
+                  待遇・条件
+                </div>
+              </label>
+              <!-- Latter -->
+              <label class="cursor-pointer block relative">
+                <input type="radio" name="q2" value="latter" class="peer hidden" onchange="updateChoiceStyles()">
+                <div class="h-full py-8 px-6 md:px-8 border-2 border-gray-100 bg-gray-50 text-gray-400 font-bold transition-all duration-300 peer-checked:border-main-blue/30 peer-checked:bg-main-blue/5 peer-checked:text-main-blue flex flex-col items-center justify-center text-center gap-4 peer-checked:[&_.radio-dot]:scale-100 peer-checked:[&_.radio-circle]:border-main-blue">
+                  <!-- Radio Icon -->
+                  <div class="radio-circle w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center transition-all bg-white">
+                    <div class="radio-dot w-2.5 h-2.5 rounded-full bg-main-blue scale-0 transition-transform duration-300"></div>
+                  </div>
+                  成長できる環境
+                </div>
+              </label>
+            </div>
+
+            <a id="btn-q2" href="#" class="btn-primary w-full md:w-auto md:px-12 tracking-widest inline-flex opacity-30 pointer-events-none grayscale transition-all duration-500">
+               エントリーはこちら <i class="fa-solid fa-caret-right ml-3"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <script>
+      function updateChoiceStyles() {
+        // Q1 Logic
+        const q1Value = document.querySelector('input[name="q1"]:checked')?.value;
+        const btnQ1 = document.getElementById('btn-q1');
+        if (q1Value === 'latter') {
+          btnQ1.classList.remove('opacity-30', 'pointer-events-none', 'grayscale');
+          btnQ1.classList.add('shadow-xl', 'hover:scale-105');
+        } else {
+          btnQ1.classList.add('opacity-30', 'pointer-events-none', 'grayscale');
+          btnQ1.classList.remove('shadow-xl', 'hover:scale-105');
+        }
+
+        // Q2 Logic
+        const q2Value = document.querySelector('input[name="q2"]:checked')?.value;
+        const btnQ2 = document.getElementById('btn-q2');
+        if (q2Value === 'latter') {
+          btnQ2.classList.remove('opacity-30', 'pointer-events-none', 'grayscale');
+          btnQ2.classList.add('shadow-xl', 'hover:scale-105');
+        } else {
+          btnQ2.classList.add('opacity-30', 'pointer-events-none', 'grayscale');
+          btnQ2.classList.remove('shadow-xl', 'hover:scale-105');
+        }
+      }
+    </script>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-gray-400 py-16" id="company">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 mb-12">
+        <!-- Logo -->
+         <div class="shrink-0">
+            <a href="#" class="inline-block flex items-center gap-3">
+              <img src="img/img-connect/logo.png" alt="T.RAD CONNECT" class="h-10 md:h-12 w-auto object-contain brightness-0 invert">
+              <span class="font-bold text-[10px] md:text-xs tracking-[0.1em] border-l-2 pl-3 border-gray-600 text-gray-400 mt-0.5">ティラドコネクト採用情報</span>
+            </a>
+         </div>
+        
+        <!-- Navigation Menu in Footer -->
+        <div class="flex flex-wrap gap-x-8 gap-y-4 text-sm font-bold text-white">
+          <a href="#interviews" class="group flex items-center transition-all duration-300">
+            <span class="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">先輩インタビュー</span>
+          </a>
+          <a href="#requirements" class="group flex items-center transition-all duration-300">
+            <span class="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">募集要項</span>
+          </a>
+          <a href="#entry" class="group flex items-center transition-all duration-300">
+            <span class="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">採用エントリー</span>
+          </a>
+          <a href="#company" class="group flex items-center transition-all duration-300">
+            <span class="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">会社概要</span>
+          </a>
+        </div>
+
+        <!-- Utility Links -->
+        <div class="flex flex-wrap gap-x-8 gap-y-4 text-[13px] font-medium">
+          <a href="connect.html" class="hover:text-white transition group flex items-center gap-1">T.RAD CONNECTコーポレートサイト <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-50 group-hover:opacity-100 transition"></i></a>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[13px] font-bold">
+        <div class="flex gap-6 mb-4 md:mb-0">
+          <a href="#" class="hover:text-white transition">個人情報保護法</a>
+        </div>
+        <p class="opacity-50">© T.RAD CONNECT Co., Ltd.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
