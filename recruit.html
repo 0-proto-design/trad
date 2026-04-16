@@ -43,12 +43,13 @@
 <body class="antialiased selection:bg-main-blue selection:text-white bg-gray-50">
 
   <!-- Header (Synced from index.html) -->
-  <header id="header" class="fixed top-0 left-0 w-full z-50 text-white border-b border-white/10">
+  <!-- Header (Synced from index.html) -->
+  <header id="header" class="fixed top-0 left-0 w-full z-50 bg-white xl:bg-transparent text-gray-900 xl:text-white border-b border-gray-100 xl:border-white/10 transition-all duration-300">
    <div class="w-full px-4 lg:px-8 h-20 flex items-center justify-between">
    <!-- Logo -->
    <a href="#" class="flex-shrink-0 z-50 relative flex items-center gap-3">
     <img src="img/img-main/logo.png" alt="T.RAD 株式会社ティラド" class="header-logo h-8 w-auto">
-    <span class="font-bold text-xs md:text-sm tracking-[0.2em] border-l-2 pl-3 border-current mt-0.5 text-white [.scrolled_&]:text-gray-400 transition-colors duration-300">RECRUIT</span>
+    <span class="font-bold text-xs md:text-sm tracking-[0.2em] border-l-2 pl-3 border-current mt-0.5 text-gray-400 xl:text-white xl:[.scrolled_&]:text-gray-400 transition-colors duration-300">RECRUIT</span>
    </a>
 
    <!-- Navigation -->
@@ -101,7 +102,7 @@
    </nav>
    
    <!-- Mobile Menu Toggle Button -->
-   <button id="mobile-menu-btn" class="xl:hidden text-white nav-link transition-colors focus:outline-none">
+   <button id="mobile-menu-btn" class="xl:hidden text-gray-900 xl:text-white nav-link transition-colors focus:outline-none">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.8" stroke="currentColor" class="w-8 h-8">
     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
     </svg>
@@ -158,9 +159,9 @@
      <a href="#new-grad" class="mobile-close-link text-lg font-bold text-gray-800 tracking-wider hover-text-gradient transition-colors border-b border-gray-100 pb-4 block">新卒採用</a>
      <a href="#career-grad" class="mobile-close-link text-lg font-bold text-gray-800 tracking-wider hover-text-gradient transition-colors border-b border-gray-100 pb-4 block">キャリア採用</a>
       <div class="pt-6 flex flex-col gap-4">
-        <div class="flex gap-3">
-          <a href="#new-grad-26" class="mobile-close-link btn-primary w-full py-4 text-white font-black text-sm md:text-base shadow-md flex justify-center items-center">2026年度卒 <i class="fa-solid fa-caret-right ml-1"></i></a>
-          <a href="#new-grad-27" class="mobile-close-link btn-primary w-full py-4 text-white font-black text-sm md:text-base shadow-md flex justify-center items-center">2027年度卒 <i class="fa-solid fa-caret-right ml-1"></i></a>
+        <div class="flex flex-col gap-3">
+          <a href="#new-grad-26" class="mobile-close-link btn-primary w-full py-4 text-white font-black text-lg md:text-base shadow-md flex justify-center items-center">2026年度卒 <i class="fa-solid fa-caret-right ml-1"></i></a>
+          <a href="#new-grad-27" class="mobile-close-link btn-primary w-full py-4 text-white font-black text-lg md:text-base shadow-md flex justify-center items-center">2027年度卒 <i class="fa-solid fa-caret-right ml-1"></i></a>
         </div>
       </div>
    </div>
@@ -213,10 +214,10 @@
           </div>
          <!-- CTA Buttons -->
          <div class="flex flex-col sm:flex-row gap-4 md:gap-6 w-full lg:w-auto shrink-0 pb-4">
-           <a href="#new-grad-26" class="btn-primary w-full sm:w-[240px] h-[64px] md:h-[72px] text-base md:text-lg shadow-xl flex items-center justify-center font-black">
+           <a href="#new-grad-26" class="btn-primary w-full sm:w-[240px] h-[64px] md:h-[72px] text-lg shadow-xl flex items-center justify-center font-black">
              2026年度卒 <i class="fa-solid fa-caret-right ml-3"></i>
            </a>
-           <a href="#new-grad-27" class="btn-primary w-full sm:w-[240px] h-[64px] md:h-[72px] text-base md:text-lg shadow-xl flex items-center justify-center font-black">
+           <a href="#new-grad-27" class="btn-primary w-full sm:w-[240px] h-[64px] md:h-[72px] text-lg shadow-xl flex items-center justify-center font-black">
              2027年度卒 <i class="fa-solid fa-caret-right ml-3"></i>
            </a>
          </div>
