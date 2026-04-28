@@ -1,0 +1,770 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>株式会社ティラド（T.RAD Co., Ltd.）</title>
+ 
+ <!-- Google Fonts: Noto Sans JP -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+ 
+ <!-- FontAwesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+ <!-- Tailwind CSS -->
+ <script src="https://cdn.tailwindcss.com"></script>
+ <script>
+  tailwind.config = {
+  theme: {
+   extend: {
+    fontFamily: {
+    sans: ['Noto Sans JP', 'sans-serif'],
+    },
+    colors: {
+    main: {
+     red: '#FF0101',
+     blue: '#0B419B',
+    },
+    dark: '#0a0f1c',
+    digital: '#111827',
+    },
+    backgroundImage: {
+    'main-gradient': 'linear-gradient(135deg, rgba(235, 46, 61, 1) 0%, rgba(46, 121, 187, 1) 100%)',
+    }
+   }
+  }
+  }
+ </script>
+
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased selection:bg-main-blue selection:text-white">
+ 
+
+ <!-- Header -->
+ <header id="header" class="fixed top-0 left-0 w-full z-50 text-white border-b border-white/10">
+  <div class="w-full px-4 lg:px-8 h-20 flex items-center justify-between">
+  <!-- Logo -->
+  <a href="#" class="flex-shrink-0 z-50 relative">
+   <!-- ロゴ画像 -->
+   <img src="img/img-main/logo.png" alt="T.RAD 株式会社ティラド" class="header-logo h-8 w-auto">
+  </a>
+
+  <!-- Navigation -->
+  <nav class="hidden xl:flex h-full items-center">
+   <ul class="flex h-full text-[13px] xl:text-sm font-medium tracking-wider w-full justify-end">
+    <!-- 企業情報 -->
+    <li class="nav-item h-full flex items-center px-3 cursor-pointer group">
+    <span class="nav-link flex items-center gap-1">企業情報 <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+    <!-- Mega Menu -->
+    <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-800 shadow-xl border-t border-gray-100 p-8 cursor-default">
+     <div class="max-w-7xl mx-auto">
+      <div class="mb-6 border-b border-gray-200 pb-3">
+      <span class="text-xl font-black text-gradient tracking-widest">企業情報</span>
+      </div>
+      <div class="flex flex-wrap gap-x-12 gap-y-4">
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">会社概要 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">社長メッセージ <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">沿革 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">数字で見るティラド <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">動画で見るティラド <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">海外拠点情報 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">ティラドコネクト <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="logistics.html" class="hover-text-gradient transition flex items-center gap-2 w-auto">ティラドロジスティクス <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      </div>
+     </div>
+    </div>
+    </li>
+    <!-- ティラドのモノづくり -->
+    <li class="h-full flex items-center px-3">
+     <a href="manufacturing.html" class="nav-link hover-text-gradient transition">ティラドのモノづくり</a>
+    </li>
+    <!-- 株主・投資家情報 (IRニュース含む) -->
+    <li class="nav-item h-full flex items-center px-3 cursor-pointer group">
+    <span class="nav-link flex items-center gap-1">株主・投資家情報 <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+    <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-800 shadow-xl border-t border-gray-100 p-8 cursor-default">
+     <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-12 gap-12">
+      <div class="col-span-5 flex flex-col gap-4">
+       <div class="mb-2 border-b border-gray-200 pb-3">
+        <span class="text-xl font-black text-gradient tracking-widest">株主・投資家情報</span>
+       </div>
+       <a href="#" class="hover-text-gradient transition flex items-center gap-2">IR基本方針 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+       <a href="#" class="hover-text-gradient transition flex items-center gap-2">IR資料室 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+       <a href="#" class="hover-text-gradient transition flex items-center gap-2">財務・実績データ <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+       <a href="#" class="hover-text-gradient transition flex items-center gap-2">電子公告 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      </div>
+      <div class="col-span-7 flex flex-col gap-4 border-l pl-12 border-gray-200">
+       <div class="mb-2 border-b border-gray-200 pb-3">
+        <span class="text-xl font-black text-gradient tracking-widest">最新のIRお知らせ</span>
+       </div>
+       <ul class="space-y-3">
+        <li class="flex gap-4 items-start"><span class="text-xs text-gray-500 w-24">2023.11.10</span><a href="#" class="hover-text-gradient text-sm">2024年3月期 第2四半期決算短信</a></li>
+        <li class="flex gap-4 items-start"><span class="text-xs text-gray-500 w-24">2023.10.25</span><a href="#" class="hover-text-gradient text-sm">業績予想の修正に関するお知らせ</a></li>
+        <li class="flex gap-4 items-start"><span class="text-xs text-gray-500 w-24">2023.08.08</span><a href="#" class="hover-text-gradient text-sm">2024年3月期 第1四半期決算短信</a></li>
+       </ul>
+       <div class="mt-4 pt-3 border-t border-gray-100 flex justify-end">
+        <a href="#" class="group text-sm font-bold transition-all duration-300 hover:opacity-70 flex items-center gap-1">
+         <span class="text-gradient">一覧を見る</span> 
+         <span class="transition-transform duration-300 group-hover:translate-x-1"><i class="fa-solid fa-caret-right text-gradient"></i></span>
+        </a>
+       </div>
+      </div>
+      </div>
+     </div>
+    </div>
+    </li>
+    <!-- サステナビリティ -->
+    <li class="nav-item h-full flex items-center px-3 cursor-pointer group">
+    <span class="nav-link flex items-center gap-1">サステナビリティ <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+    <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-800 shadow-xl border-t border-gray-100 p-8 cursor-default">
+     <div class="max-w-7xl mx-auto">
+      <div class="mb-6 border-b border-gray-200 pb-3">
+      <span class="text-xl font-black text-gradient tracking-widest">サステナビリティ</span>
+      </div>
+      <div class="flex flex-wrap gap-x-12 gap-y-4">
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">トップメッセージ <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">サステナビリティマネジメント <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">企業価値創造・マテリアリティ <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">環境 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">社会 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">サステナビリティレポート <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      </div>
+     </div>
+    </div>
+    </li>
+    <!-- サプライヤー様窓口 -->
+    <li class="nav-item h-full flex items-center px-3 cursor-pointer group">
+    <span class="nav-link flex items-center gap-1">サプライヤー様窓口 <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+    <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-800 shadow-xl border-t border-gray-100 p-8 cursor-default">
+     <div class="max-w-7xl mx-auto">
+      <div class="mb-6 border-b border-gray-200 pb-3">
+      <span class="text-xl font-black text-gradient tracking-widest">サプライヤー様窓口</span>
+      </div>
+      <div class="flex flex-wrap gap-x-12 gap-y-4">
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">募集要項 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">調達品目 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">ご提案受付 <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">グリーン調達ガイドライン <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">フォーマットDL <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">仕入先CSR <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2 w-auto">取引先ポータル <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400"></i></a>
+      </div>
+     </div>
+    </div>
+    </li>
+    <!-- お知らせ -->
+    <li class="h-full flex items-center px-3"><a href="#" class="nav-link hover-text-gradient transition">お知らせ</a></li>
+    <!-- お問い合わせ -->
+    <li class="nav-item h-full flex items-center px-3 cursor-pointer group">
+    <span class="nav-link flex items-center gap-1">お問い合わせ <i class="fa-solid fa-angle-down text-[10px]"></i></span>
+    <div class="mega-menu absolute top-20 left-0 w-full bg-white text-gray-800 shadow-xl border-t border-gray-100 p-8 cursor-default">
+     <div class="max-w-7xl mx-auto">
+      <div class="mb-6 border-b border-gray-200 pb-3">
+      <span class="text-xl font-black text-gradient tracking-widest">お問い合わせ</span>
+      </div>
+      <div class="flex gap-12">
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2">IRに関するお問い合わせ <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2">製品・見積りについて <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2">調達に関するお問い合わせ <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      <a href="#" class="hover-text-gradient transition flex items-center gap-2">その他のお問い合わせ <i class="fa-solid fa-caret-right text-xs text-gray-400"></i></a>
+      </div>
+     </div>
+    </div>
+    </li>
+    <!-- Ja/En -->
+    <li class="h-full flex items-center px-3 border-l border-white/20 ml-2">
+    <a href="#" class="nav-link font-bold text-gradient">Ja</a><span class="mx-1 nav-link opacity-50">|</span><a href="#" class="nav-link opacity-50 hover-text-gradient transition">En</a>
+    </li>
+    <!-- 採用情報 -->
+    <li class="h-full flex items-center pl-4">
+    <a href="#" class="btn-small">採用情報 <i class="fa-solid fa-caret-right ml-1"></i></a>
+    </li>
+   </ul>
+  </nav>
+  
+  <!-- Mobile Menu Toggle Button -->
+  <button id="mobile-menu-btn" class="xl:hidden text-white nav-link transition-colors focus:outline-none">
+   <!-- 線をより細く(stroke-width="0.8")設定 -->
+   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.8" stroke="currentColor" class="w-8 h-8">
+   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+   </svg>
+  </button>
+  </div>
+ </header>
+
+ <!-- Mobile Menu Overlay -->
+ <div id="mobile-menu" class="fixed inset-0 z-[100] bg-white text-gray-800 transition-transform duration-500 ease-in-out transform translate-x-full overflow-y-auto hidden-scroll">
+  <div class="sticky top-0 bg-white/95 backdrop-blur-sm z-10 px-6 h-20 flex justify-between items-center border-b border-gray-100">
+  <!-- Mobile Menu Logo (Image) -->
+  <a href="#" class="inline-block">
+   <!-- ▼ロゴ画像を配置する箇所 -->
+   <img src="img/img-main/logo.png" alt="T.RAD 株式会社ティラド" class="h-8 w-auto object-contain">
+  </a>
+  <button id="mobile-close-btn" class="text-gray-500 hover:text-main-red transition-colors w-10 h-10 flex items-center justify-center  hover:bg-gray-100 focus:outline-none">
+   <!-- 閉じるボタンも細めに(stroke-width="0.8")設定 -->
+   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.8" stroke="currentColor" class="w-8 h-8">
+   <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+   </svg>
+  </button>
+  </div>
+  
+  <div class="px-6 py-8 pb-32">
+  <div class="space-y-6">
+   <!-- 企業情報 -->
+   <div class="border-b border-gray-100 pb-4">
+    <button class="mobile-accordion-btn group w-full flex justify-between items-center text-lg font-bold text-gray-800 tracking-wider">
+    <span class="group-hover-text-gradient transition-colors">企業情報</span>
+    <div class="w-8 h-8  bg-gray-50 flex items-center justify-center transition-transform duration-300 icon-wrapper">
+     <i class="fa-solid fa-plus text-sm text-gradient"></i>
+    </div>
+    </button>
+    <div class="mobile-accordion-content hidden mt-4 space-y-2 pl-4 border-l-2 border-main-blue/20">
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>会社概要</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>社長メッセージ</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>沿革</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>数字で見るティラド</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>動画で見るティラド</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>海外拠点情報</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="connect.html" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>ティラドコネクト</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="logistics.html" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>ティラドロジスティクス</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    </div>
+   </div>
+
+   <!-- ティラドのモノづくり -->
+   <div class="border-b border-gray-100 pb-4">
+    <a href="manufacturing.html" class="w-fit flex items-center text-lg font-bold text-gray-800 tracking-wider hover-text-gradient transition-colors">
+    ティラドのモノづくり
+    </a>
+   </div>
+
+   <!-- 株主・投資家情報 -->
+   <div class="border-b border-gray-100 pb-4">
+    <button class="mobile-accordion-btn group w-full flex justify-between items-center text-lg font-bold text-gray-800 tracking-wider">
+    <span class="group-hover-text-gradient transition-colors">株主・投資家情報</span>
+    <div class="w-8 h-8  bg-gray-50 flex items-center justify-center transition-transform duration-300 icon-wrapper">
+     <i class="fa-solid fa-plus text-sm text-gradient"></i>
+    </div>
+    </button>
+    <div class="mobile-accordion-content hidden mt-4 space-y-2 pl-4 border-l-2 border-main-blue/20">
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>IR基本方針</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>IR資料室</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>財務・実績データ</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>電子公告</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <div class="pt-4 mt-4 border-t border-gray-100">
+     <span class="block text-xs font-bold text-gray-400 mb-3 ml-2 uppercase tracking-widest">Latest IR News</span>
+     <ul class="space-y-4 pl-2">
+      <li class="flex flex-col gap-1">
+       <span class="text-[10px] text-gray-400 font-mono">2023.11.10</span>
+       <a href="#" class="flex items-center justify-between text-sm text-gray-700 hover-text-gradient transition-colors"><span>2024年3月期 第2四半期決算短信</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px]"></i></a>
+      </li>
+      <li class="flex flex-col gap-1">
+       <span class="text-[10px] text-gray-400 font-mono">2023.10.25</span>
+       <a href="#" class="flex items-center justify-between text-sm text-gray-700 hover-text-gradient transition-colors"><span>業績予想の修正に関するお知らせ</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px]"></i></a>
+      </li>
+      <li class="flex flex-col gap-1">
+       <span class="text-[10px] text-gray-400 font-mono">2023.08.08</span>
+       <a href="#" class="flex items-center justify-between text-sm text-gray-700 hover-text-gradient transition-colors"><span>2024年3月期 第1四半期決算短信</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px]"></i></a>
+      </li>
+     </ul>
+     <div class="mt-4 pt-4 border-t border-gray-50 flex justify-end">
+      <a href="#" class="group text-sm font-bold transition-all duration-300 flex items-center gap-1">
+       <span class="text-gradient">IRお知らせ一覧を見る</span> 
+       <span class="transition-transform duration-300 group-hover:translate-x-1"><i class="fa-solid fa-caret-right text-gradient"></i></span>
+      </a>
+     </div>
+    </div>
+    </div>
+   </div>
+
+   <!-- サステナビリティ -->
+   <div class="border-b border-gray-100 pb-4">
+    <button class="mobile-accordion-btn group w-full flex justify-between items-center text-lg font-bold text-gray-800 tracking-wider">
+    <span class="group-hover-text-gradient transition-colors">サステナビリティ</span>
+    <div class="w-8 h-8  bg-gray-50 flex items-center justify-center transition-transform duration-300 icon-wrapper">
+     <i class="fa-solid fa-plus text-sm text-gradient"></i>
+    </div>
+    </button>
+    <div class="mobile-accordion-content hidden mt-4 space-y-2 pl-4 border-l-2 border-main-blue/20">
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>トップメッセージ</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>サステナビリティマネジメント</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>企業価値創造・マテリアリティ</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>環境</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>社会</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>サステナビリティレポート</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    </div>
+   </div>
+
+   <!-- サプライヤー様窓口 -->
+   <div class="border-b border-gray-100 pb-4">
+    <button class="mobile-accordion-btn group w-full flex justify-between items-center text-lg font-bold text-gray-800 tracking-wider">
+    <span class="group-hover-text-gradient transition-colors">サプライヤー様窓口</span>
+    <div class="w-8 h-8  bg-gray-50 flex items-center justify-center transition-transform duration-300 icon-wrapper">
+     <i class="fa-solid fa-plus text-sm text-gradient"></i>
+    </div>
+    </button>
+    <div class="mobile-accordion-content hidden mt-4 space-y-2 pl-4 border-l-2 border-main-blue/20">
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>募集要項</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>調達品目</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>ご提案受付</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>グリーン調達ガイドライン</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>フォーマットDL</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>仕入先CSR</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>取引先ポータル</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-40 ml-2"></i></a>
+    </div>
+   </div>
+   
+   <!-- リンクのみの項目 -->
+   <div class="border-b border-gray-100 pb-4">
+    <a href="#" class="w-fit flex items-center text-lg font-bold text-gray-800 tracking-wider hover-text-gradient transition-colors">
+    お知らせ
+    </a>
+   </div>
+   
+   <!-- お問い合わせ -->
+   <div class="border-b border-gray-100 pb-4">
+    <button class="mobile-accordion-btn group w-full flex justify-between items-center text-lg font-bold text-gray-800 tracking-wider">
+    <span class="group-hover-text-gradient transition-colors">お問い合わせ</span>
+    <div class="w-8 h-8  bg-gray-50 flex items-center justify-center transition-transform duration-300 icon-wrapper">
+     <i class="fa-solid fa-plus text-sm text-gradient"></i>
+    </div>
+    </button>
+    <div class="mobile-accordion-content hidden mt-4 space-y-2 pl-4 border-l-2 border-main-blue/20">
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>IRに関するお問い合わせ</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>製品・見積りについて</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>調達に関するお問い合わせ</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    <a href="#" class="flex items-center py-2 text-sm text-gray-600 hover-text-gradient transition-colors"><span>その他のお問い合わせ</span> <i class="fa-solid fa-caret-right opacity-50 text-[10px] ml-2"></i></a>
+    </div>
+   </div>
+
+   <!-- 言語切替 & 採用情報 -->
+   <div class="pt-6 flex items-center justify-between">
+    <div class="flex items-center gap-4 text-lg font-bold text-gray-800">
+    <a href="#" class="text-gradient">Ja</a>
+    <span class="text-gray-300">|</span>
+    <a href="#" class="text-gray-400 hover-text-gradient transition-colors">En</a>
+    </div>
+    <a href="#" class="btn-primary py-2 px-6 text-sm">採用情報 <i class="fa-solid fa-caret-right ml-1"></i></a>
+   </div>
+
+  </div>
+  </div>
+ </div>
+
+ <!-- #01 First View (FV) -->
+ <section id="fv" class="relative h-screen flex items-center overflow-hidden">
+  <!-- Video Background placeholder -->
+  <div class="absolute inset-0 z-[-1]">
+   <video autoplay loop muted playsinline class="w-full h-full object-cover">
+    <!-- Using a placeholder data URL for demo, replace with actual thermal video -->
+    <source src="img/img-main/fv.mp4" type="video/mp4">
+   </video>
+  <!-- 動画の上のオーバーレイ（黒40%） -->
+  <div class="absolute inset-0 bg-black/40"></div>
+  </div>
+  
+  <div class="relative z-10 px-6 md:px-12 lg:px-24 xl:px-32 w-full pt-20 fade-in-up">
+   <h1 class="text-[32px] sm:text-5xl md:text-7xl font-black text-white leading-tight mb-8 tracking-[0.03em] drop-shadow-2xl">
+    熱のある場所に、<br>
+    <span class="inline-block mt-2 md:mt-6 text-white">ティラドの技術。</span>
+   </h1>
+  <p class="text-white/90 text-lg md:text-2xl mb-12 font-bold tracking-widest max-w-3xl">
+   熱交換器のパイオニアとして、<br class="hidden md:block">長年培った技術で世界の産業を支えています。
+  </p>
+  <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+   <a href="#about" class="btn-primary w-full sm:w-auto">
+    熱交換器の役割とは？ <i class="fa-solid fa-caret-right ml-2"></i>
+   </a>
+   <a href="#" class="btn-secondary w-full sm:w-auto">
+    <span class="btn-secondary-text">製品詳細を見る <i class="fa-solid fa-caret-right ml-2"></i></span>
+   </a>
+  </div>
+  </div>
+  
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white/70">
+  <span class="text-[10px] uppercase tracking-widest mb-3 font-bold">Scroll</span>
+  <div class="scroll-line"></div>
+  </div>
+ </section>
+
+
+
+  <!-- #04 section-1 -->
+  <section id="section-1" class="relative py-32 overflow-hidden bg-gray-50">
+   <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+    <div class="mb-16">
+     <div class="fade-in-up mb-8 text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#4B5563] leading-tight">
+       <span class="scroll-text-gradient inline-block">熱交換器は、最適な性能を支える部品です。</span>
+      </h2>
+     </div>
+     <div class="max-w-3xl mx-auto space-y-8 text-gray-600 leading-relaxed font-medium fade-in-up" style="transition-delay: 0.3s;">
+      <div class="space-y-6">
+       <p class="text-lg">どのような製品やシステムも、動作すれば熱を持ちます。熱を持ちすぎると、本来の性能を十分に発揮できず、故障や寿命の低下にもつながります。</p>
+       <p class="text-lg">熱交換器は、その熱を適切に制御し、安定した温度環境を保つための部品です。自動車だけでなく、二輪車、建設・産業機械まで、熱のある場所には必ずその役割があります。</p>
+       <p class="text-lg">ティラドは、ラジエータ、オイルクーラ、EGRクーラ、チャージエアクーラなど、さまざまな熱交換器を手がけながら、社会を支える多様な製品のパフォーマンスを支えています。</p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="w-full relative fade-in-up" style="transition-delay: 0.2s;">
+    <div class="aspect-video w-full max-w-5xl mx-auto bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden shadow-inner">
+     <p class="font-bold tracking-widest text-xl">動画エリア</p>
+    </div>
+   </div>
+  </section>
+
+  <!-- #05 section-2 -->
+  <section id="section-2" class="relative py-32 overflow-hidden bg-white">
+   <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+    <div class="mb-16">
+     <div class="fade-in-up mb-8 text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#4B5563] leading-tight">
+       <span class="scroll-text-gradient inline-block">熱交換器づくりは、実はむずかしい。</span>
+      </h2>
+     </div>
+     <div class="max-w-3xl mx-auto space-y-8 text-gray-600 leading-relaxed font-medium fade-in-up" style="transition-delay: 0.3s;">
+      <div class="space-y-6">
+       <p class="text-lg">熱交換器は、ただ冷やせばいい部品ではありません。性能を上げれば、材料が増え、重くなり、コストも上がる。逆に軽く薄くすれば、性能や耐久性は下がってしまう。</p>
+       <p class="text-lg">つまり、性能・軽量化・耐久性・コストという相反する条件を、同時に満たす必要があります。</p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="w-full relative fade-in-up" style="transition-delay: 0.2s;">
+    <div class="aspect-video w-full max-w-5xl mx-auto bg-gray-100 flex items-center justify-center text-gray-400 overflow-hidden shadow-inner">
+     <p class="font-bold tracking-widest text-xl">画像エリア</p>
+    </div>
+   </div>
+  </section>
+
+  <!-- #06 section-3 -->
+  <section id="section-3" class="relative py-32 overflow-hidden bg-gray-50">
+   <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+    <div class="mb-16">
+     <div class="fade-in-up mb-8 text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#4B5563] leading-tight">
+       <span class="scroll-text-gradient inline-block">その難題を、ティラドは技術で解いてきた。</span>
+      </h2>
+     </div>
+     <div class="max-w-3xl mx-auto space-y-8 text-gray-600 leading-relaxed font-medium fade-in-up" style="transition-delay: 0.3s;">
+      <div class="space-y-6">
+       <p class="text-lg">90年近く積み重ねてきたのは、熱交換器に求められる難題を一つずつ解いていく技術です。</p>
+       <p class="text-lg">ティラドは、世界トップクラスのノウハウを背景に、設計技術と製造技術を磨いてきました。</p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="w-full relative fade-in-up" style="transition-delay: 0.2s;">
+    <div class="aspect-video w-full max-w-5xl mx-auto bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden shadow-inner">
+     <p class="font-bold tracking-widest text-xl">画像エリア</p>
+    </div>
+   </div>
+  </section>
+
+  <!-- #07 section-4 -->
+  <section id="section-4" class="relative py-32 overflow-hidden bg-white">
+   <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+    <div class="mb-16">
+     <div class="fade-in-up mb-8 text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#4B5563] leading-tight">
+       <span class="scroll-text-gradient inline-block">熱のある場所すべてが、ティラドの現場。</span>
+      </h2>
+     </div>
+     <div class="max-w-3xl mx-auto space-y-8 text-gray-600 leading-relaxed font-medium fade-in-up" style="transition-delay: 0.3s;">
+      <div class="space-y-6">
+       <p class="text-lg">二輪車・ATV、自動車・トラック、建設・産業・農業機械まで。マルチパスウェイ時代に対応した幅広いラインナップで、さまざまな熱管理課題に応えています。</p>
+      </div>
+     </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 fade-in-up" style="transition-delay: 0.2s;">
+     <div class="bg-gray-50 p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col h-full">
+      <div class="aspect-video bg-gray-200 mb-6 flex items-center justify-center text-gray-500 font-bold tracking-widest shadow-inner">画像エリア</div>
+      <h3 class="font-bold text-xl mb-3 text-gray-800">自動車用熱交換器</h3>
+      <p class="text-gray-600 mb-8 leading-relaxed">ICE・HEV・BEV・FCEVまで、多様なパワープラントの熱を制御。</p>
+      <div class="mt-auto">
+       <a href="#" class="btn-secondary w-full text-sm">詳細を見る <i class="fa-solid fa-caret-right ml-1"></i></a>
+      </div>
+     </div>
+     <div class="bg-gray-50 p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col h-full">
+      <div class="aspect-video bg-gray-200 mb-6 flex items-center justify-center text-gray-500 font-bold tracking-widest shadow-inner">画像エリア</div>
+      <h3 class="font-bold text-xl mb-3 text-gray-800">二輪車用熱交換器</h3>
+      <p class="text-gray-600 mb-8 leading-relaxed">世界の二輪車市場で培った、小型・高性能・高信頼の技術。</p>
+      <div class="mt-auto">
+       <a href="#" class="btn-secondary w-full text-sm">詳細を見る <i class="fa-solid fa-caret-right ml-1"></i></a>
+      </div>
+     </div>
+     <div class="bg-gray-50 p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col h-full">
+      <div class="aspect-video bg-gray-200 mb-6 flex items-center justify-center text-gray-500 font-bold tracking-widest shadow-inner">画像エリア</div>
+      <h3 class="font-bold text-xl mb-3 text-gray-800">建設・産業・農業機械用熱交換器</h3>
+      <p class="text-gray-600 mb-8 leading-relaxed">泥・振動・高負荷など、過酷な現場で求められる耐久設計。</p>
+      <div class="mt-auto">
+       <a href="#" class="btn-secondary w-full text-sm">詳細を見る <i class="fa-solid fa-caret-right ml-1"></i></a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <!-- #08 section-5 -->
+  <section id="section-5" class="relative py-32 overflow-hidden bg-gray-50">
+   <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+    <div class="mb-16">
+     <div class="fade-in-up mb-8 text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#4B5563] leading-tight">
+       <span class="scroll-text-gradient inline-block">動力が変わっても、熱制御の課題はなくならない。</span>
+      </h2>
+     </div>
+     <div class="max-w-3xl mx-auto space-y-8 text-gray-600 leading-relaxed font-medium fade-in-up" style="transition-delay: 0.3s;">
+      <div class="space-y-6">
+       <p class="text-lg">世界では、BEVだけに絞るのではなく、地域ごとのインフラや用途、エネルギー事情に応じて、HEV、PHEV、BEV、FCEV、水素エンジンなど多様な選択肢を持つマルチパスウェイが広がっています。</p>
+       <p class="text-lg">動力源が変わっても、熱を制御する必要はなくなりません。むしろ、熱交換器に求められる役割はさらに多様になっていきます。</p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="w-full relative fade-in-up" style="transition-delay: 0.2s;">
+    <div class="aspect-video w-full max-w-5xl mx-auto bg-gray-200 flex items-center justify-center text-gray-500 overflow-hidden shadow-inner">
+     <p class="font-bold tracking-widest text-xl">画像エリア</p>
+    </div>
+   </div>
+  </section>
+
+  <!-- #09 section-6 -->
+  <section id="section-6" class="relative py-32 overflow-hidden bg-white">
+   <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+    <div class="mb-16">
+     <div class="fade-in-up mb-8 text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#4B5563] leading-tight">
+       <span class="scroll-text-gradient inline-block">電動化が進むことで、熱交換器の出番はさらに増えていく。</span>
+      </h2>
+     </div>
+     <div class="max-w-3xl mx-auto space-y-8 text-gray-600 leading-relaxed font-medium fade-in-up" style="transition-delay: 0.3s;">
+      <div class="space-y-6">
+       <p class="text-lg">エンジンが減れば熱交換器も減る。そう思われがちですが、実際は逆です。</p>
+       <p class="text-lg">モーター、インバータ、バッテリー、燃料電池など、新しい熱管理対象が増えることで、必要数はむしろ増えていきます。</p>
+      </div>
+     </div>
+    </div>
+    
+    <div class="aspect-video w-full max-w-5xl mx-auto bg-gray-100 flex items-center justify-center text-gray-400 overflow-hidden mb-16 shadow-inner fade-in-up">
+     <p class="font-bold tracking-widest text-xl">画像エリア</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 fade-in-up" style="transition-delay: 0.2s;">
+     <div class="bg-gray-50 p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+      <div class="aspect-video bg-gray-200 mb-5 flex items-center justify-center text-gray-500 text-sm shadow-inner font-bold tracking-wider">画像エリア</div>
+      <h3 class="font-bold text-xl mb-3 text-gray-800">ガソリン車（ICE）</h3>
+      <p class="text-transparent bg-clip-text bg-main-gradient font-bold text-sm mb-3">熱交換器搭載数：2〜6 台 / 1車両</p>
+      <p class="text-gray-600 text-sm leading-relaxed">ラジエータ、EGRクーラ、オイルクーラなど。従来車でも熱管理は不可欠。</p>
+     </div>
+     <div class="bg-gray-50 p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+      <div class="aspect-video bg-gray-200 mb-5 flex items-center justify-center text-gray-500 text-sm shadow-inner font-bold tracking-wider">画像エリア</div>
+      <h3 class="font-bold text-xl mb-3 text-gray-800">HEV・PHEV</h3>
+      <p class="text-transparent bg-clip-text bg-main-gradient font-bold text-sm mb-3">熱交換器搭載数：4〜9 台 / 1車両</p>
+      <p class="text-gray-600 text-sm leading-relaxed">モーターやバッテリー管理用が追加され、熱交換器の役割が広がります。</p>
+     </div>
+     <div class="bg-gray-50 p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+      <div class="aspect-video bg-gray-200 mb-5 flex items-center justify-center text-gray-500 text-sm shadow-inner font-bold tracking-wider">画像エリア</div>
+      <h3 class="font-bold text-xl mb-3 text-gray-800">FCEV（燃料電池車）</h3>
+      <p class="text-transparent bg-clip-text bg-main-gradient font-bold text-sm mb-3">熱交換器搭載数：5〜7 台 / 1車両</p>
+      <p class="text-gray-600 text-sm leading-relaxed">FCスタックの精密温度管理が必要で、高度な熱制御が求められます。</p>
+     </div>
+     <div class="bg-gray-50 p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+      <div class="aspect-video bg-gray-200 mb-5 flex items-center justify-center text-gray-500 text-sm shadow-inner font-bold tracking-wider">画像エリア</div>
+      <h3 class="font-bold text-xl mb-3 text-gray-800">BEV（純電気車）</h3>
+      <p class="text-transparent bg-clip-text bg-main-gradient font-bold text-sm mb-3">熱交換器搭載数：3〜7 台 / 1車両</p>
+      <p class="text-gray-600 text-sm leading-relaxed">バッテリー熱管理やチラーなど、電動化専用の熱交換器が重要になります。</p>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <!-- #10 section-7 -->
+  <section id="section-7" class="relative py-32 overflow-hidden bg-gray-50">
+   <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+    <div class="text-center mb-16 fade-in-up">
+     <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#4B5563] leading-tight mb-8">
+      <span class="scroll-text-gradient inline-block">世界のメーカーに選ばれる理由</span>
+     </h2>
+    </div>
+    
+    <div class="flex flex-wrap justify-center gap-4 mb-20 fade-in-up">
+     <div class="w-32 h-20 bg-white flex items-center justify-center shadow-sm text-sm text-gray-400 font-bold tracking-wider border border-gray-100">画像</div>
+     <div class="w-32 h-20 bg-white flex items-center justify-center shadow-sm text-sm text-gray-400 font-bold tracking-wider border border-gray-100">画像</div>
+     <div class="w-32 h-20 bg-white flex items-center justify-center shadow-sm text-sm text-gray-400 font-bold tracking-wider border border-gray-100">画像</div>
+     <div class="w-32 h-20 bg-white flex items-center justify-center shadow-sm text-sm text-gray-400 font-bold tracking-wider border border-gray-100">画像</div>
+     <div class="w-32 h-20 bg-white flex items-center justify-center shadow-sm text-sm text-gray-400 font-bold tracking-wider border border-gray-100">画像</div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 fade-in-up" style="transition-delay: 0.2s;">
+     <div class="relative pl-6 border-l-4 border-[#0e3b7b]">
+      <h3 class="font-bold text-2xl mb-4 text-gray-800">過酷な環境での耐久性と信頼性</h3>
+      <p class="text-gray-600 text-lg leading-relaxed">熱交換器は、温度差、振動、汚れ、連続稼働など、厳しい条件にさらされる部品です。だからこそ、壊れないこと、安定して働くことが重視されます。</p>
+     </div>
+     <div class="relative pl-6 border-l-4 border-[#0e3b7b]">
+      <h3 class="font-bold text-2xl mb-4 text-gray-800">マルチパスウェイに対応する幅広いラインナップ</h3>
+      <p class="text-gray-600 text-lg leading-relaxed">二輪、四輪、建機、産業機械まで。多様な分野に応えられる製品群が、ティラドの強みです。</p>
+     </div>
+     <div class="relative pl-6 border-l-4 border-[#0e3b7b]">
+      <h3 class="font-bold text-2xl mb-4 text-gray-800">市場をリードする技術力</h3>
+      <p class="text-gray-600 text-lg leading-relaxed">SMART、多機能Rad、CAE、超薄肉加工など、目立たない部品にこそ詰まった技術が、選ばれる理由になっています。</p>
+     </div>
+    </div>
+    <p class="text-right text-sm text-gray-400 mt-10 font-medium fade-in-up">※掲載以外にも多数のお取引実績があります。</p>
+   </div>
+  </section>
+
+  <!-- #11 section-8 -->
+  <section id="section-8" class="relative py-32 overflow-hidden bg-white">
+   <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+    <div class="mb-16">
+     <div class="fade-in-up mb-8 text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#4B5563] leading-tight">
+       <span class="scroll-text-gradient inline-block">見えないところで、社会を支える技術へ。</span>
+      </h2>
+     </div>
+     <div class="max-w-3xl mx-auto space-y-8 text-gray-600 leading-relaxed font-medium fade-in-up" style="transition-delay: 0.3s;">
+      <div class="space-y-6">
+       <p class="text-lg">熱交換器は目立つ部品ではありません。けれど、その性能は、機械の信頼性や効率、寿命を大きく左右します。ティラドはその答えを、愚直に磨き続けてきました。</p>
+      </div>
+     </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32 fade-in-up" style="transition-delay: 0.2s;">
+     <div class="bg-gray-50 p-8 shadow-sm border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+      <div class="aspect-square bg-white mb-8 w-40 h-40 mx-auto flex items-center justify-center text-gray-400 font-bold tracking-widest shadow-inner border border-gray-100">画像</div>
+      <h3 class="font-black text-2xl mb-4 text-center text-gray-800">熱を制御する</h3>
+      <p class="text-gray-600 text-base text-center leading-relaxed">機械を止めず、本来の性能を引き出す。その前提を支えるのが熱交換器です。</p>
+     </div>
+     <div class="bg-gray-50 p-8 shadow-sm border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+      <div class="aspect-square bg-white mb-8 w-40 h-40 mx-auto flex items-center justify-center text-gray-400 font-bold tracking-widest shadow-inner border border-gray-100">画像</div>
+      <h3 class="font-black text-2xl mb-4 text-center text-gray-800">難題を解く</h3>
+      <p class="text-gray-600 text-base text-center leading-relaxed">相反する条件に向き合い、設計技術と製造技術で答えを出し続けることが、ティラドのものづくりです。</p>
+     </div>
+     <div class="bg-gray-50 p-8 shadow-sm border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+      <div class="aspect-square bg-white mb-8 w-40 h-40 mx-auto flex items-center justify-center text-gray-400 font-bold tracking-widest shadow-inner border border-gray-100">画像</div>
+      <h3 class="font-black text-2xl mb-4 text-center text-gray-800">未来へ広がる</h3>
+      <p class="text-gray-600 text-base text-center leading-relaxed">動力が変わっても、熱制御の課題はなくなりません。だからこそ、ティラドの技術は次の時代でも必要とされます。</p>
+     </div>
+    </div>
+
+    <div class="text-center fade-in-up border-t border-gray-200 pt-20" style="transition-delay: 0.4s;">
+     <p class="text-3xl md:text-5xl font-black text-[#4B5563] leading-tight md:leading-snug tracking-widest">
+      熱制御の課題に、挑み続ける。<br>
+      それが、<span class="scroll-text-gradient inline-block ml-2">ティラドのものづくり</span>です。
+     </p>
+    </div>
+   </div>
+  </section>
+
+ <!-- Footer -->
+ <footer class="bg-dark text-gray-400 py-16 border-t border-gray-900">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+   <!-- Logo & Info -->
+   <div class="lg:col-span-1">
+    <div class="mb-6">
+    <!-- ▼ロゴ画像を配置する箇所 -->
+    <a href="#" class="inline-block">
+     <img src="img/img-main/logo.png" alt="T.RAD 株式会社ティラド" class="h-8 w-auto object-contain">
+    </a>
+    </div>
+   </div>
+
+   <!-- Menu Columns -->
+   <div class="flex flex-col gap-4 text-sm">
+    <div class="mb-4">
+    <a href="#" class="group font-bold mb-2 block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">企業情報</span>
+    </a>
+    <ul class="space-y-2 pl-2 border-l border-gray-800">
+     <li><a href="#" class="hover:text-white transition">会社概要</a></li>
+     <li><a href="#" class="hover:text-white transition">社長メッセージ</a></li>
+     <li><a href="#" class="hover:text-white transition">沿革</a></li>
+     <li><a href="#" class="hover:text-white transition">数字で見るティラド</a></li>
+     <li><a href="#" class="hover:text-white transition">動画で見るティラド</a></li>
+     <li><a href="#" class="hover:text-white transition">海外拠点情報</a></li>
+     <li><a href="connect.html" class="hover:text-white transition">ティラドコネクト</a></li>
+     <li><a href="logistics.html" class="hover:text-white transition">ティラドロジスティクス</a></li>
+    </ul>
+    </div>
+    <div class="mb-4">
+    <a href="manufacturing.html" class="group font-bold mb-2 block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">ティラドのモノづくり</span>
+    </a>
+    </div>
+   </div>
+
+   <div class="flex flex-col gap-4 text-sm">
+    <div class="mb-4">
+    <a href="#" class="group font-bold mb-2 block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">株主・投資家情報</span>
+    </a>
+    <ul class="space-y-2 pl-2 border-l border-gray-800">
+     <li><a href="#" class="hover:text-white transition">IR基本方針</a></li>
+     <li><a href="#" class="hover:text-white transition">IR資料室</a></li>
+     <li><a href="#" class="hover:text-white transition">财务・実績データ</a></li>
+     <li><a href="#" class="hover:text-white transition">電子公告</a></li>
+    </ul>
+    </div>
+    <div class="mb-4">
+    <a href="#" class="group font-bold mb-2 block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">サステナビリティ</span>
+    </a>
+    <ul class="space-y-2 pl-2 border-l border-gray-800">
+     <li><a href="#" class="hover:text-white transition">トップメッセージ</a></li>
+     <li><a href="#" class="hover:text-white transition">サステナビリティマネジメント</a></li>
+     <li><a href="#" class="hover:text-white transition">企業価値創造・マテリアリティ特定</a></li>
+     <li><a href="#" class="hover:text-white transition">環境</a> / <a href="#" class="hover:text-white transition">社会</a></li>
+     <li><a href="#" class="hover:text-white transition">サステナビリティレポート</a></li>
+    </ul>
+    </div>
+   </div>
+
+   <div class="flex flex-col gap-4 text-sm">
+    <div class="mb-4">
+    <a href="#" class="group font-bold mb-2 block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">サプライヤー様窓口</span>
+    </a>
+    <ul class="space-y-2 pl-2 border-l border-gray-800">
+     <li><a href="#" class="hover:text-white transition">募集要項</a> / <a href="#" class="hover:text-white transition">調達品目</a></li>
+     <li><a href="#" class="hover:text-white transition">ご提案受付</a></li>
+     <li><a href="#" class="hover:text-white transition">グリーン調達ガイドライン</a></li>
+     <li><a href="#" class="hover:text-white transition">フォーマットダウンロード</a></li>
+     <li><a href="#" class="hover:text-white transition">仕入先CSRガイドライン</a></li>
+     <li><a href="#" class="hover:text-white transition">取引先ポータルログイン</a></li>
+    </ul>
+    </div>
+    <div class="flex flex-col gap-2 border-t border-gray-800 pt-4 mt-2">
+    <a href="#" class="group font-bold block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">お知らせ</span>
+    </a>
+    <a href="#" class="group font-bold block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">お問い合わせ</span>
+    </a>
+    <a href="#" class="group font-bold block w-fit">
+     <span class="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-main-gradient transition-all duration-300">採用情報</span>
+    </a>
+    </div>
+   </div>
+  </div>
+
+  <div class="flex flex-col md:flex-row justify-between items-center border-t border-gray-900 pt-8 text-xs">
+   <div class="flex gap-6 mb-4 md:mb-0">
+    <a href="#" class="hover:text-white transition">ご利用に際して</a>
+    <a href="#" class="hover:text-white transition">個人情報保護について</a>
+   </div>
+   <p>Copyright&copy; T.RAD Co., Ltd. All rights reserved.</p>
+  </div>
+  </div>
+ </footer>
+
+ <!-- Scripts -->
+ <script src="js/main.js"></script>
+</body>
+</html>
