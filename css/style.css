@@ -299,15 +299,45 @@ body {
     border-image: var(--main-gradient) 1;
 }
 
-/* Infinite Carousel (Left to Right) */
-.carousel-track-ltr {
+.border-l-gradient {
+    position: relative;
+    border-left: none !important;
+}
+.border-l-gradient::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    bottom: 0.1em;
+    width: 4px;
+    background: linear-gradient(to bottom, #eb2e3d, #2e79bb);
+}
+
+/* Infinite Carousel (Flow Right to Left) */
+.carousel-track-left {
     display: flex;
     width: max-content;
-    animation: scroll-ltr 40s linear infinite;
+    animation: scroll-left 60s linear infinite;
 }
-@keyframes scroll-ltr {
+@keyframes scroll-left {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+}
+
+/* Infinite Carousel (Flow Left to Right) */
+.carousel-track-right {
+    display: flex;
+    width: max-content;
+    animation: scroll-right 60s linear infinite;
+}
+@keyframes scroll-right {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+/* Slower version for logo carousel */
+.carousel-track-slow {
+    animation-duration: 100s;
 }
 .carousel-img {
     width: 280px;
