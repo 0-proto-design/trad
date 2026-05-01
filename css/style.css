@@ -247,6 +247,24 @@ body {
     100% { transform: translateY(200%); }
 }
 
+.scroll-line-dark {
+    position: relative;
+    width: 1px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.scroll-line-dark::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: black;
+    animation: scrollLineDown 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
 /* Hover Text Gradient */
 .hover-text-gradient {
     transition: all var(--transition-speed) ease;
