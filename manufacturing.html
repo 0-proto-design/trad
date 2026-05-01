@@ -378,54 +378,204 @@
  </div>
 
  <!-- #01 First View (FV) -->
- <section id="fv" class="relative h-screen flex items-center overflow-hidden">
-  <!-- Video Background placeholder -->
-  <div class="absolute inset-0 z-[-1]">
-   <video autoplay loop muted playsinline class="w-full h-full object-cover">
-    <!-- Using a placeholder data URL for demo, replace with actual thermal video -->
-    <source src="img/img-main/fv.mp4" type="video/mp4">
-   </video>
-  <!-- 動画の上のオーバーレイ（黒40%） -->
-  <div class="absolute inset-0 bg-black/40"></div>
-  </div>
-  
-  <div class="relative z-10 px-6 md:px-12 lg:px-24 xl:px-32 w-full pt-20 fade-in-up">
-   <h1 class="text-[32px] sm:text-5xl md:text-7xl font-black text-white leading-tight mb-8 tracking-[0.03em] drop-shadow-2xl">
-    熱のある場所に、<br>
-    <span class="inline-block mt-2 md:mt-6 text-white">ティラドの技術。</span>
-   </h1>
-  <p class="text-white/90 text-lg md:text-2xl mb-12 font-bold tracking-widest max-w-3xl">
-   熱交換器のパイオニアとして、<br class="hidden md:block">長年培った技術で世界の産業を支えています。
-  </p>
-  <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-   <a href="#about" class="btn-primary w-full sm:w-auto">
-    熱交換器の役割とは？ <i class="fa-solid fa-caret-right ml-2"></i>
-   </a>
-   <a href="#" class="btn-secondary w-full sm:w-auto">
-    <span class="btn-secondary-text">製品詳細を見る <i class="fa-solid fa-caret-right ml-2"></i></span>
-   </a>
-  </div>
-  </div>
-  
-  <!-- Scroll indicator -->
-  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white/70">
-  <span class="text-[10px] uppercase tracking-widest mb-3 font-bold">Scroll</span>
-  <div class="scroll-line"></div>
-  </div>
- </section>
+  <section id="fv" class="relative bg-gray-100 flex flex-col pt-[72px] pb-1 px-1 min-h-screen md:h-screen">
+   <div class="grid grid-cols-2 md:grid-cols-12 md:grid-rows-3 gap-1 flex-grow w-full h-full grid-flow-row-dense">
+    
+    <!-- Row 1 (Desktop) -->
+    <!-- 1. AUTOMOTIVE -->
+    <div class="col-span-1 md:col-span-3 relative overflow-hidden group aspect-square md:aspect-auto">
+     <div class="absolute inset-0 bg-gray-200">
+      <img src="img/img-manufacturing/heat-exchanger-1-automotive.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="AUTOMOTIVE">
+     </div>
+     <div class="absolute top-4 left-4 lg:top-6 lg:left-6 z-10 bg-white/90 backdrop-blur-sm p-3 shadow-sm">
+      <p class="text-[#0B419B] font-bold text-[10px] lg:text-xs tracking-widest mb-1 uppercase">Automotive</p>
+      <p class="text-[#0B419B] font-black text-sm lg:text-base">自動車</p>
+      <div class="w-5 h-[2px] bg-[#0B419B] mt-2"></div>
+     </div>
+    </div>
+
+    <!-- 2. MOTORCYCLE -->
+    <div class="col-span-1 md:col-span-3 relative overflow-hidden group aspect-square md:aspect-auto">
+     <div class="absolute inset-0 bg-gray-200">
+      <img src="img/img-manufacturing/heat-exchanger-2-motorcycle.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="MOTORCYCLE">
+     </div>
+     <div class="absolute top-4 left-4 lg:top-6 lg:left-6 z-10 bg-white/90 backdrop-blur-sm p-3 shadow-sm">
+      <p class="text-[#0B419B] font-bold text-[10px] lg:text-xs tracking-widest mb-1 uppercase">Motorcycle</p>
+      <p class="text-[#0B419B] font-black text-sm lg:text-base">二輪車</p>
+      <div class="w-5 h-[2px] bg-[#0B419B] mt-2"></div>
+     </div>
+    </div>
+
+    <!-- 3. SINCE 1936 -->
+    <div class="col-span-1 md:col-span-3 bg-[#0B419B] p-6 flex flex-col justify-center items-center text-white text-center aspect-square md:aspect-auto relative overflow-hidden">
+     <p class="text-[10px] md:text-xs font-bold tracking-widest mb-2 relative z-10 opacity-90 uppercase">Since</p>
+     <p class="text-4xl lg:text-5xl xl:text-6xl font-black mb-4 relative z-10 tracking-wider">1936</p>
+     <div class="w-8 h-[2px] bg-white mb-4 relative z-10"></div>
+     <p class="text-[10px] md:text-xs font-bold leading-relaxed opacity-90 relative z-10">創業以来、技術の力で<br>社会を支える。</p>
+    </div>
+
+    <!-- 4. Component 1 -->
+    <div class="col-span-1 md:col-span-3 relative overflow-hidden group aspect-square md:aspect-auto bg-gray-200">
+     <div class="w-full h-full flex items-center justify-center text-gray-500 text-sm">画像仮置き</div>
+    </div>
+
+    <!-- Row 2 (Desktop) -->
+    <!-- 5. CONSTRUCTION MACHINERY -->
+    <div class="col-span-1 md:col-span-3 relative overflow-hidden group aspect-square md:aspect-auto">
+     <div class="absolute inset-0 bg-gray-200">
+      <img src="img/img-manufacturing/heat-exchanger-3-off-highway.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="CONSTRUCTION MACHINERY">
+     </div>
+     <div class="absolute top-4 left-4 lg:top-6 lg:left-6 z-10 bg-white/90 backdrop-blur-sm p-3 shadow-sm">
+      <p class="text-[#0B419B] font-bold text-[10px] lg:text-xs tracking-widest mb-1 uppercase leading-tight">Construction<br>Machinery</p>
+      <p class="text-[#0B419B] font-black text-sm lg:text-base mt-1">建設機械</p>
+      <div class="w-5 h-[2px] bg-[#0B419B] mt-2"></div>
+     </div>
+    </div>
+
+    <!-- 6. CENTER TEXT BLOCK -->
+    <div class="col-span-2 md:col-span-6 bg-white flex flex-col justify-center items-center text-center p-8 md:p-10 lg:p-16">
+      <h1 class="text-2xl sm:text-4xl lg:text-[42px] xl:text-5xl font-black text-[#0B419B] leading-snug mb-6 tracking-widest">
+       社会を動かす、<br>
+       あらゆる<span class="text-transparent bg-clip-text bg-main-gradient">熱</span>のそばに。
+      </h1>
+      <p class="text-gray-800 font-bold leading-loose tracking-widest text-xs sm:text-sm lg:text-base xl:text-lg">
+       自動車、二輪車、建設・産業機械まで。<br class="hidden lg:block">
+       ティラドは1936年の創業以来、<br class="hidden lg:block">
+       熱交換器の技術で社会を支えてきました。
+      </p>
+    </div>
+
+    <!-- 7. INDUSTRIAL MACHINERY -->
+    <div class="col-span-1 md:col-span-3 relative overflow-hidden group aspect-square md:aspect-auto">
+     <div class="absolute inset-0 bg-gray-200">
+      <div class="w-full h-full bg-gray-300 flex items-center justify-center text-gray-500 text-xs">画像仮置き</div>
+     </div>
+     <div class="absolute top-4 left-4 lg:top-6 lg:left-6 z-10 bg-white/90 backdrop-blur-sm p-3 shadow-sm">
+      <p class="text-[#0B419B] font-bold text-[10px] lg:text-xs tracking-widest mb-1 uppercase leading-tight">Industrial<br>Machinery</p>
+      <p class="text-[#0B419B] font-black text-sm lg:text-base mt-1">産業機械</p>
+      <div class="w-5 h-[2px] bg-[#0B419B] mt-2"></div>
+     </div>
+    </div>
+
+    <!-- Row 3 (Desktop) -->
+    <!-- 8. Cityscape -->
+    <div class="col-span-1 md:col-span-3 relative overflow-hidden group aspect-square md:aspect-auto bg-gray-200">
+     <div class="w-full h-full flex items-center justify-center text-gray-500 text-sm">画像仮置き</div>
+    </div>
+
+    <!-- 9. HEAT EXCHANGER TECHNOLOGY -->
+    <div class="col-span-1 md:col-span-3 bg-main-gradient p-6 lg:p-8 flex flex-col justify-center items-center text-white text-center relative overflow-hidden aspect-square md:aspect-auto">
+     <div class="relative z-10">
+      <p class="text-[10px] lg:text-sm font-bold tracking-widest mb-4 leading-relaxed uppercase">Heat Exchanger<br>Technology</p>
+      <div class="w-8 h-[2px] bg-white mx-auto mb-4"></div>
+      <p class="text-[10px] lg:text-xs font-bold leading-relaxed opacity-90">熱交換器の技術で、<br>最適な熱環境を支える。</p>
+     </div>
+    </div>
+
+    <!-- 10. Component 2 -->
+    <div class="col-span-1 md:col-span-3 relative overflow-hidden group aspect-square md:aspect-auto bg-gray-200">
+     <div class="w-full h-full flex items-center justify-center text-gray-500 text-sm">画像仮置き</div>
+    </div>
+
+    <!-- 11. Logo Box -->
+    <div class="col-span-1 md:col-span-3 bg-white flex flex-col items-center justify-center p-6 aspect-square md:aspect-auto">
+     <img src="img/img-main/logo.png" alt="T.RAD" class="w-full h-auto max-w-[100px] lg:max-w-[140px] hover:scale-105 transition-transform duration-500 mb-3">
+     <p class="text-[#0B419B] font-bold text-[8px] lg:text-[10px] tracking-widest">熱で未来をつくる</p>
+    </div>
+
+   </div>
+  </section>
+
+    <div class="col-span-1 md:col-span-3 relative overflow-hidden group aspect-square md:aspect-auto">
+     <div class="absolute inset-0 bg-gray-200">
+      <img src="img/img-manufacturing/heat-exchanger-2-motorcycle.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="MOTORCYCLE">
+     </div>
+     <div class="absolute top-4 left-4 lg:top-6 lg:left-6 z-10 bg-white/90 backdrop-blur-sm p-3 lg:p-5 shadow-sm">
+      <p class="text-[#0B419B] font-bold text-[10px] lg:text-xs tracking-widest mb-1 uppercase">Motorcycle</p>
+      <p class="text-[#0B419B] font-black text-sm lg:text-base">二輪車</p>
+      <div class="w-5 h-[2px] bg-[#0B419B] mt-2"></div>
+     </div>
+    </div>
+
+    <!-- 4. CONSTRUCTION MACHINERY -->
+    <div class="col-span-1 md:col-span-3 relative overflow-hidden group aspect-square md:aspect-auto">
+     <div class="absolute inset-0 bg-gray-200">
+      <img src="img/img-manufacturing/heat-exchanger-3-off-highway.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="CONSTRUCTION MACHINERY">
+     </div>
+     <div class="absolute top-4 left-4 lg:top-6 lg:left-6 z-10 bg-white/90 backdrop-blur-sm p-3 lg:p-5 shadow-sm">
+      <p class="text-[#0B419B] font-bold text-[10px] lg:text-xs tracking-widest mb-1 uppercase leading-tight">Construction<br>Machinery</p>
+      <p class="text-[#0B419B] font-black text-sm lg:text-base mt-1">建設機械</p>
+      <div class="w-5 h-[2px] bg-[#0B419B] mt-2"></div>
+     </div>
+    </div>
+
+    <!-- 5. INDUSTRIAL MACHINERY -->
+    <div class="col-span-1 md:col-span-3 relative overflow-hidden group aspect-square md:aspect-auto">
+     <div class="absolute inset-0 bg-gray-200">
+      <div class="w-full h-full bg-gray-300 flex items-center justify-center text-gray-500 text-xs">画像仮置き</div>
+     </div>
+     <div class="absolute top-4 left-4 lg:top-6 lg:left-6 z-10 bg-white/90 backdrop-blur-sm p-3 lg:p-5 shadow-sm">
+      <p class="text-[#0B419B] font-bold text-[10px] lg:text-xs tracking-widest mb-1 uppercase leading-tight">Industrial<br>Machinery</p>
+      <p class="text-[#0B419B] font-black text-sm lg:text-base mt-1">産業機械</p>
+      <div class="w-5 h-[2px] bg-[#0B419B] mt-2"></div>
+     </div>
+    </div>
+
+    <!-- 6. SINCE 1936 -->
+    <div class="col-span-1 md:col-span-2 bg-[#0B419B] p-6 flex flex-col justify-center items-start text-white aspect-square md:aspect-auto relative overflow-hidden">
+     <p class="text-[10px] md:text-xs font-bold tracking-widest mb-2 relative z-10 opacity-90 uppercase">Since</p>
+     <p class="text-3xl lg:text-4xl xl:text-5xl font-black mb-4 relative z-10 tracking-wider">1936</p>
+     <div class="w-6 h-[2px] bg-white mb-4 relative z-10"></div>
+     <p class="text-[10px] md:text-[11px] font-bold leading-relaxed opacity-90 relative z-10">創業以来、<br>技術の力で<br>社会を支える。</p>
+    </div>
+
+    <!-- 7. Bottom Component 1 -->
+    <div class="hidden md:block col-span-3 relative overflow-hidden bg-gray-200">
+     <div class="w-full h-full bg-gray-300 flex items-center justify-center text-gray-500 text-sm">画像仮置き</div>
+    </div>
+
+    <!-- 8. HEAT EXCHANGER TECHNOLOGY -->
+    <div class="col-span-2 md:col-span-3 bg-[#0B419B] p-6 lg:p-8 flex flex-col justify-center text-white relative overflow-hidden aspect-[2/1] md:aspect-auto">
+     <div class="relative z-10">
+      <p class="text-xs lg:text-sm font-bold tracking-widest mb-4 leading-relaxed uppercase">Heat Exchanger<br>Technology</p>
+      <p class="text-[11px] lg:text-xs font-bold leading-relaxed opacity-90">熱交換器の技術で、<br>最適な熱環境を支える。</p>
+      <div class="w-8 h-[2px] bg-white mt-5"></div>
+     </div>
+    </div>
+
+    <!-- 9. Cityscape -->
+    <div class="hidden md:block col-span-2 relative overflow-hidden bg-gray-200">
+     <div class="w-full h-full bg-gray-300 flex items-center justify-center text-gray-500 text-sm">画像仮置き</div>
+    </div>
+
+    <!-- 10. Logo Box -->
+    <div class="hidden md:flex col-span-2 bg-white items-center justify-center p-8">
+     <img src="img/img-main/logo.png" alt="T.RAD" class="w-full h-auto max-w-[120px] hover:scale-105 transition-transform duration-500">
+    </div>
+
+    <!-- 11. Component 2 -->
+    <div class="hidden md:block col-span-2 relative overflow-hidden bg-gray-200">
+     <div class="w-full h-full bg-gray-300 flex items-center justify-center text-gray-500 text-sm">画像仮置き</div>
+    </div>
+
+   </div>
+  </section>
+
 
 
 
   <!-- #04 section-1 -->
-  <section id="section-1" class="relative py-32 overflow-hidden bg-white">
-   <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
-    <div class="mb-16">
-     <div class="fade-in-up mb-8 text-center">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#4B5563] leading-tight">
-       熱交換器は、<span class="scroll-text-gradient inline-block">最適な性能を支える</span>部品です。
+  <section id="section-1" class="relative pt-32 pb-48 md:pb-64 overflow-hidden bg-white">
+   <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-20 flex flex-col md:flex-row">
+    <!-- Left text area -->
+    <div class="w-full md:w-2/3 lg:w-3/5">
+     <div class="fade-in-up mb-8">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-800 leading-tight">
+       熱交換器は、<br class="hidden md:block">
+       <span class="scroll-text-gradient inline-block mt-2">最適な性能を支える</span><span class="inline-block whitespace-nowrap">部品です。</span>
       </h2>
      </div>
-     <div class="max-w-3xl mx-auto space-y-8 text-gray-600 leading-relaxed font-medium fade-in-up" style="transition-delay: 0.3s;">
+     <div class="space-y-8 text-gray-600 leading-relaxed font-medium fade-in-up max-w-lg" style="transition-delay: 0.3s;">
       <div class="space-y-6">
        <p class="text-lg">どのような製品やシステムも、動作すれば熱を持ちます。<span class="text-gray-800 font-bold border-b-gradient pb-1">熱を持ちすぎると、本来の性能を十分に発揮できず、故障や寿命の低下にもつながります。</span></p>
        <p class="text-lg"><span class="text-gray-800 font-bold border-b-gradient pb-1">熱交換器は、その熱を適切に制御し、安定した温度環境を保つための部品です。</span>自動車だけでなく、二輪車、建設・産業機械まで、<span class="text-gray-800 font-bold border-b-gradient pb-1">熱のある場所には必ずその役割があります。</span></p>
@@ -435,11 +585,26 @@
     </div>
    </div>
    
-   <div class="w-full flex flex-col md:flex-row fade-in-up" style="transition-delay: 0.2s;">
-    <div class="w-full md:w-[40%] aspect-[4/3] md:aspect-auto">
-     <img src="img/img-manufacturing/heat-exchanger.png" alt="熱交換器" class="w-full h-full object-cover">
+   <!-- Image on bottom right, overflowing -->
+   <div class="absolute right-0 bottom-0 translate-y-[10%] md:translate-y-[15%] translate-x-[10%] w-[100%] sm:w-[85%] md:w-[75%] lg:w-[65%] xl:w-[55%] max-w-[600px] lg:max-w-[750px] xl:max-w-[850px] z-10 pointer-events-none fade-in-up" style="transition-delay: 0.4s;">
+    <img src="img/img-manufacturing/heat-exchanger.png" alt="熱交換器" class="w-full h-auto object-contain">
+   </div>
+  </section>
+
+  <!-- Role of Heat Exchanger Video Section -->
+  <section class="relative py-24 overflow-hidden" id="heat-exchanger-section">
+   <!-- Background Image -->
+   <div class="absolute inset-0 z-0 bg-fixed bg-cover bg-center" style="background-image: url('img/img-manufacturing/heat-exchanger-bg.png');">
+   </div>
+   <!-- Dark Overlay -->
+   <div id="heat-exchanger-overlay" class="absolute inset-0 z-0 bg-black transition-opacity duration-1000 opacity-0 pointer-events-none"></div>
+
+   <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+    <div id="he-content-1" class="mb-16 flex flex-col items-center opacity-0 translate-y-8 transition-all duration-1000">
+     <h3 class="text-2xl md:text-3xl font-black text-white mb-6 text-center shadow-black drop-shadow-md tracking-wider">熱交換器の仕組み</h3>
+     <div class="w-14 h-[2px] bg-main-gradient"></div>
     </div>
-    <div class="w-full md:w-[60%] aspect-video">
+    <div id="he-content-2" class="aspect-video w-full max-w-5xl mx-auto shadow-[0_20px_50px_rgba(0,0,0,0.6)] bg-black overflow-hidden opacity-0 translate-y-8 transition-all duration-1000">
      <video autoplay loop muted playsinline class="w-full h-full object-cover">
       <source src="img/img-manufacturing/heat-exchanger.mp4" type="video/mp4">
      </video>
@@ -447,12 +612,39 @@
    </div>
   </section>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const section = document.getElementById('heat-exchanger-section');
+      const overlay = document.getElementById('heat-exchanger-overlay');
+      const content1 = document.getElementById('he-content-1');
+      const content2 = document.getElementById('he-content-2');
+      if (section && overlay) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                overlay.style.opacity = '0.75'; // 暗くする
+                // 見出しと動画を同じタイミングで表示
+                content1.classList.remove('opacity-0', 'translate-y-8');
+                content1.classList.add('opacity-100', 'translate-y-0');
+                content2.classList.remove('opacity-0', 'translate-y-8');
+                content2.classList.add('opacity-100', 'translate-y-0');
+              }, 400);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: '0px 0px -50px 0px', threshold: 0.3 });
+        observer.observe(section);
+      }
+    });
+  </script>
+
   <!-- #05 section-2 -->
-  <section id="section-2" class="relative py-32 overflow-hidden bg-white">
+  <section id="section-2" class="relative pt-32 pb-12 overflow-hidden bg-white">
    <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
     <div class="mb-16">
      <div class="fade-in-up mb-8 text-center">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#4B5563] leading-tight">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-800 leading-tight">
        熱交換器づくりは、<span class="scroll-text-gradient inline-block">実はむずかしい。</span>
       </h2>
      </div>
@@ -552,7 +744,7 @@
    <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
     <div class="mb-16">
      <div class="fade-in-up mb-8 text-center">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#4B5563] leading-tight">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-800 leading-tight">
        その難題を、<span class="scroll-text-gradient inline-block">ティラドは技術で解いてきた。</span>
       </h2>
      </div>
@@ -569,8 +761,8 @@
       <div class="bg-white shadow-xl p-6 md:p-8 w-full md:w-[45%] flex flex-col items-center border border-gray-200 border-t-gradient relative">
        <h3 class="text-gradient text-2xl md:text-3xl font-black mb-4 tracking-wider">「匠」の設計技術</h3>
        <p class="font-bold text-gray-800 text-center mb-6 leading-relaxed text-lg">性能、耐久性、軽量化、コストの<br class="hidden xl:block">トレードオフを独自技術で突破</p>
-       <div class="w-full aspect-video bg-gray-200 flex items-center justify-center text-gray-400">
-        <span class="font-bold tracking-widest">画像エリア (仮置き)</span>
+       <div class="w-full aspect-video overflow-hidden">
+        <img src="img/img-manufacturing/takumi.png" alt="「匠」の設計技術" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
        </div>
       </div>
       
@@ -581,8 +773,8 @@
       <div class="bg-white shadow-xl p-6 md:p-8 w-full md:w-[45%] flex flex-col items-center border border-gray-200 border-t-gradient relative">
        <h3 class="text-gradient text-2xl md:text-3xl font-black mb-4 tracking-wider">世界最高レベルの製造技術</h3>
        <p class="font-bold text-gray-800 text-center mb-6 leading-relaxed text-lg">業界トップレベルの<br class="hidden xl:block">超薄肉材の成形加工技術</p>
-       <div class="w-full aspect-video bg-gray-200 flex items-center justify-center text-gray-400">
-        <span class="font-bold tracking-widest">画像エリア (仮置き)</span>
+       <div class="w-full aspect-video overflow-hidden">
+        <img src="img/img-manufacturing/manufacturing-technology.png" alt="世界最高レベルの製造技術" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
        </div>
       </div>
      </div>
@@ -607,8 +799,8 @@
         <div class="p-6 flex flex-col flex-1 items-center">
          <h4 class="text-gradient font-bold text-lg text-center mb-4">業界No.1の高性能・軽量化</h4>
          <p class="text-sm text-gray-700 text-center mb-6 leading-relaxed font-medium">フィン・チューブの最適設計と<br>超薄肉化技術で業界No.1性能</p>
-         <div class="w-full aspect-[4/3] bg-gray-200 flex items-center justify-center text-gray-400 mb-4">
-          <span class="font-bold text-sm tracking-widest">画像エリア (仮置き)</span>
+         <div class="w-full aspect-video overflow-hidden mb-4">
+          <img src="img/img-manufacturing/knowledge-technology-1.png" alt="高性能Rad（SMART）" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
          </div>
          <p class="text-[10px] text-gray-500 text-center w-full mt-auto">SMART : SLiM & Advanced Radiator Technology</p>
         </div>
@@ -625,8 +817,8 @@
         <div class="p-6 flex flex-col flex-1 items-center">
          <h4 class="text-gradient font-bold text-lg text-center mb-4">２つのラジエータを一体化</h4>
          <p class="text-sm text-gray-700 text-center mb-6 leading-relaxed font-medium">部品点数と重量を削減、独自構造<br>で温度差による故障リスクも解決</p>
-         <div class="w-full aspect-[4/3] bg-gray-200 flex items-center justify-center text-gray-400">
-          <span class="font-bold text-sm tracking-widest">画像エリア (仮置き)</span>
+         <div class="w-full aspect-video overflow-hidden">
+          <img src="img/img-manufacturing/knowledge-technology-2.png" alt="多機能Rad" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
          </div>
         </div>
        </div>
@@ -642,8 +834,8 @@
         <div class="p-6 flex flex-col flex-1 items-center">
          <h4 class="text-gradient font-bold text-lg text-center mb-4">開発スピードアップ</h4>
          <p class="text-sm text-gray-700 text-center mb-6 leading-relaxed font-medium">熱流体解析、構造解析、実車解析<br>の活用による試作レス開発</p>
-         <div class="w-full aspect-[4/3] bg-gray-200 flex items-center justify-center text-gray-400">
-          <span class="font-bold text-sm tracking-widest">画像エリア (仮置き)</span>
+         <div class="w-full aspect-video overflow-hidden">
+          <img src="img/img-manufacturing/knowledge-technology-3.png" alt="CAE技術の活用" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
          </div>
         </div>
        </div>
@@ -658,7 +850,7 @@
    <div class="max-w-[1440px] mx-auto px-4 md:px-8 relative z-10">
     <div class="mb-16">
      <div class="fade-in-up mb-8 text-center">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#4B5563] leading-tight">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-800 leading-tight">
        熱のある場所すべてが、<span class="scroll-text-gradient inline-block">ティラドの現場。</span>
       </h2>
      </div>
@@ -671,33 +863,33 @@
     
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 fade-in-up" style="transition-delay: 0.2s;">
      <!-- 自動車用熱交換器 -->
-     <div class="bg-white shadow-xl flex flex-col h-full overflow-hidden">
+     <div class="bg-white shadow-xl flex flex-col h-full overflow-hidden border border-gray-100">
       <!-- メイン画像エリア (16:9) -->
       <div class="aspect-video w-full overflow-hidden">
        <img src="img/img-manufacturing/heat-exchanger-1-automotive.png" alt="自動車用熱交換器" class="w-full h-full object-cover">
       </div>
       
       <!-- 画像自動スライドエリア -->
-      <div class="slider-container w-full bg-gray-50 border-y border-gray-100 overflow-hidden">
-       <div class="carousel-track-product">
+      <div class="slider-container w-full bg-white border-y border-gray-100 overflow-hidden">
+       <div class="carousel-track-product" style="animation-duration: 30s;">
         <!-- 8枚 + ループ用8枚 -->
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/automotive/automotive-1.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/automotive/automotive-2.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/automotive/automotive-3.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/automotive/automotive-4.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/automotive/automotive-5.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/automotive/automotive-6.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/automotive/automotive-7.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/automotive/automotive-8.png" class="h-full w-auto"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/automotive/automotive-1.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/automotive/automotive-2.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/automotive/automotive-3.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/automotive/automotive-4.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/automotive/automotive-5.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/automotive/automotive-6.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/automotive/automotive-7.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/automotive/automotive-8.png" class="max-h-full max-w-full object-contain"></div>
         <!-- Duplicates for seamless loop -->
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/automotive/automotive-1.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/automotive/automotive-2.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/automotive/automotive-3.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/automotive/automotive-4.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/automotive/automotive-5.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/automotive/automotive-6.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/automotive/automotive-7.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/automotive/automotive-8.png" class="h-full w-auto"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/automotive/automotive-1.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/automotive/automotive-2.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/automotive/automotive-3.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/automotive/automotive-4.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/automotive/automotive-5.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/automotive/automotive-6.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/automotive/automotive-7.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/automotive/automotive-8.png" class="max-h-full max-w-full object-contain"></div>
        </div>
       </div>
       
@@ -705,39 +897,31 @@
        <h3 class="font-bold text-2xl mb-4 text-gray-800">自動車用熱交換器</h3>
        <p class="text-gray-600 mb-8 leading-relaxed">ICE・HEV・BEV・FCEVまで、多様なパワープラントの熱を制御。</p>
        <div class="mt-auto">
-        <a href="#" class="btn-secondary w-full text-sm"><span class="btn-secondary-text">詳細を見る <i class="fa-solid fa-caret-right ml-1"></i></span></a>
+        <button type="button" onclick="openModal(this.getAttribute('data-modal-target'))" class="btn-primary w-full py-4" data-modal-target="modal-automotive">詳細を見る <i class="fa-solid fa-caret-right ml-1"></i></button>
        </div>
       </div>
      </div>
 
      <!-- 二輪車用熱交換器 -->
-     <div class="bg-white shadow-xl flex flex-col h-full overflow-hidden">
+     <div class="bg-white shadow-xl flex flex-col h-full overflow-hidden border border-gray-100">
       <!-- メイン画像エリア (16:9) -->
       <div class="aspect-video w-full overflow-hidden">
        <img src="img/img-manufacturing/heat-exchanger-2-motorcycle.png" alt="二輪車用熱交換器" class="w-full h-full object-cover">
       </div>
       
       <!-- 画像自動スライドエリア -->
-      <div class="slider-container w-full bg-gray-50 border-y border-gray-100 overflow-hidden">
-       <div class="carousel-track-product">
-        <!-- 8枚 (4枚を2回) + ループ用8枚 -->
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/motorcycle/motorcycle-1.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/motorcycle/motorcycle-2.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/motorcycle/motorcycle-3.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/motorcycle/motorcycle-4.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/motorcycle/motorcycle-1.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/motorcycle/motorcycle-2.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/motorcycle/motorcycle-3.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/motorcycle/motorcycle-4.png" class="h-full w-auto"></div>
+      <div class="slider-container w-full bg-white border-y border-gray-100 overflow-hidden">
+       <div class="carousel-track-product" style="animation-duration: 15s;">
+        <!-- 4枚 + ループ用4枚 -->
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/motorcycle/motorcycle-1.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/motorcycle/motorcycle-2.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/motorcycle/motorcycle-3.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/motorcycle/motorcycle-4.png" class="max-h-full max-w-full object-contain"></div>
         <!-- Duplicates for seamless loop -->
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/motorcycle/motorcycle-1.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/motorcycle/motorcycle-2.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/motorcycle/motorcycle-3.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/motorcycle/motorcycle-4.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/motorcycle/motorcycle-1.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/motorcycle/motorcycle-2.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/motorcycle/motorcycle-3.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/motorcycle/motorcycle-4.png" class="h-full w-auto"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/motorcycle/motorcycle-1.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/motorcycle/motorcycle-2.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/motorcycle/motorcycle-3.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/motorcycle/motorcycle-4.png" class="max-h-full max-w-full object-contain"></div>
        </div>
       </div>
       
@@ -745,39 +929,37 @@
        <h3 class="font-bold text-2xl mb-4 text-gray-800">二輪車用熱交換器</h3>
        <p class="text-gray-600 mb-8 leading-relaxed">世界の二輪車市場で培った、小型・高性能・高信頼の技術。</p>
        <div class="mt-auto">
-        <a href="#" class="btn-secondary w-full text-sm"><span class="btn-secondary-text">詳細を見る <i class="fa-solid fa-caret-right ml-1"></i></span></a>
+        <button type="button" onclick="openModal(this.getAttribute('data-modal-target'))" class="btn-primary w-full py-4" data-modal-target="modal-motorcycle">詳細を見る <i class="fa-solid fa-caret-right ml-1"></i></button>
        </div>
       </div>
      </div>
 
      <!-- 建設・産業・農業機械用熱交換器 -->
-     <div class="bg-white shadow-xl flex flex-col h-full overflow-hidden">
+     <div class="bg-white shadow-xl flex flex-col h-full overflow-hidden border border-gray-100">
       <!-- メイン画像エリア (16:9) -->
       <div class="aspect-video w-full overflow-hidden">
        <img src="img/img-manufacturing/heat-exchanger-3-off-highway.png" alt="建設・産業・農業機械用熱交換器" class="w-full h-full object-cover">
       </div>
       
       <!-- 画像自動スライドエリア -->
-      <div class="slider-container w-full bg-gray-50 border-y border-gray-100 overflow-hidden">
-       <div class="carousel-track-product">
-        <!-- 8枚 (7枚 + 1枚) + ループ用8枚 -->
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/off-highway/off-highway-1.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/off-highway/off-highway-2.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/off-highway/off-highway-3.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/off-highway/off-highway-4.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/off-highway/off-highway-5.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/off-highway/off-highway-6.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/off-highway/off-highway-7.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/off-highway/off-highway-1.png" class="h-full w-auto"></div>
+      <div class="slider-container w-full bg-white border-y border-gray-100 overflow-hidden">
+       <div class="carousel-track-product" style="animation-duration: 26.25s;">
+        <!-- 7枚 + ループ用7枚 -->
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/off-highway/off-highway-1.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/off-highway/off-highway-2.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/off-highway/off-highway-3.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/off-highway/off-highway-4.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/off-highway/off-highway-5.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/off-highway/off-highway-6.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/off-highway/off-highway-7.png" class="max-h-full max-w-full object-contain"></div>
         <!-- Duplicates for seamless loop -->
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/off-highway/off-highway-1.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/off-highway/off-highway-2.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/off-highway/off-highway-3.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/off-highway/off-highway-4.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/off-highway/off-highway-5.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/off-highway/off-highway-6.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/off-highway/off-highway-7.png" class="h-full w-auto"></div>
-        <div class="flex-shrink-0 h-24 md:h-36 px-2 py-3"><img src="img/img-manufacturing/products/off-highway/off-highway-1.png" class="h-full w-auto"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/off-highway/off-highway-1.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/off-highway/off-highway-2.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/off-highway/off-highway-3.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/off-highway/off-highway-4.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/off-highway/off-highway-5.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/off-highway/off-highway-6.png" class="max-h-full max-w-full object-contain"></div>
+        <div class="flex-shrink-0 h-24 md:h-32 w-36 md:w-52 px-0 py-2 border-r border-gray-100 flex items-center justify-center"><img src="img/img-manufacturing/products/off-highway/off-highway-7.png" class="max-h-full max-w-full object-contain"></div>
        </div>
       </div>
       
@@ -785,7 +967,7 @@
        <h3 class="font-bold text-2xl mb-4 text-gray-800">建設・産業・農業機械用熱交換器</h3>
        <p class="text-gray-600 mb-8 leading-relaxed">泥・振動・高負荷など、過酷な現場で求められる耐久設計。</p>
        <div class="mt-auto">
-        <a href="#" class="btn-secondary w-full text-sm"><span class="btn-secondary-text">詳細を見る <i class="fa-solid fa-caret-right ml-1"></i></span></a>
+        <button type="button" onclick="openModal(this.getAttribute('data-modal-target'))" class="btn-primary w-full py-4" data-modal-target="modal-offhighway">詳細を見る <i class="fa-solid fa-caret-right ml-1"></i></button>
        </div>
       </div>
      </div>
@@ -798,8 +980,9 @@
    <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
     <div class="mb-16">
      <div class="fade-in-up mb-8 text-center">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#4B5563] Garden leading-tight">
-       動力が変わっても、<span class="scroll-text-gradient inline-block">熱制御の課題はなくならない。</span>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-800 leading-relaxed">
+       <span class="block mb-2">動力が変わっても、</span>
+       <span class="scroll-text-gradient inline-block">熱制御の課題はなくならない。</span>
       </h2>
      </div>
      <div class="max-w-3xl mx-auto space-y-8 text-gray-600 leading-relaxed font-medium fade-in-up" style="transition-delay: 0.3s;">
@@ -865,46 +1048,231 @@
    <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
     <div class="mb-16">
      <div class="fade-in-up mb-8 text-center">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#4B5563] leading-tight">
-       <span class="scroll-text-gradient inline-block">電動化が進むことで、熱交換器の出番はさらに増えていく。</span>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-800 leading-relaxed">
+       <span class="block mb-2">電動化が進むことで、</span>
+       <span class="scroll-text-gradient inline-block">熱交換器の出番はさらに増えていく。</span>
       </h2>
      </div>
      <div class="max-w-3xl mx-auto space-y-8 text-gray-600 leading-relaxed font-medium fade-in-up" style="transition-delay: 0.3s;">
-      <div class="space-y-6">
+      <div class="space-y-6 text-center">
        <p class="text-lg">エンジンが減れば熱交換器も減る。そう思われがちですが、実際は逆です。</p>
        <p class="text-lg">モーター、インバータ、バッテリー、燃料電池など、新しい熱管理対象が増えることで、必要数はむしろ増えていきます。</p>
       </div>
      </div>
     </div>
     
-    <div class="aspect-video w-full max-w-5xl mx-auto bg-gray-100 flex items-center justify-center text-gray-400 overflow-hidden mb-16 shadow-inner fade-in-up">
-     <p class="font-bold tracking-widest text-xl">画像エリア</p>
+    <div class="w-full max-w-xl mx-auto mb-16 fade-in-up">
+     <img src="img/img-manufacturing/electrification.png" alt="熱交換器の需要拡大" class="w-full h-auto">
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 fade-in-up" style="transition-delay: 0.2s;">
-     <div class="bg-gray-50 p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-      <div class="aspect-video bg-gray-200 mb-5 flex items-center justify-center text-gray-500 text-sm shadow-inner font-bold tracking-wider">画像エリア</div>
-      <h3 class="font-bold text-xl mb-3 text-gray-800">ガソリン車（ICE）</h3>
-      <p class="text-transparent bg-clip-text bg-main-gradient font-bold text-sm mb-3">熱交換器搭載数：2〜6 台 / 1車両</p>
-      <p class="text-gray-600 text-sm leading-relaxed">ラジエータ、EGRクーラ、オイルクーラなど。従来車でも熱管理は不可欠。</p>
+    <!-- Comparison Table Area -->
+    <div class="max-w-7xl mx-auto mb-20 fade-in-up" style="transition-delay: 0.4s;">
+     <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-12">
+      <!-- Left Table -->
+      <div class="overflow-x-auto">
+       <table class="w-full text-left border-collapse">
+        <thead class="bg-main-gradient text-white text-xs md:text-sm">
+         <tr>
+          <th class="py-2 px-2 md:px-4 font-bold border-r border-white/10 w-8"></th>
+          <th class="py-2 px-2 md:px-4 font-bold border-r border-white/10 whitespace-nowrap">熱交換器の種類</th>
+          <th class="py-2 px-1 md:px-2 font-bold text-center border-r border-white/10 w-12 md:w-16">ICE</th>
+          <th class="py-2 px-1 md:px-2 font-bold text-center border-r border-white/10 w-16 md:w-24">HEV/PHEV</th>
+          <th class="py-2 px-1 md:px-2 font-bold text-center border-r border-white/10 w-12 md:w-16">BEV</th>
+          <th class="py-2 px-1 md:px-2 font-bold text-center w-12 md:w-16">FCEV</th>
+         </tr>
+        </thead>
+        <tbody class="text-gray-700 font-medium text-sm md:text-base">
+         <tr class="border-b border-gray-200">
+          <td class="py-2 px-2 md:px-4 text-center font-bold text-gray-400 text-xs">1</td>
+          <td class="py-2 px-2 md:px-4 font-black whitespace-nowrap">HTラジエータ</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+         </tr>
+         <tr class="border-b border-gray-200">
+          <td class="py-2 px-2 md:px-4 text-center font-bold text-gray-400 text-xs">2</td>
+          <td class="py-2 px-2 md:px-4 font-black whitespace-nowrap">LTラジエータ</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+         </tr>
+         <tr class="border-b border-gray-200">
+          <td class="py-2 px-2 md:px-4 text-center font-bold text-gray-400 text-xs">3</td>
+          <td class="py-2 px-2 md:px-4 font-black whitespace-nowrap">バッテリー用ラジエータ</td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+         </tr>
+         <tr class="border-b border-gray-200">
+          <td class="py-2 px-2 md:px-4 text-center font-bold text-gray-400 text-xs">4</td>
+          <td class="py-2 px-2 md:px-4 font-black whitespace-nowrap">FCスタック用ラジエータ</td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+         </tr>
+         <tr class="border-b border-gray-200">
+          <td class="py-2 px-2 md:px-4 text-center font-bold text-gray-400 text-xs">5</td>
+          <td class="py-2 px-2 md:px-4 font-black whitespace-nowrap">チャージエアクーラ</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+         </tr>
+         <tr class="border-b border-gray-200">
+          <td class="py-2 px-2 md:px-4 text-center font-bold text-gray-400 text-xs">6</td>
+          <td class="py-2 px-2 md:px-4 font-black whitespace-nowrap">EGRクーラ</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+
+      <!-- Right Table -->
+      <div class="overflow-x-auto">
+       <table class="w-full text-left border-collapse">
+        <thead class="bg-main-gradient text-white text-xs md:text-sm">
+         <tr>
+          <th class="py-2 px-2 md:px-4 font-bold border-r border-white/10 w-8"></th>
+          <th class="py-2 px-2 md:px-4 font-bold border-r border-white/10 whitespace-nowrap">熱交換器の種類</th>
+          <th class="py-2 px-1 md:px-2 font-bold text-center border-r border-white/10 w-12 md:w-16">ICE</th>
+          <th class="py-2 px-1 md:px-2 font-bold text-center border-r border-white/10 w-16 md:w-24">HEV/PHEV</th>
+          <th class="py-2 px-1 md:px-2 font-bold text-center border-r border-white/10 w-12 md:w-16">BEV</th>
+          <th class="py-2 px-1 md:px-2 font-bold text-center w-12 md:w-16">FCEV</th>
+         </tr>
+        </thead>
+        <tbody class="text-gray-700 font-medium text-sm md:text-base">
+         <tr class="border-b border-gray-200">
+          <td class="py-2 px-2 md:px-4 text-center font-bold text-gray-400 text-xs">7</td>
+          <td class="py-2 px-2 md:px-4 font-black whitespace-nowrap">エンジンオイルクーラ</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+         </tr>
+         <tr class="border-b border-gray-200">
+          <td class="py-2 px-2 md:px-4 text-center font-bold text-gray-400 text-xs">8</td>
+          <td class="py-2 px-2 md:px-4 font-black whitespace-nowrap text-nowrap">ATF/CVTFクーラ/ウォーマ</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+         </tr>
+         <tr class="border-b border-gray-200">
+          <td class="py-2 px-2 md:px-4 text-center font-bold text-gray-400 text-xs">9</td>
+          <td class="py-2 px-2 md:px-4 font-black whitespace-nowrap">モータオイルクーラ</td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+         </tr>
+         <tr class="border-b border-gray-200">
+          <td class="py-2 px-2 md:px-4 text-center font-bold text-gray-400 text-xs">10</td>
+          <td class="py-2 px-2 md:px-4 font-black whitespace-nowrap">インバータ冷却用ヒートシンク</td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+         </tr>
+         <tr class="border-b border-gray-200">
+          <td class="py-2 px-2 md:px-4 text-center font-bold text-gray-400 text-xs">11</td>
+          <td class="py-2 px-2 md:px-4 font-black whitespace-nowrap">チラー</td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+         </tr>
+         <tr class="border-b border-gray-200">
+          <td class="py-2 px-2 md:px-4 text-center font-bold text-gray-400 text-xs">12</td>
+          <td class="py-2 px-2 md:px-4 font-black whitespace-nowrap">バッテリー用ヒートシンク</td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center text-lg md:text-xl text-gradient font-black">○</td>
+          <td class="py-2 px-1 md:px-2 text-center"></td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
      </div>
-     <div class="bg-gray-50 p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-      <div class="aspect-video bg-gray-200 mb-5 flex items-center justify-center text-gray-500 text-sm shadow-inner font-bold tracking-wider">画像エリア</div>
-      <h3 class="font-bold text-xl mb-3 text-gray-800">HEV・PHEV</h3>
-      <p class="text-transparent bg-clip-text bg-main-gradient font-bold text-sm mb-3">熱交換器搭載数：4〜9 台 / 1車両</p>
-      <p class="text-gray-600 text-sm leading-relaxed">モーターやバッテリー管理用が追加され、熱交換器の役割が広がります。</p>
+    </div>
+
+    <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 fade-in-up" style="transition-delay: 0.2s;">
+     <!-- ICE -->
+     <div class="bg-white shadow-xl border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-1 flex flex-col">
+      <div class="aspect-[4/3] bg-white overflow-hidden p-2">
+       <img src="img/img-manufacturing/powertrain-1-ice.png" alt="ガソリン車（ICE）" class="w-full h-full object-cover">
+      </div>
+      <h3 class="bg-main-gradient text-white text-lg font-bold py-2 text-center">ガソリン車（ICE）</h3>
+      <div class="p-6 text-center flex-grow">
+       <div class="mb-6">
+        <p class="text-gray-400 text-xs font-black tracking-widest mb-1 uppercase">熱交換器搭載数</p>
+        <div class="flex items-baseline justify-center gap-1">
+         <span class="text-4xl font-black text-gradient">2〜6</span>
+         <span class="text-sm font-bold text-gray-600">台</span>
+        </div>
+       </div>
+       <p class="text-gray-600 text-sm leading-relaxed text-left">ラジエータ、EGRクーラ、オイルクーラなど。従来車でも熱管理は不可欠。</p>
+      </div>
      </div>
-     <div class="bg-gray-50 p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-      <div class="aspect-video bg-gray-200 mb-5 flex items-center justify-center text-gray-500 text-sm shadow-inner font-bold tracking-wider">画像エリア</div>
-      <h3 class="font-bold text-xl mb-3 text-gray-800">FCEV（燃料電池車）</h3>
-      <p class="text-transparent bg-clip-text bg-main-gradient font-bold text-sm mb-3">熱交換器搭載数：5〜7 台 / 1車両</p>
-      <p class="text-gray-600 text-sm leading-relaxed">FCスタックの精密温度管理が必要で、高度な熱制御が求められます。</p>
+
+     <!-- HEV/PHEV -->
+     <div class="bg-white shadow-xl border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-1 flex flex-col">
+      <div class="aspect-[4/3] bg-white overflow-hidden p-2">
+       <img src="img/img-manufacturing/powertrain-2-hev-phev.png" alt="HEV・PHEV" class="w-full h-full object-cover">
+      </div>
+      <h3 class="bg-main-gradient text-white text-lg font-bold py-2 text-center">HEV・PHEV</h3>
+      <div class="p-6 text-center flex-grow">
+       <div class="mb-6">
+        <p class="text-gray-400 text-xs font-black tracking-widest mb-1 uppercase">熱交換器搭載数</p>
+        <div class="flex items-baseline justify-center gap-1">
+         <span class="text-4xl font-black text-gradient">4〜9</span>
+         <span class="text-sm font-bold text-gray-600">台</span>
+        </div>
+       </div>
+       <p class="text-gray-600 text-sm leading-relaxed text-left">モーターやバッテリー管理用が追加され、熱交換器の役割が広がります。</p>
+      </div>
      </div>
-     <div class="bg-gray-50 p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-      <div class="aspect-video bg-gray-200 mb-5 flex items-center justify-center text-gray-500 text-sm shadow-inner font-bold tracking-wider">画像エリア</div>
-      <h3 class="font-bold text-xl mb-3 text-gray-800">BEV（純電気車）</h3>
-      <p class="text-transparent bg-clip-text bg-main-gradient font-bold text-sm mb-3">熱交換器搭載数：3〜7 台 / 1車両</p>
-      <p class="text-gray-600 text-sm leading-relaxed">バッテリー熱管理やチラーなど、電動化専用の熱交換器が重要になります。</p>
+
+     <!-- FCEV -->
+     <div class="bg-white shadow-xl border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-1 flex flex-col">
+      <div class="aspect-[4/3] bg-white overflow-hidden p-2">
+       <img src="img/img-manufacturing/powertrain-3-fcev.png" alt="FCEV（燃料電池車）" class="w-full h-full object-cover">
+      </div>
+      <h3 class="bg-main-gradient text-white text-lg font-bold py-2 text-center">FCEV（燃料電池車）</h3>
+      <div class="p-6 text-center flex-grow">
+       <div class="mb-6">
+        <p class="text-gray-400 text-xs font-black tracking-widest mb-1 uppercase">熱交換器搭載数</p>
+        <div class="flex items-baseline justify-center gap-1">
+         <span class="text-4xl font-black text-gradient">5〜7</span>
+         <span class="text-sm font-bold text-gray-600">台</span>
+        </div>
+       </div>
+       <p class="text-gray-600 text-sm leading-relaxed text-left">FCスタックの精密温度管理が必要で、高度な熱制御が求められます。</p>
+      </div>
+     </div>
+
+     <!-- BEV -->
+     <div class="bg-white shadow-xl border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-1 flex flex-col">
+      <div class="aspect-[4/3] bg-white overflow-hidden p-2">
+       <img src="img/img-manufacturing/powertrain-4-bev.png" alt="BEV（純電気車）" class="w-full h-full object-cover">
+      </div>
+      <h3 class="bg-main-gradient text-white text-lg font-bold py-2 text-center">BEV（純電気車）</h3>
+      <div class="p-6 text-center flex-grow">
+       <div class="mb-6">
+        <p class="text-gray-400 text-xs font-black tracking-widest mb-1 uppercase">熱交換器搭載数</p>
+        <div class="flex items-baseline justify-center gap-1">
+         <span class="text-4xl font-black text-gradient">3〜7</span>
+         <span class="text-sm font-bold text-gray-600">台</span>
+        </div>
+       </div>
+       <p class="text-gray-600 text-sm leading-relaxed text-left">バッテリー熱管理やチラーなど、電動化専用の熱交換器が重要になります。</p>
+      </div>
      </div>
     </div>
    </div>
@@ -914,7 +1282,7 @@
   <section id="section-7" class="relative py-32 overflow-hidden bg-gray-50">
    <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10 text-center mb-16">
     <div class="fade-in-up">
-     <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#4B5563] leading-tight mb-8">
+     <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-800 leading-tight mb-8">
       世界のメーカーに<span class="scroll-text-gradient inline-block">選ばれる理由</span>
      </h2>
     </div>
@@ -1028,7 +1396,7 @@
    <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
     <div class="mb-16">
      <div class="fade-in-up mb-8 text-center">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-[#4B5563] leading-tight">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-800 leading-tight">
        見えないところで、<span class="scroll-text-gradient inline-block">社会を支える技術へ。</span>
       </h2>
      </div>
@@ -1041,21 +1409,27 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 fade-in-up" style="transition-delay: 0.2s;">
      <div class="bg-white shadow-lg border border-gray-100 overflow-hidden flex flex-col">
-      <div class="aspect-video bg-gray-200 flex items-center justify-center text-gray-400 font-bold tracking-widest shadow-inner">画像</div>
+      <div class="aspect-video overflow-hidden">
+       <img src="img/img-manufacturing/technology-1.png" alt="熱を制御する" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+      </div>
       <div class="p-8 flex-grow">
        <h3 class="font-black text-2xl mb-6 text-center text-gray-800 relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-main-gradient">熱を制御する</h3>
        <p class="text-gray-600 text-base text-center leading-relaxed font-medium">機械を止めず、本来の性能を引き出す。その前提を支えるのが熱交換器です。</p>
       </div>
      </div>
      <div class="bg-white shadow-lg border border-gray-100 overflow-hidden flex flex-col">
-      <div class="aspect-video bg-gray-200 flex items-center justify-center text-gray-400 font-bold tracking-widest shadow-inner">画像</div>
+      <div class="aspect-video overflow-hidden">
+       <img src="img/img-manufacturing/technology-2.png" alt="難題を解く" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+      </div>
       <div class="p-8 flex-grow">
        <h3 class="font-black text-2xl mb-6 text-center text-gray-800 relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-main-gradient">難題を解く</h3>
        <p class="text-gray-600 text-base text-center leading-relaxed font-medium">相反する条件に向き合い、設計技術と製造技術で答えを出し続けることが、ティラドのものづくりです。</p>
       </div>
      </div>
      <div class="bg-white shadow-lg border border-gray-100 overflow-hidden flex flex-col">
-      <div class="aspect-video bg-gray-200 flex items-center justify-center text-gray-400 font-bold tracking-widest shadow-inner">画像</div>
+      <div class="aspect-video overflow-hidden">
+       <img src="img/img-manufacturing/technology-3.png" alt="未来へ広がる" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+      </div>
       <div class="p-8 flex-grow">
        <h3 class="font-black text-2xl mb-6 text-center text-gray-800 relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-main-gradient">未来へ広がる</h3>
        <p class="text-gray-600 text-base text-center leading-relaxed font-medium">動力が変わっても、熱制御の課題はなくなりません。だからこそ、ティラドの技術は次の時代でも必要とされます。</p>
@@ -1066,30 +1440,36 @@
    </section>
 
    <!-- Bottom Message Area (Full Width) -->
-   <div class="relative w-full aspect-video overflow-hidden fade-in-up flex items-center justify-center" style="transition-delay: 0.4s;">
-    <!-- Background Grid of 4 Images -->
-    <div class="absolute inset-0 grid grid-cols-2 grid-rows-2 -z-10">
+   <div class="relative w-full min-h-[400px] md:aspect-[21/9] lg:min-h-[600px] overflow-hidden fade-in-up flex items-center justify-center py-20 md:py-0" style="transition-delay: 0.4s;">
+    <!-- Background Grid of 6 Images -->
+    <div class="absolute inset-0 grid grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-2 -z-10">
      <div class="relative overflow-hidden">
-      <img src="img/img-manufacturing/powertrain-1-ice.png" class="w-full h-full object-cover">
+      <img src="img/img-manufacturing/challenge-1.jpg" class="w-full h-full object-cover">
      </div>
      <div class="relative overflow-hidden">
-      <img src="img/img-manufacturing/powertrain-2-hev-phev.png" class="w-full h-full object-cover">
+      <img src="img/img-manufacturing/challenge-2.jpg" class="w-full h-full object-cover">
      </div>
      <div class="relative overflow-hidden">
-      <img src="img/img-manufacturing/powertrain-3-fcev.png" class="w-full h-full object-cover">
+      <img src="img/img-manufacturing/challenge-3.jpg" class="w-full h-full object-cover">
      </div>
      <div class="relative overflow-hidden">
-      <img src="img/img-manufacturing/powertrain-4-bev.png" class="w-full h-full object-cover">
+      <img src="img/img-manufacturing/challenge-4.jpg" class="w-full h-full object-cover">
+     </div>
+     <div class="relative overflow-hidden">
+      <img src="img/img-manufacturing/challenge-5.jpg" class="w-full h-full object-cover">
+     </div>
+     <div class="relative overflow-hidden">
+      <img src="img/img-manufacturing/challenge-6.jpg" class="w-full h-full object-cover">
      </div>
     </div>
     <!-- Overlay for better readability -->
-    <div class="absolute inset-0 bg-white/40 -z-10 backdrop-blur-[2px]"></div>
+    <div class="absolute inset-0 bg-white/50 -z-10"></div>
 
-    <div class="text-center relative z-10 px-4">
-     <div class="bg-white/90 backdrop-blur-md px-8 py-10 md:px-20 md:py-16 shadow-2xl inline-block border border-white/50">
-      <p class="text-2xl md:text-4xl lg:text-5xl font-black text-[#4B5563] leading-none tracking-widest">
-       <span class="scroll-text-gradient block mb-6 md:mb-10">熱制御の課題に、挑み続ける。</span>
-       <span class="block">それが、ティラドのものづくりです。</span>
+    <div class="text-center relative z-10 px-4 w-full max-w-5xl mx-auto">
+     <div class="bg-white/95 backdrop-blur-md px-6 py-10 md:px-16 md:py-16 shadow-2xl inline-block border border-white/60 w-full md:w-auto rounded-sm">
+      <p class="text-xl md:text-3xl lg:text-4xl font-black text-gray-800 leading-relaxed md:leading-none tracking-widest">
+       <span class="scroll-text-gradient block mb-6 md:mb-10 text-2xl md:text-4xl lg:text-5xl">熱制御の課題に、挑み続ける。</span>
+       <span class="block text-lg md:text-2xl lg:text-3xl">それが、ティラドのものづくりです。</span>
       </p>
      </div>
     </div>
@@ -1199,5 +1579,132 @@
 
  <!-- Scripts -->
  <script src="js/main.js"></script>
+
+  <!-- Modals for Section 4 -->
+  <!-- 自動車用熱交換器 Modal -->
+  <div id="modal-automotive" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+   <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeModal('modal-automotive')"></div>
+   <div class="relative w-full max-w-4xl bg-white shadow-2xl overflow-hidden max-h-[90vh] flex flex-col fade-in-up">
+    <!-- Header -->
+    <div class="flex justify-between items-center p-5 md:p-6 border-b border-gray-200 bg-white">
+     <div class="text-center w-full"><h3 class="inline-block text-xl md:text-2xl font-black text-gradient">自動車用熱交換器</h3></div>
+     <button onclick="closeModal('modal-automotive')" class="text-gray-400 hover:text-gray-800 transition-colors w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-200">
+      <i class="fa-solid fa-xmark text-2xl"></i>
+     </button>
+    </div>
+    <!-- Body -->
+    <div class="overflow-y-auto p-5 md:p-8 flex-grow bg-white">
+     <div class="flex items-stretch mb-8"><div class="w-1 bg-main-gradient mr-4"></div><p class="text-base md:text-lg text-gray-800 font-bold tracking-widest text-left">業界トップランナーとして、広く世界の主要メーカーで採用</p></div>
+     
+     <!-- Slider -->
+     <div class="relative mb-10 custom-slider group" data-slides-to-show="3">
+      <div class="overflow-hidden">
+       <div class="flex transition-transform duration-500 ease-in-out slider-track">
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/automotive/automotive-1.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">ハイブリッド車用ラジエータ</p></div>
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/automotive/automotive-2.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">T.RAD-SMART</p></div>
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/automotive/automotive-3.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">インバータ・バッテリ用熱交換器</p></div>
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/automotive/automotive-4.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">コンパクト高性能EGRクーラ</p></div>
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/automotive/automotive-5.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">LLCチラー</p></div>
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/automotive/automotive-6.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">水冷チャージエアクーラ</p></div>
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/automotive/automotive-7.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">補機冷却用ラジエータ</p></div>
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/automotive/automotive-8.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">排熱回収器コア</p></div>
+       </div>
+      </div>
+      <!-- Prev/Next -->
+      <button class="absolute top-[40%] -translate-y-1/2 -left-4 md:-left-6 w-10 h-10 md:w-12 md:h-12 bg-white shadow-lg border border-gray-100 rounded-none text-gray-600 hover:text-[#0B419B] flex items-center justify-center btn-prev transition-colors opacity-100"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="absolute top-[40%] -translate-y-1/2 -right-4 md:-right-6 w-10 h-10 md:w-12 md:h-12 bg-white shadow-lg border border-gray-100 rounded-none text-gray-600 hover:text-[#0B419B] flex items-center justify-center btn-next transition-colors opacity-100"><i class="fa-solid fa-chevron-right"></i></button>
+      <!-- Dots -->
+      <div class="flex justify-center gap-2 mt-6 slider-dots"></div>
+     </div>
+     
+     <div class="space-y-4 text-sm md:text-base text-gray-700 leading-relaxed bg-gray-50 p-6 rounded border border-gray-100">
+      <p>自動車用熱交換器は当社事業の第一の柱であり、当社競争力の中核のひとつです。ティラドがお客様に納入している品目はラジエータ、オイルクーラ／ウォーマ、チャージエアクーラ、EGRクーラ等様々な熱交換器です。</p>
+      <p>搭載車種は軽自動車から大型SUVなどの乗用車、トラックやバスなどの商用車全域に及びます。さらには電動車両用としての低温ラジエータ、インバータ冷却器、バッテリー冷却器等非常に多岐にわたっております。当社は各製品ごとの研究開発体制をとることにより、高い性能・耐久性を実現し、広く世界で活躍しています。</p>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <!-- 二輪車用熱交換器 Modal -->
+  <div id="modal-motorcycle" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+   <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeModal('modal-motorcycle')"></div>
+   <div class="relative w-full max-w-4xl bg-white shadow-2xl overflow-hidden max-h-[90vh] flex flex-col fade-in-up">
+    <!-- Header -->
+    <div class="flex justify-between items-center p-5 md:p-6 border-b border-gray-200 bg-white">
+     <div class="text-center w-full"><h3 class="inline-block text-xl md:text-2xl font-black text-gradient">二輪車用熱交換器</h3></div>
+     <button onclick="closeModal('modal-motorcycle')" class="text-gray-400 hover:text-gray-800 transition-colors w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-200">
+      <i class="fa-solid fa-xmark text-2xl"></i>
+     </button>
+    </div>
+    <!-- Body -->
+    <div class="overflow-y-auto p-5 md:p-8 flex-grow bg-white">
+     <div class="flex items-stretch mb-8"><div class="w-1 bg-main-gradient mr-4"></div><p class="text-base md:text-lg text-gray-800 font-bold tracking-widest text-left">二輪車用ラジエータの世界トップブランド「T.RAD」</p></div>
+     
+     <!-- Slider -->
+     <div class="relative mb-10 custom-slider group" data-slides-to-show="3">
+      <div class="overflow-hidden">
+       <div class="flex transition-transform duration-500 ease-in-out slider-track">
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/motorcycle/motorcycle-1.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">スクータ用ビルトインラジエータ</p></div>
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/motorcycle/motorcycle-2.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">モータサイクル用台形曲げラジエータ</p></div>
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/motorcycle/motorcycle-3.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">空冷オイルクーラ</p></div>
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/motorcycle/motorcycle-4.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">水冷オイルクーラ</p></div>
+       </div>
+      </div>
+      <!-- Prev/Next -->
+      <button class="absolute top-[40%] -translate-y-1/2 -left-4 md:-left-6 w-10 h-10 md:w-12 md:h-12 bg-white shadow-lg border border-gray-100 rounded-none text-gray-600 hover:text-[#0B419B] flex items-center justify-center btn-prev transition-colors opacity-100"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="absolute top-[40%] -translate-y-1/2 -right-4 md:-right-6 w-10 h-10 md:w-12 md:h-12 bg-white shadow-lg border border-gray-100 rounded-none text-gray-600 hover:text-[#0B419B] flex items-center justify-center btn-next transition-colors opacity-100"><i class="fa-solid fa-chevron-right"></i></button>
+      <!-- Dots -->
+      <div class="flex justify-center gap-2 mt-6 slider-dots"></div>
+     </div>
+     
+     <div class="space-y-4 text-sm md:text-base text-gray-700 leading-relaxed bg-gray-50 p-6 rounded border border-gray-100">
+      <p>当社は二輪車用熱交換器の世界No.1メーカーです。そのラジエータのシェアは世界水冷二輪車市場の半数以上を占めています。このため、当社の熱交換器はデファクトスタンダードとして君臨しており、二輪車用熱交換器の機能や性能をけん引しています。また、ラジエータだけではなく、空冷オイルクーラ、水冷オイルクーラの要求にもお応えします。</p>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <!-- 建設・産業・農業機械用熱交換器 Modal -->
+  <div id="modal-offhighway" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+   <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeModal('modal-offhighway')"></div>
+   <div class="relative w-full max-w-4xl bg-white shadow-2xl overflow-hidden max-h-[90vh] flex flex-col fade-in-up">
+    <!-- Header -->
+    <div class="flex justify-between items-center p-5 md:p-6 border-b border-gray-200 bg-white">
+     <div class="text-center w-full"><h3 class="inline-block text-xl md:text-2xl font-black text-gradient">建設・産業・農業機械用熱交換器</h3></div>
+     <button onclick="closeModal('modal-offhighway')" class="text-gray-400 hover:text-gray-800 transition-colors w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-200">
+      <i class="fa-solid fa-xmark text-2xl"></i>
+     </button>
+    </div>
+    <!-- Body -->
+    <div class="overflow-y-auto p-5 md:p-8 flex-grow bg-white">
+     <div class="flex items-stretch mb-8"><div class="w-1 bg-main-gradient mr-4"></div><p class="text-base md:text-lg text-gray-800 font-bold tracking-widest text-left">業界からの厚い信頼に応える、あらゆる用途に適した機能</p></div>
+     
+     <!-- Slider -->
+     <div class="relative mb-10 custom-slider group" data-slides-to-show="3">
+      <div class="overflow-hidden">
+       <div class="flex transition-transform duration-500 ease-in-out slider-track">
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/off-highway/off-highway-1.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">建設機械用モジュール N-ACoM</p></div>
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/off-highway/off-highway-2.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">ハイブリッド建機用サブラジエータ</p></div>
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/off-highway/off-highway-3.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">建機エンジン用EGRクーラ</p></div>
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/off-highway/off-highway-4.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">高耐圧チャージエアクーラ</p></div>
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/off-highway/off-highway-5.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">高耐圧作動油クーラ</p></div>
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/off-highway/off-highway-6.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">産業・農業機械用ラジエータ</p></div>
+        <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/products/off-highway/off-highway-7.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">大型建機用熱交換器モジュール</p></div>
+       </div>
+      </div>
+      <!-- Prev/Next -->
+      <button class="absolute top-[40%] -translate-y-1/2 -left-4 md:-left-6 w-10 h-10 md:w-12 md:h-12 bg-white shadow-lg border border-gray-100 rounded-none text-gray-600 hover:text-[#0B419B] flex items-center justify-center btn-prev transition-colors opacity-100"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="absolute top-[40%] -translate-y-1/2 -right-4 md:-right-6 w-10 h-10 md:w-12 md:h-12 bg-white shadow-lg border border-gray-100 rounded-none text-gray-600 hover:text-[#0B419B] flex items-center justify-center btn-next transition-colors opacity-100"><i class="fa-solid fa-chevron-right"></i></button>
+      <!-- Dots -->
+      <div class="flex justify-center gap-2 mt-6 slider-dots"></div>
+     </div>
+     
+     <div class="space-y-4 text-sm md:text-base text-gray-700 leading-relaxed bg-gray-50 p-6 rounded border border-gray-100">
+      <p>当社の熱交換器は、建設機械や産業機械・農業機械にも多く使われています。パワーショベルやフォークリフトにおいては非常に高いシェアがあり、当社の高い耐久性を有した高性能でコンパクトな熱交換器が採用されています。ラジエータ、オイルクーラ、チャージエアクーラをセットとしたN-ACoMや、建機エンジン用EGRクーラ、マイニング機械用のアルミ大型モジュールなど、ユニークな商品群を有しています。</p>
+     </div>
+    </div>
+   </div>
+  </div>
+
 </body>
 </html>

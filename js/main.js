@@ -267,3 +267,126 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// Modal and Custom Slider Logic
+window.openModal = function(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+        
+        // Initialize sliders inside the modal if not already initialized
+        setTimeout(() => {
+            initCustomSliders(modal);
+        }, 100);
+    }
+};
+
+window.closeModal = function(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+    }
+};
+
+function initCustomSliders(container = document) {
+    const sliders = container.querySelectorAll('.custom-slider');
+    sliders.forEach(slider => {
+        if (slider.dataset.initialized) return;
+        slider.dataset.initialized = 'true';
+        
+        const track = slider.querySelector('.slider-track');
+        const slides = slider.querySelectorAll('.slide-item');
+        const btnPrev = slider.querySelector('.btn-prev');
+        const btnNext = slider.querySelector('.btn-next');
+        const dotsContainer = slider.querySelector('.slider-dots');
+        
+        if (!track || slides.length === 0) return;
+        
+        let currentIndex = 0;
+        let slideInterval;
+        
+        // Calculate slides to show based on screen size
+        const getSlidesToShow = () => window.innerWidth < 768 ? 2 : parseInt(slider.dataset.slidesToShow || 3);
+        
+        const updateSlider = () => {
+            const slidesToShow = getSlidesToShow();
+            const maxIndex = Math.max(0, slides.length - slidesToShow);
+            
+            if (currentIndex > maxIndex) currentIndex = maxIndex;
+            if (currentIndex < 0) currentIndex = 0;
+            
+            // Calculate translation based on percentage of track container
+            const slideWidth = 100 / slidesToShow;
+            track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+            
+            // Update dots
+            if (dotsContainer) {
+                const dots = dotsContainer.querySelectorAll('.slider-dot');
+                dots.forEach((dot, index) => {
+                    if (index === currentIndex) {
+                        dot.classList.remove('bg-gray-300');
+                        dot.classList.add('bg-main-gradient', 'w-6');
+                    } else {
+                        dot.classList.remove('bg-main-gradient', 'w-6');
+                        dot.classList.add('bg-gray-300', 'w-2');
+                    }
+                });
+            }
+        };
+        
+        const nextSlide = () => {
+            const maxIndex = Math.max(0, slides.length - getSlidesToShow());
+            currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+            updateSlider();
+        };
+        
+        const prevSlide = () => {
+            const maxIndex = Math.max(0, slides.length - getSlidesToShow());
+            currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
+            updateSlider();
+        };
+        
+        // Create dots
+        if (dotsContainer) {
+            dotsContainer.innerHTML = '';
+            const maxIndex = Math.max(0, slides.length - getSlidesToShow());
+            for (let i = 0; i <= maxIndex; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'slider-dot h-2 w-2 rounded-full bg-gray-300 transition-all duration-300';
+                dot.addEventListener('click', () => {
+                    currentIndex = i;
+                    updateSlider();
+                    resetInterval();
+                });
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        if (btnNext) btnNext.addEventListener('click', () => { nextSlide(); resetInterval(); });
+        if (btnPrev) btnPrev.addEventListener('click', () => { prevSlide(); resetInterval(); });
+        
+        const startInterval = () => {
+            slideInterval = setInterval(nextSlide, 3000);
+        };
+        
+        const resetInterval = () => {
+            clearInterval(slideInterval);
+            startInterval();
+        };
+        
+        window.addEventListener('resize', updateSlider);
+        
+        // Initial setup
+        updateSlider();
+        startInterval();
+    });
+}
+
+// Initialize inline sliders if any exist on the page load
+document.addEventListener('DOMContentLoaded', () => {
+    initCustomSliders();
+});
