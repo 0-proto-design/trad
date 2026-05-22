@@ -1,0 +1,35 @@
+diff --git a/manufacturing.html b/manufacturing.html
+index f6470c3..213a92e 100644
+--- a/manufacturing.html
++++ b/manufacturing.html
+@@ -662,10 +662,10 @@
+       <div class="space-y-6 md:space-y-0">
+        <p class="text-lg">世界では、BEVだけに絞るのではなく、地域ごとのインフラや用途、エネルギー事情に応じて、<br class="hidden md:block">HEV、PHEV、BEV、FCEV、水素エンジンなど多様な選択肢を持つマルチパスウェイが広がっています。</p>
+        <p class="text-lg">動力源が変わっても、熱を制御する必要はなくなりません。むしろ、熱交換器に求められる役割はさらに多様になっていきます。</p>
++       </div>
+       </div>
+      </div>
+     </div>
+-   </div>
+     <!-- 2. Image Slider Area (Carousel) from index.html -->
+     <div id="ev-slider" class="w-full relative mb-12 md:mb-20 fade-in-up" style="transition-delay: 0.2s;">
+      <div class="w-full overflow-hidden h-[45vw] md:h-[40vw] lg:h-[32vw] flex items-center">
+@@ -695,6 +695,12 @@
+          <img src="img/img-main/ev-4.png" alt="EVテクノロジー4" class="w-full h-full object-contain">
+         </div>
+        </div>
++       <!-- Slide 5 -->
++       <div class="ev-carousel-slide flex-shrink-0 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] opacity-40 w-[50vw] md:w-[30vw] lg:w-[25vw] shadow-[0_4px_20px_rgba(0,0,0,0.08)] relative z-0">
++        <div class="aspect-video relative overflow-hidden rounded-sm w-full bg-white">
++         <img src="img/img-main/ev-5.png" alt="EVテクノロジー5" class="w-full h-full object-contain">
++        </div>
++       </div>
+       </div>
+       
+       <!-- Arrows -->
+@@ -712,6 +718,7 @@
+       <div class="ev-dot cursor-pointer w-12 md:w-20 h-[2px] md:h-[3px] bg-gray-200 hover:bg-gray-300 transition-all duration-300 shadow-sm" data-index="1"></div>
+       <div class="ev-dot cursor-pointer w-12 md:w-20 h-[2px] md:h-[3px] bg-gray-200 hover:bg-gray-300 transition-all duration-300 shadow-sm" data-index="2"></div>
+       <div class="ev-dot cursor-pointer w-12 md:w-20 h-[2px] md:h-[3px] bg-gray-200 hover:bg-gray-300 transition-all duration-300 shadow-sm" data-index="3"></div>
++      <div class="ev-dot cursor-pointer w-12 md:w-20 h-[2px] md:h-[3px] bg-gray-200 hover:bg-gray-300 transition-all duration-300 shadow-sm" data-index="4"></div>
+      </div>
