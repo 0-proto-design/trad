@@ -59,6 +59,10 @@
       position: relative;
       overflow: hidden;
     }
+    /* #section-1 のカード用：他の fade-in-up 要素とアニメーションを統一しつつ、ホバー時のシャドウアニメーションも両立 */
+    #section-1 .fade-in-up {
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    }
   </style>
 </head>
 <body class="antialiased selection:bg-main-blue selection:text-white">
@@ -375,7 +379,6 @@
  </div>
 
   <!-- #01 First View (FV) -->
-  <!-- #01 First View (FV) -->
   <section id="fv" class="relative w-full flex flex-col md:block md:h-screen overflow-hidden bg-white md:bg-transparent pt-20 md:pt-0">
     <!-- Background Video Area -->
     <div class="relative w-full aspect-video md:absolute md:inset-0 md:h-full md:w-full z-0">
@@ -414,9 +417,6 @@
     </div>
   </section>
 
-
-
-
   <!-- #04 section-1 -->
   <section id="section-1" class="relative pt-24 pb-24 overflow-hidden bg-white">
    <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-20 flex flex-col">
@@ -431,9 +431,9 @@
     </div>
 
     <!-- Cards (3 items, vertical stack) -->
-    <div class="flex flex-col gap-6 mb-8 fade-in-up" style="transition-delay: 0.3s;">
+    <div class="flex flex-col gap-6 mb-8">
      <!-- Card 1 -->
-     <div class="bg-white shadow-xl border border-gray-100 p-8 rounded-none flex flex-col md:flex-row md:items-start md:gap-8 hover:shadow-2xl transition-shadow duration-300">
+     <div class="bg-white shadow-xl border border-gray-100 p-8 rounded-none flex flex-col md:flex-row md:items-start md:gap-8 hover:shadow-2xl fade-in-up" style="transition-delay: 0.2s;">
       <div class="md:w-[42%] lg:w-[36%] shrink-0">
        <h3 class="font-bold text-2xl md:text-3xl text-gray-800 border-l-gradient pl-4 mb-4 md:mb-0 leading-tight md:whitespace-nowrap">熱の課題と影響</h3>
       </div>
@@ -443,7 +443,7 @@
      </div>
      
      <!-- Card 2 -->
-     <div class="bg-white shadow-xl border border-gray-100 p-8 rounded-none flex flex-col md:flex-row md:items-start md:gap-8 hover:shadow-2xl transition-shadow duration-300">
+     <div class="bg-white shadow-xl border border-gray-100 p-8 rounded-none flex flex-col md:flex-row md:items-start md:gap-8 hover:shadow-2xl fade-in-up" style="transition-delay: 0.4s;">
       <div class="md:w-[42%] lg:w-[36%] shrink-0">
        <h3 class="font-bold text-2xl md:text-3xl text-gray-800 border-l-gradient pl-4 mb-4 md:mb-0 leading-tight md:whitespace-nowrap">熱交換器の役割と今後の展望</h3>
       </div>
@@ -453,7 +453,7 @@
      </div>
      
      <!-- Card 3 -->
-     <div class="bg-white shadow-xl border border-gray-100 p-8 rounded-none flex flex-col md:flex-row md:items-start md:gap-8 hover:shadow-2xl transition-shadow duration-300">
+     <div class="bg-white shadow-xl border border-gray-100 p-8 rounded-none flex flex-col md:flex-row md:items-start md:gap-8 hover:shadow-2xl fade-in-up" style="transition-delay: 0.6s;">
       <div class="md:w-[42%] lg:w-[36%] shrink-0">
        <h3 class="font-bold text-2xl md:text-3xl text-gray-800 border-l-gradient pl-4 mb-4 md:mb-0 leading-tight md:whitespace-nowrap">ティラドの製品展開と使命</h3>
       </div>
@@ -733,10 +733,40 @@
      </div>
     </div>
     
-    <div class="w-full max-w-xl mx-auto mb-16 fade-in-up">
+    <div class="w-full max-w-4xl mx-auto mb-16 fade-in-up relative">
      <img src="img/img-manufacturing/electrification.png" alt="熱交換器の需要拡大" class="w-full h-auto">
+     <!-- 画像上の①ボタン -->
+     <div class="absolute cursor-pointer flex items-center justify-center rounded-full text-white font-bold text-[clamp(10px,1.5vw,18px)] shadow-md hover:scale-110 transition-transform"
+          style="top: 13.7%; left: 12.9%; width: 5.6%; aspect-ratio: 1; background: linear-gradient(135deg, #c31f45 0%, #303788 100%);"
+          onclick="triggerSliderAndHighlight(0)">
+      1
+     </div>
     </div>
 
+    <!-- Slider -->
+    <div id="ev-heat-exchanger-slider" class="relative mb-28 custom-slider group fade-in-up" data-slides-to-show="3">
+     <div class="overflow-hidden">
+      <div class="flex transition-transform duration-500 ease-in-out slider-track">
+       <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/car-heat-exchanger/car-heat-exchanger-1.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">HTラジエータ</p></div>
+       <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/car-heat-exchanger/car-heat-exchanger-2.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">LTラジエータ</p></div>
+       <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/car-heat-exchanger/car-heat-exchanger-3.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">バッテリー用ラジエータ</p></div>
+       <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/car-heat-exchanger/car-heat-exchanger-4.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">FCスタック用ラジエータ</p></div>
+       <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/car-heat-exchanger/car-heat-exchanger-5.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">チャージエアクーラ</p></div>
+       <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/car-heat-exchanger/car-heat-exchanger-6.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">EGRクーラ</p></div>
+       <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/car-heat-exchanger/car-heat-exchanger-7.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">エンジンオイルクーラ</p></div>
+       <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/car-heat-exchanger/car-heat-exchanger-8.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">ATF/CVTFクーラ/ウォーマ</p></div>
+       <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/car-heat-exchanger/car-heat-exchanger-9.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">モータオイルクーラ</p></div>
+       <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/car-heat-exchanger/car-heat-exchanger-10.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">インバータ冷却用ヒートシンク</p></div>
+       <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/car-heat-exchanger/car-heat-exchanger-11.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">チラー</p></div>
+       <div class="w-1/2 md:w-1/3 flex-shrink-0 px-4 md:px-6 slide-item"><img src="img/img-manufacturing/car-heat-exchanger/car-heat-exchanger-12.png" class="w-full bg-white aspect-square object-contain p-4 mb-3 border border-gray-200 rounded shadow-sm"><p class="text-[11px] md:text-xs text-center font-bold text-gray-700">バッテリー用ヒートシンク</p></div>
+      </div>
+     </div>
+     <!-- Prev/Next -->
+     <button class="absolute top-[40%] -translate-y-1/2 -left-4 md:-left-6 w-10 h-10 md:w-12 md:h-12 bg-white shadow-lg border border-gray-100 rounded-none text-gray-600 hover:text-[#0B419B] flex items-center justify-center btn-prev transition-colors opacity-100"><i class="fa-solid fa-chevron-left"></i></button>
+     <button class="absolute top-[40%] -translate-y-1/2 -right-4 md:-right-6 w-10 h-10 md:w-12 md:h-12 bg-white shadow-lg border border-gray-100 rounded-none text-gray-600 hover:text-[#0B419B] flex items-center justify-center btn-next transition-colors opacity-100"><i class="fa-solid fa-chevron-right"></i></button>
+     <!-- Dots -->
+     <div class="flex justify-center gap-2 mt-6 slider-dots"></div>
+    </div>
 
     <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
      <!-- ICE -->
@@ -1421,5 +1451,43 @@
    </div>
   </div>
 
+  <script>
+    function triggerSliderAndHighlight(index) {
+        const slider = document.getElementById('ev-heat-exchanger-slider');
+        if (!slider) return;
+        
+        // 1枚目へスクロール (dotsの0番目をクリック)
+        const dots = slider.querySelectorAll('.slider-dot');
+        if (dots.length > index) {
+            dots[index].click();
+        }
+        
+        // 全画像の枠をリセット
+        const allImgs = slider.querySelectorAll('.slide-item img');
+        allImgs.forEach(img => {
+            img.classList.remove('border-4', 'border-[#eb2e3d]', 'shadow-lg');
+            img.classList.add('border-gray-200'); // 元に戻す
+        });
+        
+        // 該当画像をハイライト
+        const targetImg = allImgs[index];
+        if (targetImg) {
+            targetImg.classList.remove('border-gray-200');
+            targetImg.classList.add('border-4', 'border-[#eb2e3d]', 'shadow-lg', 'transition-all', 'duration-300');
+            
+            // スライダーの位置まで少しスクロールさせる
+            const offset = 100;
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const elementRect = slider.getBoundingClientRect().top;
+            const elementPosition = elementRect - bodyRect;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                 top: offsetPosition,
+                 behavior: 'smooth'
+            });
+        }
+    }
+  </script>
 </body>
 </html>
