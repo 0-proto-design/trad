@@ -740,14 +740,9 @@
      </div>
     </div>
     
-    <div class="w-full max-w-4xl mx-auto mb-16 fade-in-up relative">
-     <img src="img/img-manufacturing/electrification.png" alt="熱交換器の需要拡大" class="w-full h-auto">
-     <!-- 画像上の①ボタン -->
-     <div class="absolute cursor-pointer flex items-center justify-center rounded-full text-white font-black text-[clamp(14px,2.2vw,24px)] shadow-md hover:scale-110 transition-transform bg-main-gradient"
-          style="top: 13.40%; left: 12.87%; width: 4.53%; aspect-ratio: 1;"
-          onclick="triggerSliderAndHighlight(0)">
-      1
-     </div>
+    <div id="electrification-image-container" class="w-full max-w-4xl mx-auto mb-16 fade-in-up relative">
+     <img src="img/img-manufacturing/electrification.png" alt="熱交換器の需要拡大" class="w-full h-auto block">
+     <!-- 画像上の番号ボタンはJavaScriptで生成されます -->
     </div>
 
     <!-- Slider -->
@@ -1459,14 +1454,82 @@
   </div>
 
   <script>
+    // 電動化画像の番号ボタンの座標管理
+    // 位置調整や、今後の②以降の追加がしやすいように配列で管理します。
+    // top, left は画像に対する割合(%)で指定し、サイズ(width)も%で指定します。
+    const electrificationButtons = [
+        { id: 1, top: '17.87%', left: '15.15%', width: '6.40%' },
+        { id: 2, top: '19.09%', left: '6.76%', width: '6.40%' },
+        { id: 3, top: '78.95%', left: '2.93%', width: '6.40%' },
+        { id: 4, top: '91.52%', left: '11.31%', width: '6.40%' },
+        { id: 5, top: '11.93%', left: '26.41%', width: '6.40%' },
+        { id: 6, top: '89.76%', left: '42.02%', width: '6.40%' },
+        { id: 7, top: '85.39%', left: '20.09%', width: '6.40%' },
+        { id: 8, top: '86.81%', left: '31.54%', width: '6.40%' },
+        { id: 9, top: '51.48%', left: '44.89%', width: '6.40%' },
+        { id: 10, top: '16.68%', left: '45.35%', width: '6.40%' },
+        { id: 11, top: '70.12%', left: '49.08%', width: '6.40%' },
+        { id: 12, top: '39.22%', left: '64.92%', width: '6.40%' }
+    ];
+
+    const initElectrificationButtons = () => {
+        const container = document.getElementById('electrification-image-container');
+        if (!container) return;
+
+        // 重複実行を防止
+        if (container.dataset.buttonsInitialized) return;
+        container.dataset.buttonsInitialized = 'true';
+
+        // 実際にコンテナが画面に入ったことを検知してボタン生成＆アニメーションを開始
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    electrificationButtons.forEach((btnData, index) => {
+                        const btn = document.createElement('div');
+                        // 初期状態として透明(opacity-0)・縮小(scale-50)を設定し、アニメーション(transition-all)を追加
+                        btn.className = 'absolute cursor-pointer flex items-center justify-center rounded-full text-white font-black text-[clamp(14px,2.2vw,24px)] shadow-md hover:scale-110 -translate-x-1/2 -translate-y-1/2 bg-main-gradient transition-all duration-500 ease-out opacity-0 scale-50';
+                        btn.style.top = btnData.top;
+                        btn.style.left = btnData.left;
+                        btn.style.width = btnData.width;
+                        btn.style.aspectRatio = '1';
+                        btn.onclick = () => triggerSliderAndHighlight(index);
+                        btn.innerText = btnData.id;
+                        container.appendChild(btn);
+
+                        // 画像のフェードイン表示(fade-in-up)に合わせて600ms遅延させ、さらに各ボタンごとに150msの時間差(スタッガー)をつける
+                        setTimeout(() => {
+                            btn.classList.remove('opacity-0', 'scale-50');
+                            btn.classList.add('opacity-100', 'scale-100');
+                        }, 600 + (index * 150));
+                    });
+                    
+                    // 1度アニメーションが発動したら監視を終了
+                    observer.unobserve(container);
+                }
+            });
+        }, {
+            threshold: 0.15 // コンテナが15%以上画面に入ったら発動
+        });
+
+        observer.observe(container);
+    };
+
+    // DOMの読み込み状態に応じて安全に初期化関数を実行
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initElectrificationButtons);
+    } else {
+        initElectrificationButtons();
+    }
+
     function triggerSliderAndHighlight(index) {
         const slider = document.getElementById('ev-heat-exchanger-slider');
         if (!slider) return;
         
-        // 1枚目へスクロール (dotsの0番目をクリック)
+        // 1枚目へスクロール (dots数がslidesToShow数に応じて足りない場合があるため、上限をクランプしてクリック)
         const dots = slider.querySelectorAll('.slider-dot');
-        if (dots.length > index) {
-            dots[index].click();
+        if (dots.length > 0) {
+            const targetDotIndex = Math.min(index, dots.length - 1);
+            dots[targetDotIndex].click();
         }
         
         // 全画像の枠をリセット
