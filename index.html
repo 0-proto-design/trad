@@ -354,9 +354,14 @@
  <section id="fv" class="relative h-screen flex items-center overflow-hidden">
   <!-- Video Background placeholder -->
   <div class="absolute inset-0 z-[-1]">
-   <video autoplay loop muted playsinline class="w-full h-full object-cover">
-    <!-- Using a placeholder data URL for demo, replace with actual thermal video -->
-    <source src="img/img-main/fv.mp4" type="video/mp4">
+   <video 
+       src="img/img-main/fv.mp4"
+       poster="img/img-main/fv-poster.jpg"
+       autoplay 
+       loop 
+       muted 
+       playsinline 
+       class="w-full h-full object-cover">
    </video>
   <!-- 動画の上のオーバーレイ（黒40%） -->
   <div class="absolute inset-0 bg-black/40"></div>
