@@ -378,8 +378,14 @@
   <section id="fv" class="relative w-full flex flex-col md:block md:h-screen overflow-hidden bg-white md:bg-transparent pt-20 md:pt-0">
     <!-- Background Video Area -->
     <div class="relative w-full aspect-video md:absolute md:inset-0 md:h-full md:w-full z-0">
-      <video autoplay loop muted playsinline class="w-full h-full object-cover">
-        <source src="img/img-manufacturing/fv.mp4" type="video/mp4">
+      <video 
+          src="img/img-manufacturing/fv.mp4"
+          poster="img/img-manufacturing/fv-poster.png"
+          autoplay 
+          loop 
+          muted 
+          playsinline 
+          class="w-full h-full object-cover">
       </video>
       <!-- Overlay only on PC -->
       <div class="hidden md:block absolute inset-0 bg-black/40 z-10"></div>
